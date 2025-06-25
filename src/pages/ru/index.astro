@@ -1,0 +1,21 @@
+---
+import "beercss";
+import "../../settings.css"
+
+import { getRelativeLocaleUrl } from 'astro:i18n';
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google" content="notranslate">
+	<link rel="icon" type="image/svg+xml" href="/logos/Logo-05.svg" />
+    <title>Hello world</title>
+  </head>
+  <body class="light">
+    <h1>Remember: no Russian!</h1>
+    <a href={getRelativeLocaleUrl('en', '')} class="link">&lt;&lt; GO BACK GO BACK</a>
+  </body>
+</html>
