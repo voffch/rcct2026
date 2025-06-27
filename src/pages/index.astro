@@ -158,9 +158,11 @@ import {Content as Committees} from '../md/committees_ru.md';
       <article id="info">
         <h2>О конференции</h2>
         <p>Это макет информационного сайта XXV Международной конференции по химической термодинамике RCCT 2026. "Макет", потому что пока здесь нет информации о самой конференции, и эта страница не индексируется в поисковиках.</p>
-        <blockquote>
-          Сейчас мы хотим утвердить и согласовать хотя бы примерный внешний вид, дизайн и расположение основных информационных элементов, чтобы потом заняться наполнением содержимым. Помните, что это всего лишь первый вариант страницы! Цветовая схема и пр. обсуждаются.
-        </blockquote>
+        <p>
+          <blockquote>
+            Сейчас мы хотим утвердить и согласовать хотя бы примерный внешний вид, дизайн и расположение основных информационных элементов, чтобы потом заняться наполнением содержимым. Помните, что это всего лишь первый вариант страницы! Цветовая схема и пр. обсуждаются.
+          </blockquote>
+        </p>
         <p>
           В этом разделе будет 
           <ul>
@@ -317,11 +319,6 @@ import {Content as Committees} from '../md/committees_ru.md';
   .presentation-card img {
     object-fit: scale-down;
   }
-  @media all and (max-width: 600px) {
-    main > article {
-      scroll-margin-top: 5rem;
-    }
-  }
 </style>
 
 <style is:global>
@@ -349,12 +346,22 @@ import {Content as Committees} from '../md/committees_ru.md';
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .list > li > a,
+  .list > li > a:only-child {
+    white-space: wrap;
+  }
   .list > li > a[href^="http"],
   .list > li > a[href^="https://"] {
     gap: 0
   }
   .list > li {
     cursor: unset;
+    padding: 0.5rem 0;
+  }
+  @media all and (max-width: 600px) {
+    main > article {
+      scroll-margin-top: 5rem;
+    }
   }
 </style>
 
