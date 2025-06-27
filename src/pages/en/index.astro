@@ -157,22 +157,9 @@ import {Content as Committees} from '../../md/committees_en.md';
       <img src="/logos/Logo-03.svg" class="logo responsive small-height" />
       <article id="info">
         <h2>Info</h2>
-        <p>I stole all this from Ivanovo.</p>
-        <p>The Organizing Committee of the conference is happy to invite you to participate in the XXIV International Conference on Chemical Thermodynamics in Russia (RCCT-2024) that will be held on July 1-5, 2024 in Ivanovo.</p>
-        <p>Conferences on chemical thermodynamics are among the largest scientific events in Russia. The first conference of the series – “The All-Union Conference on Calorimetry" – opened in 1961 and was then held every two-three years until 1977. In 1979 it was renamed "The All-Union Conference on Calorimetry and Chemical Thermodynamics" and was held regularly until 1991. Then there was a long pause in the conference history until 2002, when the conference tradition was revived with the first “International Conference on Chemical Thermodynamics in Russia” in Saint Petersburg. Since then the RCCT International Conferences have been organized every two years in large scientific centers of Russia, including Moscow (2005, 2013), Saint Petersburg (2002, 2019), Ivanovo (2007), Kazan (2009, 2022), Samara (2011), Nizhny Novgorod (2015), and Novosibirsk (2017).</p>
-        <p>Every RCCT is a unique and important scientific event both for the Russian and international thermodynamic communities. The conference traditionally covers all aspects of chemical thermodynamics from fundamental to applied problems, including multidisciplinary approaches and related fields of science. RCCT2024 is to take place in the year of the 300th anniversary of the Russian Academy of Sciences.RCCT 2024 will be organized as part of a Сonference Сluster, which will include two conferences: XXIV International Conference on Chemical Thermodynamics in Russia and XV All-Russian School-Conference of Young Scientists "Supercritical Fluid Technologies in Solving Environmental Problems” .</p>
-        <p>The plenary and breakout sessions will include lectures, oral and poster presentations.</p>
-        <p>The official languages of the conference are: English and Russian.</p>
-        <p>We are looking forward to seeing you at the conference and hope you enjoy it!</p>
+        <p><span class="warning">Это не настоящая англоязычная страница!</span> Не обращайте на нее внимание. Сейчас здесь ничего нет. Когда мы утвердим внешний вид и содержание основной русскоязычной страницы, тогда сделаем эту. Сейчас <a class="link underline" href={getRelativeLocaleUrl('ru', '')}>возвращайтесь назад</a>.</p>
         <h2>Venue</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>We have logos!</h2>
-        <p>Petr hand-painted them all.</p>
-        <img src="/logos/Logo-01.svg" class="logo responsive small-height" />
-        <img src="/logos/Logo-02.svg" class="logo responsive small-height" />
-        <img src="/logos/Logo-03.svg" class="logo responsive small-height" />
-        <img src="/logos/Logo-04.svg" class="logo responsive small-height" />
-        <img src="/logos/Logo-05.svg" class="logo responsive small-height" />
       </article>
       <article id="dates">
         <h2>Key Dates</h2>
@@ -186,26 +173,6 @@ import {Content as Committees} from '../../md/committees_en.md';
       <article id="participate">
         <h2>Registration and Payment</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <div class="fees-container">
-          <div class="fees-card">
-            <h5>Regular</h5>
-            <div class="fee">100 000 ₽</div>
-            <i>shopping_cart</i>
-            <p>For mature scientists in heat (of discovery)</p>
-          </div>
-          <div class="fees-card">
-            <h5>Student</h5>
-            <div class="fee">99 000 ₽</div>
-            <i>savings</i>
-            <p>For students and PhD students</p>
-          </div>
-          <div class="fees-card">
-            <h5>PROFIT!!!1</h5>
-            <div class="fee">−9 999 ₽</div>
-            <i>credit_card_off</i>
-            <p>For the members of organizing committee</p>
-          </div>
-        </div>
         <h2>Abstract Submission</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <h2>Presentations and Posters</h2>
@@ -244,42 +211,10 @@ import {Content as Committees} from '../../md/committees_en.md';
       scroll-margin-top: 5rem;
     }
   }
-  .fees-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+  .warning {
+    font-weight: bold;
+    color: red;
   }
-  .fees-card {
-    flex-basis: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid var(--secondary);
-    border-radius: 5px;
-    text-align: center;
-  }
-  .fees-card > h5 {
-    margin-bottom: 0.5rem;
-  }
-  .fees-card > * {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  .fees-card > i {
-    font-size: 4rem;
-    --_size: none;
-    color: var(--primary);
-  }
-  .fees-card > p {
-    margin-top: 0;
-  }
-  .fee {
-    font-size: 1.5rem;
-  }
-  
 </style>
 
 <style is:global>
