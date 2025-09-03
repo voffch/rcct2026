@@ -5,6 +5,10 @@ import "../settings.css"
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 import {Content as Committees} from '../md/committees_ru.md';
+import {Content as Sections} from '../md/sections_ru.md';
+import {Content as Dates} from '../md/dates_ru.md';
+
+const thisPageURL = Astro.url.href;
 ---
 
 <html lang="ru">
@@ -13,8 +17,78 @@ import {Content as Committees} from '../md/committees_ru.md';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google" content="notranslate">
-	<link rel="icon" type="image/svg+xml" href="/logos/Logo-05.svg" />
+    <meta name="description" content="RCCT 2026 - XXV Международная конференция по химической термодинамике в России (Екатеринбург, 06-10 июля 2026 г.)">
+    <meta property="og:title" content="RCCT 2026 - XXV Международная конференция по химической термодинамике в России" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={thisPageURL} />
+    <meta property="og:image" content="/android-chrome-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image" content="/android-chrome-192x192.png" />
+    <meta property="og:image:width" content="192" />
+    <meta property="og:image:height" content="192" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:description" content="RCCT 2026 - XXV Международная конференция по химической термодинамике в России (Екатеринбург, 06-10 июля 2026 г.)" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>RCCT 2026 - XXV Международная конференция по химической термодинамике в России</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Event",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "name": "RCCT 2026 - XXV Международная конференция по химической термодинамике в России",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Уральский федеральный университет",
+        "url": "https://www.urfu.ru/"
+      },
+      "startDate": "2026-07-06",
+      "endDate": "2026-07-10",
+      "offers": [
+        {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-09-03T23:59:59",
+          "validThrough": "2026-04-30T23:59:59",
+          "description": "Оргвзнос для обычных участников конференции",
+          "price": "12000.00",
+          "priceCurrency": "RUB"
+        },{
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-09-03T23:59:59",
+          "validThrough": "2026-04-30T23:59:59",
+          "description": "Оргвзнос для студентов и аспирантов",
+          "price": "5000.00",
+          "priceCurrency": "RUB"
+        },{
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-09-03T23:59:59",
+          "validThrough": "2026-04-30T23:59:59",
+          "description": "Оргвзнос для сопровождающих лиц",
+          "price": "3000.00",
+          "priceCurrency": "RUB"
+        }
+        ],
+      "description": "RCCT 2026 - XXV Международная конференция по химической термодинамике в России проводится в г. Екатеринбург, 06-10 июля 2026 г. на базе Уральского федерального университета. Конференция является одним из крупнейших научных событий в России и охватывает все аспекты химической термодинамики от фундаментальных до прикладных вопросов, включая мультидисциплинарные подходы и смежные области науки.",
+      "image": "https://rcct2026.ru/logos/Logo-03.svg",
+      "location": {
+        "@type": "Place",
+        "name": "Уральский федеральный университет",
+        "url": "https://urfu.ru/",
+        "address": {
+          "@type": "PostalAddress",
+          "postalCode": "620026",
+          "streetAddress": "ул. Куйбышева, 48",
+          "addressLocality": "Екатеринбург, Россия",
+          "addressCountry": "RU"
+        }
+      }
+    }
+    </script>
   </head>
   <body class="light">
     <nav class="left max l">
@@ -27,6 +101,10 @@ import {Content as Committees} from '../md/committees_ru.md';
       <a href="#info">
         <i>help</i>
         <div>Информация</div>
+      </a>
+      <a href="#news">
+        <i>breaking_news</i>
+        <div>Новости</div>
       </a>
       <a href="#dates">
         <i>calendar_month</i>
@@ -61,6 +139,10 @@ import {Content as Committees} from '../md/committees_ru.md';
       <a href="#info">
         <i>help</i>
         <div>Информация</div>
+      </a>
+      <a href="#news">
+        <i>breaking_news</i>
+        <div>Новости</div>
       </a>
       <a href="#dates">
         <i>calendar_month</i>
@@ -116,6 +198,12 @@ import {Content as Committees} from '../md/committees_ru.md';
         </a>
       </li>
       <li class="wave round">
+        <a href="#news">
+          <i>breaking_news</i>
+          <div>Новости</div>
+        </a>
+      </li>
+      <li class="wave round">
         <a href="#dates">
           <i>calendar_month</i>
           <div>Основные даты</div>
@@ -157,127 +245,82 @@ import {Content as Committees} from '../md/committees_ru.md';
       <img src="/logos/Logo-03.svg" class="logo responsive small-height" />
       <article id="info">
         <h2>О конференции</h2>
-        <p>Это макет информационного сайта XXV Международной конференции по химической термодинамике RCCT 2026. "Макет", потому что пока здесь нет информации о самой конференции, и эта страница не индексируется в поисковиках.</p>
+        <p>Конференция по химической термодинамике - одно из крупнейших научных событий в России. Первая конференция – «Всесоюзная конференция по калориметрии» – состоялась в 1961 году и затем проводилась каждые два-три года до 1977 года. В 1979 году она была переименована во «Всесоюзную конференцию по калориметрии и химической термодинамике» и проводилась регулярно до 1991 года. После длительной паузы, в 2002 году традиция проведения конференций по термодинамике возродилась, и с тех пор каждые два года «Международные конференции по химической термодинамике в России»  проводятся в крупных научных центрах России, в том числе в Москве (2005, 2013), Санкт-Петербурге (2002, 2019), Иванове (2007, <a class="link" target="_blank" href="https://rcct.isc-ras.ru">2024</a>), Казани (2009, <a class="link" target="_blank" href="https://rcct2021.kpfu.ru">2022</a>), Самаре (2011), Нижнем Новгороде (2015) и Новосибирске (<a class="link" target="_blank" href="https://rcct2017.ru">2017</a>).</p>
+        <p>Каждая конференция RCCT — уникальное и важное научное событие как для российского, так и для международного термодинамического сообщества. Конференция традиционно охватывает все аспекты химической термодинамики от фундаментальных до прикладных вопросов, включая мультидисциплинарные подходы и смежные области науки. В 2026 году XXV Международная конференция по химической термодинамике в России (RCCT-2026) будет проведена в г. Екатеринбурге на базе Уральского федерального университета.</p>
         <p>
-          <blockquote>
-            Сейчас мы хотим утвердить и согласовать хотя бы примерный внешний вид, дизайн и расположение основных информационных элементов, чтобы потом заняться наполнением содержимым. Помните, что это всего лишь первый вариант страницы! Цветовая схема и пр. обсуждаются.
-          </blockquote>
-        </p>
-        <p>
-          В этом разделе будет 
+          Организаторы конференции RCCT-2026:
           <ul>
-            <li>краткая информация о конференции</li>
-            <li>историческая сводка</li>
-            <li>информация о месте проведения</li>
+            <li>Уральский федеральный университет</li>
+            <li>Институт общей и неорганической химии им. Курнакова РАН</li>
+            <li>Министерство науки и высшего образования РФ</li>
+            <li>Российская академия наук</li>
+            <li>Российское химическое общество им. Д.И. Менделеева</li>
+            <li>Научный совет РАН по физической химии</li>
           </ul>
         </p>
-        <p>Сайты предыдущих конференций:
-          <ul class="list border">
-            <li><a class="link" target="_blank" href="https://rcct.isc-ras.ru">RCCT 2024 (Иваново): https://https://rcct.isc-ras.ru</a></li>
-            <li><a class="link" target="_blank" href="https://rcct2021.kpfu.ru">RCCT 2021 (Казань): https://rcct2021.kpfu.ru</a></li>
-            <li><a class="link" target="_blank" href="https://rcct2017.ru">RCCT 2017 (Новосибирск): https://rcct2017.ru</a></li>
-          </ul>
-        </p>
-        <h3>Концепция</h3>
-        <p>Сайт будет состоять из 2-х основных страниц: этой, где будет представлена вся необходимая информация, и страницы с программой. Эти страницы будут дублироваться на английском языке. Нечто подобное мы ранее разрабатывали для нашей <a class="link underline" href="https://conferenceusu.github.io">молодежной научной конференции</a>.</p>
-        <p>Информация о конференции также будет дублироваться на <a class="link underline" href="https://insma.urfu.ru">сайте ИЕНиМ УрФУ</a> и возможно еще где-нибудь, чтобы даже в самом худшем случае организаторы и участники не остались без связи в нашем рунете будущего <i>rocket</i>.</p>
-        <h3>Новости</h3>
-        <p>Этот подраздел надо будет разместить где-то под общей информацией о конференции. Сверху - более свежие сообщения, снизу - менее важные. Хочется, чтобы было сразу видно, когда в последний раз информация обновлялась.</p>
-        <p>Может, стоит сделать отдельный раздел со своей кнопкой в навигации?..</p>
+      </article>
+      <article id="news">
+        <h2>Новости</h2>
         <ul class="list border news">
           <li>
             <div class="max">
-              <h5 class="small">Регистрация</h5>
-              <div class="wrap">Уважаемые участники! Уведомляем вас, что открыта регистрация... для демонстрации это должен быть длинный параграф текста, и я не знаю, что здесь написать... чтобы зарегистрироваться, пройдите по ссылке.</div>
+              <div class="wrap">Актуализирована информация об основных датах, секциях, размере оргвзноса и составе оргкомитета.</div>
             </div>
-            <label>27.06.2025</label>
-          </li>
-          <li>
-            <i>attach_email</i>
-            <div class="max">
-              <h5 class="small">Рассылка</h5>
-              <div class="wrap">Разослан первый циркуляр</div>
-            </div>
-            <a class="link underline">Скачать</a>
-            <label>26.06.2025</label>
-          </li>
-          <li>
-            <div class="max">
-              <div class="wrap">Это простое сообщение без заголовка, иконки и ссылки.</div>
-            </div>
-            <label>25.06.2025</label>
+            <label>03.09.2025</label>
           </li>
         </ul>
-        <h3>Логотипы</h3>
-        <p>Альтернативные варианты логотипов конференции:</p>
-        <img src="/logos/Logo-01.svg" class="logo responsive small-height" />
-        <img src="/logos/Logo-02.svg" class="logo responsive small-height" />
-        <img src="/logos/Logo-03.svg" class="logo responsive small-height" />
-        <img src="/logos/Logo-04.svg" class="logo responsive small-height" />
-        <img src="/logos/Logo-05.svg" class="logo responsive small-height" />
       </article>
       <article id="dates">
         <h2>Основные даты</h2>
-        <p>В этом разделе будет список дат, событий и календарик - <a class="link underlined" href="https://conferenceusu.github.io/#dates">как здесь</a> примерно (или даже буквально как там).</p>
+        <Dates />
       </article>
       <article id="participate">
-        <p>Здесь нужно разместить всю информацию для участников.</p>
-        <h2>Как добраться</h2>
-        <p>Это самый сложный раздел - он состоится только если мне коллеги его напишут. А то я сам не знаю где здесь жить и куда поесть сходить ;)</p>
         <h2>Регистрация и оргвзнос</h2>
-        <p>
+        <p>Размер организационного взноса составит:
+          <ul>
+            <li><strong>3000 ₽</strong> для сопровождающих лиц;</li>
+            <li><strong>5000 ₽</strong> для аспирантов и студентов;</li>
+            <li><strong>12000 ₽</strong> для прочих участников конференции.</li>
+          </ul>
+          Оргвзнос включает оплату участия во всех мероприятиях конференции (заседания и стендовая сессия, круглые столы, специальные сессии и выставки), материалов участника, приветственного фуршета и кофе-пауз.
+        </p>
+        <p>Регистрация на конференцию еще не открыта. Следующая информация будет предоставлена позднее:
           <ul>
             <li>о том, как зарегистрироваться</li>
-            <li>размер оргвзноса (пока не ясно, какие у нас будут градации и категории, непонятно в каком виде это будет представлено)</li>
-            <li>как оплачивать оргвзнос (или каким образом эта информация будет участникам предоставлена)</li>
-            <li>как оформлять тезисы доклада (со ссылкой на шаблон с подробным описанием)</li>
-          </ul>
-        </p>
-        <h2>Доклады и тезисы</h2>
-        <p>
-          <ul>
+            <li>как оплачивать оргвзнос</li>
+            <li>о конкретном месте проведения и как до него добраться</li>
             <li>как оформлять тезисы доклада (со ссылкой на шаблон с подробным описанием)</li>
             <li>куда и как их потом загружать</li>
             <li>как оформлять устные и стендовые доклады (регламент, размеры, шаблоны)</li>
-            <li>? кратко о сборнике тезисов и возможно о статьях по результатам конференции в соотв. журналах</li>
+            <li>о сборнике тезисов и (возможно) о статьях по результатам конференции в рецензируемых журналах</li>
           </ul>
         </p>
-        <p>Примеры шаблонов:</p>
-          <article class="no-padding container presentation-card">
-            <div class="grid no-space">
-              <div class="s12 m6">
-                <img class="responsive" src="/img/presentation_templates.png">
-              </div>
-              <div class="s12 m6">
-                <div class="padding">
-                  <h5>Шаблоны презентаций</h5>
-                  <p>В этом файле несколько примеров оформления титульных слайдов презентаций к устным докладам.</p>
-                  <a class="link underline" href="/docs/RCCT_presentation_templates.pptx">Скачать (pptx, &lt;3 Mb)</a>
-                </div>
+        <h2>Доклады и тезисы</h2>
+        <article class="no-padding container presentation-card">
+          <div class="grid no-space">
+            <div class="s12 m6">
+              <img class="responsive" src="/img/presentation_templates.png" alt="Шаблоны презентаций">
+            </div>
+            <div class="s12 m6">
+              <div class="padding">
+                <h5>Шаблоны презентаций</h5>
+                <p>В этом файле несколько примеров оформления титульных слайдов презентаций к устным докладам.</p>
+                <a class="link underline" href="/docs/RCCT_presentation_templates.pptx">Скачать (pptx, &lt;3 Mb)</a>
               </div>
             </div>
-          </article>
+          </div>
+        </article>
       </article>
       <article id="sections">
-        <h2>Секции</h2>
-        <p>В этом разделе будут перечислены секции и краткие описания научных направлений, которые эти секции объединяют.</p>
+        <Sections />
       </article>
       <article id="committees">
-        <p>Этот раздел скопирован с RCCT-2021 просто чтобы оценить внешний вид списка членов оргкомитета. Я бы предложил ограничиться простым списком, без фотографий большинства членов. Для генштаба оргкомитета можно сделать карточки:</p>
-        <p>
-          <article class="no-padding border secondary-container committee-card">
-            <img class="responsive" width="256" alt="Albert Einstein sticks his tongue" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Albert_Einstein_sticks_his_tongue.jpg/256px-Albert_Einstein_sticks_his_tongue.jpg?20241125173658">
-            <div class="padding">
-                <div class="wrap">академик РАН Альберт Эйнштейн (Москва)</div>
-            </div>
-          </article>
-        </p>
         <Committees />
       </article>
       <article id="contacts">
         <h2>Контакты</h2>
-          <p><strong>Адрес для обратной связи:</strong> <a class="link underline" href="mailto:an@email.invalid">официальный email</a></p>
-          <p><strong>Дополнительные ресурсы:</strong> информация о конференции дублируется <a class="link underline" href="https://insma.urfu.ru">на сайте ИЕНиМ УрФУ</a></p>
+          <p><strong>Адрес для обратной связи:</strong> <a class="link underline" href="mailto:an@email.invalid">официальный email</a> (пока неактивен)</p>
+          <p><strong>Дополнительные ресурсы:</strong> информация о конференции будет продублирована <a class="link underline" href="https://insma.urfu.ru">на сайте ИЕНиМ УрФУ</a></p>
           <p><strong>Email-рассылка:</strong> общее информирование участников конференции производится при помощи рассылки (@urfu.email). Подписаться на рассылку в настоящее время можно только по запросу. Отписаться можно, отправив пустое письмо с темой "unsubscribe conferenceusu" (без кавычек) на <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
           <p><strong>Почтовый адрес:</strong> 620000, г. Екатеринбург, пр. Ленина, 51, Уральский федеральный университет, Институт естественных наук и математики, кафедра физической и неорганической химии</p>
       </article>
