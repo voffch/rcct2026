@@ -13,5 +13,5 @@ The following additional events will be held during the conference:
 
 -	**Round table** discussion «Chemical thermodynamics in higher education».
 -	**Special session** on the development of measurement methods and experimental setups in thermal analysis and calorimetry.
--	**Exhibition** of the thermoanalytical setups.
+-	**Exhibition** of the recent achievements in the field of scientific instrumentation.
 -	«Best presentation» **competition** for the young scientists.
