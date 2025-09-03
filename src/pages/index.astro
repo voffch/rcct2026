@@ -17,7 +17,7 @@ const thisPageURL = Astro.url.href;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google" content="notranslate">
-    <meta name="description" content="RCCT 2026 - XXV Международная конференция по химической термодинамике в России (Екатеринбург, 06-10 июля 2026 г.)">
+    <meta name="description" content="RCCT - одно из крупнейших научных событий в России, охватывающее все аспекты химической термодинамики. Конференция RCCT 2026 проводится в Екатеринбурге 6-10 июля 2026 г.">
     <meta property="og:title" content="RCCT 2026 - XXV Международная конференция по химической термодинамике в России" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={thisPageURL} />
@@ -28,7 +28,7 @@ const thisPageURL = Astro.url.href;
     <meta property="og:image:width" content="192" />
     <meta property="og:image:height" content="192" />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="og:description" content="RCCT 2026 - XXV Международная конференция по химической термодинамике в России (Екатеринбург, 06-10 июля 2026 г.)" />
+    <meta property="og:description" content="RCCT - одно из крупнейших научных событий в России, охватывающее все аспекты химической термодинамики. Конференция RCCT 2026 проводится в Екатеринбурге 6-10 июля 2026 г." />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -363,7 +363,8 @@ const thisPageURL = Astro.url.href;
   }
   #committees ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 0 1rem;
+    text-indent: -1rem;
   }
   a[href^="tel:"]:before {
     content: "\260e\00a0";

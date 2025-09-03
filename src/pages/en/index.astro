@@ -5,6 +5,10 @@ import "../../settings.css"
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 import {Content as Committees} from '../../md/committees_en.md';
+import {Content as Sections} from '../../md/sections_en.md';
+import {Content as Dates} from '../../md/dates_en.md';
+
+const thisPageURL = Astro.url.href;
 ---
 
 <html lang="en">
@@ -13,8 +17,78 @@ import {Content as Committees} from '../../md/committees_en.md';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google" content="notranslate">
-	<link rel="icon" type="image/svg+xml" href="/logos/Logo-05.svg" />
-    <title>Hello world</title>
+    <meta name="description" content="RCCT, one of the most important scientific events in Russia, covers all aspects of chemical thermodynamics. RCCT 2026 will be held in Ekaterinburg on June 6-10, 2026.">
+    <meta property="og:title" content="RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={thisPageURL} />
+    <meta property="og:image" content="/android-chrome-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image" content="/android-chrome-192x192.png" />
+    <meta property="og:image:width" content="192" />
+    <meta property="og:image:height" content="192" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:description" content="RCCT, one of the most important scientific events in Russia, covers all aspects of chemical thermodynamics. RCCT 2026 will be held in Ekaterinburg on June 6-10, 2026." />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Event",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "name": "RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Ural Federal University",
+        "url": "https://www.urfu.ru/en/"
+      },
+      "startDate": "2026-07-06",
+      "endDate": "2026-07-10",
+      "offers": [
+        {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-09-03T23:59:59",
+          "validThrough": "2026-04-30T23:59:59",
+          "description": "Regular participation fee",
+          "price": "12000.00",
+          "priceCurrency": "RUB"
+        },{
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-09-03T23:59:59",
+          "validThrough": "2026-04-30T23:59:59",
+          "description": "Participation fee for students and PhD students",
+          "price": "5000.00",
+          "priceCurrency": "RUB"
+        },{
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-09-03T23:59:59",
+          "validThrough": "2026-04-30T23:59:59",
+          "description": "Participation fee for accompanying persons",
+          "price": "3000.00",
+          "priceCurrency": "RUB"
+        }
+        ],
+      "description": "RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia will be held in Ekaterinburg on June 6-10, 2026 in the Ural Federal University. The conference covers all aspects of chemical thermodynamics, from fundamental to applied issues, and is one of the leading scientific events in Russia.",
+      "image": "https://rcct2026.ru/logos/Logo-03.svg",
+      "location": {
+        "@type": "Place",
+        "name": "Ural Federal University",
+        "url": "https://urfu.ru/en",
+        "address": {
+          "@type": "PostalAddress",
+          "postalCode": "620026",
+          "streetAddress": "48 Kuybysheva st.",
+          "addressLocality": "Ekaterinburg, Russia",
+          "addressCountry": "RU"
+        }
+      }
+    }
+    </script>
   </head>
   <body class="light">
     <nav class="left max l">
@@ -27,6 +101,10 @@ import {Content as Committees} from '../../md/committees_en.md';
       <a href="#info">
         <i>help</i>
         <div>Info</div>
+      </a>
+      <a href="#news">
+        <i>breaking_news</i>
+        <div>News</div>
       </a>
       <a href="#dates">
         <i>calendar_month</i>
@@ -61,6 +139,10 @@ import {Content as Committees} from '../../md/committees_en.md';
       <a href="#info">
         <i>help</i>
         <div>Info</div>
+      </a>
+      <a href="#news">
+        <i>breaking_news</i>
+        <div>News</div>
       </a>
       <a href="#dates">
         <i>calendar_month</i>
@@ -116,6 +198,12 @@ import {Content as Committees} from '../../md/committees_en.md';
         </a>
       </li>
       <li class="wave round">
+        <a href="#news">
+          <i>breaking_news</i>
+          <div>News</div>
+        </a>
+      </li>
+      <li class="wave round">
         <a href="#dates">
           <i>calendar_month</i>
           <div>Dates</div>
@@ -156,38 +244,75 @@ import {Content as Committees} from '../../md/committees_en.md';
     <main class="responsive">
       <img src="/logos/Logo-03.svg" class="logo responsive small-height" />
       <article id="info">
-        <h2>Info</h2>
-        <p><span class="warning">Это не настоящая англоязычная страница!</span> Не обращайте на нее внимание. Сейчас здесь ничего нет. Когда мы утвердим внешний вид и содержание основной русскоязычной страницы, тогда сделаем эту. Сейчас <a class="link underline" href={getRelativeLocaleUrl('ru', '')}>возвращайтесь назад</a>.</p>
-        <h2>Venue</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>General info</h2>
+        <p>RCCT ("Russian Conference on Chemical Thermodynamics", or "International Conference on Chemical Thermodynamics in Russia") is one of the most significant scientific events in Russia. Its history can be traced back to the "All-Union Conference on Calorimetry", which was held every two to three years between 1961 and 1977. In 1979 the conference was renamed as the "All-Union Conference on Calorimetry and Chemical Thermodynamics" and was held regularly under this name until 1991. After a long hiatus, the tradition of organizing the meetings on chemical thermodynamics was revived in 2002 with the first "International Conference on Chemical Thermodynamics in Russia" in Saint Petersburg. Since then, the RCCT International Conferences have been held biannually in large scientific centers of Russia, including Moscow (2005, 2013), Saint Petersburg (2002, 2019), Ivanovo (2007, <a class="link" target="_blank" href="https://rcct.isc-ras.ru">2024</a>), Kazan (2009, <a class="link" target="_blank" href="https://rcct2021.kpfu.ru">2022</a>), Samara (2011), Nizhny Novgorod (2015), and Novosibirsk (<a class="link" target="_blank" href="https://rcct2017.ru">2017</a>).</p>
+        <p>Every RCCT is uniquely important for the international thermodynamic community. The conference traditionally covers all aspects of chemical thermodynamics and provides the platform for discussing the cutting-edge issues in this scientific field. In 2026, Ural Federal University in Ekaterinburg will be the host of the XXV International Conference on Chemical Thermodynamics in Russia (RCCT-2026).</p>
+        <p>
+          RCCT-2026 is organized by:
+          <ul>
+            <li>Ural Federal University</li>
+            <li>Kurnakov Institute of General and Inorganic Chemistry</li>
+            <li>Ministry of Science and Higher Education of the Russian Federation</li>
+            <li>Russian Academy of Sciences</li>
+            <li>Mendeleev Russian Chemical Society</li>
+            <li>Scientific Council on Physical Chemistry RAS</li>
+          </ul>
+        </p>
+      </article>
+      <article id="news">
+        <h2>News</h2>
+        <ul class="list border news">
+          <li>
+            <div class="max">
+              <div class="wrap">Updated the information on the key dates, sections, participation fee and organizing committee members.</div>
+            </div>
+            <label>03.09.2025</label>
+          </li>
+        </ul>
       </article>
       <article id="dates">
         <h2>Key Dates</h2>
-        <ul class="list border">
-          <li>day 1</li>
-          <li>day 2</li>
-          <li>day 3</li>
-          <li>day 4</li>
-        </ul>
+        <Dates />
       </article>
       <article id="participate">
-        <h2>Registration and Payment</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>Abstract Submission</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>Presentations and Posters</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Registration and participation fees</h2>
+        <p>The participation fee is:
+          <ul>
+            <li><strong>3000 ₽</strong> for accompanying persons;</li>
+            <li><strong>5000 ₽</strong> for students and PhD students;</li>
+            <li><strong>12000 ₽</strong> - the regular fee.</li>
+          </ul>
+          The fee covers participation and access to all the events, including the oral and poster sessions, special sessions, meetings, discussions, exhibitions, welcome party, and coffee breaks.
+        </p>
+        <p>The registration has not been officially opened yet. More information will be available in due time.</p>
+        <h2>Presentations and abstracts</h2>
+        <article class="no-padding container presentation-card">
+          <div class="grid no-space">
+            <div class="s12 m6">
+              <img class="responsive" src="/img/presentation_templates.png" alt="Шаблоны презентаций">
+            </div>
+            <div class="s12 m6">
+              <div class="padding">
+                <h5>Presentation templates</h5>
+                <p>This file contains several title slide templates for the oral presentations.</p>
+                <a class="link underline" href="/docs/RCCT_presentation_templates.pptx">Download (pptx, &lt;3 Mb)</a>
+              </div>
+            </div>
+          </div>
+        </article>
       </article>
       <article id="sections">
-        <h2>Sections</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <Sections />
       </article>
       <article id="committees">
         <Committees />
       </article>
       <article id="contacts">
-        <h2>Contact Us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Contacts</h2>
+          <p><strong>Contact us:</strong> <a class="link underline" href="mailto:an@email.invalid">official email</a> (inactive right now)</p>
+          <p><strong>Additional resources:</strong> the information about the conference will be made available on the <a class="link underline" href="https://insma.urfu.ru">institution website</a></p>
+          <p><strong>Mass mail:</strong> the conference newsletters will be sent via the email (@urfu.email). The subscription to the newsletter is available by request only. You can unsubscribe by sending an empty letter with "unsubscribe conferenceusu" (without quotes) as the email subject to <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
+          <p><strong>Postal address:</strong> 620000, Ekaterinburg, 51 Lenin av., Ural Federal University, Institute of Natural Sciences and Mathematics, Department of Physical and Inorganic Chemistry</p>
       </article>
     </main>
   </body>
@@ -200,30 +325,70 @@ import {Content as Committees} from '../../md/committees_en.md';
 	}
   main {
     font-size: 16px;
-    /*max-width: 800px;
-    margin: 0 0.5rem;*/
+    max-width: 64rem;
+    margin: 0 0.5rem;
   }
-  #info {
+  /*#info {
     columns: auto 32em;
+  }*/
+  .committee-card {
+    max-width: 256px;
+    margin: 0 auto;
   }
-  @media all and (max-width: 600px) {
-    main > article {
-      scroll-margin-top: 5rem;
-    }
+  .committee-card img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
-  .warning {
-    font-weight: bold;
-    color: red;
+  .committee-card, .committee-card > div {
+    background-color: var(--surface-container-high);
+  }
+  .presentation-card img {
+    object-fit: scale-down;
   }
 </style>
 
 <style is:global>
   #committees {
-    columns: auto 16em;
+    columns: auto 20em;
   }
   #committees ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0 0 1rem;
+    text-indent: -1rem;
+  }
+  a[href^="tel:"]:before {
+    content: "\260e\00a0";
+  }
+  a[href^="mailto:"]:before {
+    content: "\2709\00a0";
+  }
+  main a[href^="http"]::after,
+  main a[href^="https://"]::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    margin-left: 4px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .list > li > a,
+  .list > li > a:only-child {
+    white-space: wrap;
+  }
+  .list > li > a[href^="http"],
+  .list > li > a[href^="https://"] {
+    gap: 0
+  }
+  .list > li {
+    cursor: unset;
+    padding: 0.5rem 0;
+  }
+  @media all and (max-width: 600px) {
+    main > article {
+      scroll-margin-top: 5rem;
+    }
   }
 </style>
 

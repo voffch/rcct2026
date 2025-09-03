@@ -1,0 +1,4 @@
+- **10 March** – registration deadline
+- **29 March** – abstract submission deadline
+- **30 April** – participation fee payment deadline
+- **06-10 July** – the conference days
