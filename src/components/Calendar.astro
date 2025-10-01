@@ -1,0 +1,46 @@
+---
+import CalendarMonth from './CalendarMonth.astro';
+const { lang, year, importantDates } = Astro.props;
+---
+<script>
+  'use strict';
+  document.addEventListener('DOMContentLoaded', () => {
+    //get date for the calendar
+    const monthClasses = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+    const numberClass = 'calendar__number';
+    const numberTodayClass = 'calendar__number--current';
+    const today = new Date();
+    const mm = today.getMonth();
+    const dd = today.getDate();
+    const dateSelector = `.${monthClasses[mm]} .${numberClass}`;
+    //console.log(dateSelector);
+    const monthNodes = document.querySelectorAll(dateSelector);
+    if (monthNodes) {
+      const monthNode = monthNodes[dd - 1];
+      if (monthNode) {
+        monthNode.classList.add(numberTodayClass);
+      }
+    }
+  }, {once: true});
+</script>
+
+<div class="calendar-wrapper">
+  <CalendarMonth month=3 lang={lang} year={year} importantDates={importantDates} />
+  <CalendarMonth month=4 lang={lang} year={year} importantDates={importantDates} />
+  <CalendarMonth month=7 lang={lang} year={year} importantDates={importantDates} />
+</div>
+
+<style>
+.calendar-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+  max-width: none;
+}
+.calendar__number--current {
+  background-color: var(--primary);
+}
+</style>

@@ -4,6 +4,8 @@ import "../../settings.css"
 
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
+import Calendar from '../../components/Calendar.astro';
+
 import {Content as Committees} from '../../md/committees_en.md';
 import {Content as Sections} from '../../md/sections_en.md';
 import {Content as Dates} from '../../md/dates_en.md';
@@ -263,6 +265,15 @@ const thisPageURL = Astro.url.href;
         <h2>News</h2>
         <ul class="list border news">
           <li>
+            <i>attach_email</i>
+            <div class="max">
+              <h5 class="small">Newsletter</h5>
+              <div class="wrap">Updated committee and contacts; distributed the first newsletter.</div>
+            </div>
+            <a class="link underline" href="/docs/1st_newsletter_EN.pdf">Download</a>
+            <label>01.10.2025</label>
+          </li>
+          <li>
             <div class="max">
               <div class="wrap">Updated the information on the key dates, sections, participation fee and organizing committee members.</div>
             </div>
@@ -273,6 +284,7 @@ const thisPageURL = Astro.url.href;
       <article id="dates">
         <h2>Key Dates</h2>
         <Dates />
+        <Calendar lang="en" year="2026" importantDates="10.3 29.3 30.4 6.7 7.7 8.7 9.7 10.7" />
       </article>
       <article id="participate">
         <h2>Registration and participation fees</h2>
@@ -309,8 +321,8 @@ const thisPageURL = Astro.url.href;
       </article>
       <article id="contacts">
         <h2>Contacts</h2>
-          <p><strong>Contact us:</strong> <a class="link underline" href="mailto:an@email.invalid">official email</a> (inactive right now)</p>
-          <p><strong>Additional resources:</strong> the information about the conference will be made available on the <a class="link underline" href="https://insma.urfu.ru">institution website</a></p>
+          <p><strong>Contact us:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></p>
+          <p><strong>Additional resources:</strong> the information about the conference will be made available on the <a class="link underline" href="https://scievent.urfu.ru/rcct2026">university website</a></p>
           <p><strong>Mass mail:</strong> the conference newsletters will be sent via the email (@urfu.email). The subscription to the newsletter is available by request only. You can unsubscribe by sending an empty letter with "unsubscribe conferenceusu" (without quotes) as the email subject to <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
           <p><strong>Postal address:</strong> 620000, Ekaterinburg, 51 Lenin av., Ural Federal University, Institute of Natural Sciences and Mathematics, Department of Physical and Inorganic Chemistry</p>
       </article>
