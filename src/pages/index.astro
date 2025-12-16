@@ -258,12 +258,20 @@ const thisPageURL = Astro.url.href;
             <li>Российская академия наук</li>
             <li>Российское химическое общество им. Д.И. Менделеева</li>
             <li>Научный совет РАН по физической химии</li>
+            <li>Научный совет РАН по керамическим материалам</li>
+            <li>Научный совет РАН по неорганической химии</li>
           </ul>
         </p>
       </article>
       <article id="news">
         <h2>Новости</h2>
         <ul class="list border news">
+          <li>
+            <div class="max">
+              <div class="wrap">Дополнена информация об организаторах и составе оргкомитета.</div>
+            </div>
+            <label>16.12.2025</label>
+          </li>
           <li>
             <i>attach_email</i>
             <div class="max">
@@ -333,7 +341,7 @@ const thisPageURL = Astro.url.href;
         <h2>Контакты</h2>
           <p><strong>Адрес для обратной связи:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></p>
           <p><strong>Дополнительные ресурсы:</strong> информация о конференции будет продублирована <a class="link underline" href="https://scievent.urfu.ru/rcct2026">на портале научных мероприятий УрФУ</a></p>
-          <p><strong>Email-рассылка:</strong> общее информирование участников конференции производится при помощи рассылки (@urfu.email). Подписаться на рассылку в настоящее время можно только по запросу. Отписаться можно, отправив пустое письмо с темой "unsubscribe conferenceusu" (без кавычек) на <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
+          <p><strong>Email-рассылка:</strong> общее информирование участников конференции производится при помощи рассылки (с адресов @rcct2026.ru или @urfu.email). Подписаться на рассылку в настоящее время можно только по запросу. Отписаться можно, отправив пустое письмо с темой "unsubscribe conferenceusu" (без кавычек) на <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
           <p><strong>Почтовый адрес:</strong> 620000, г. Екатеринбург, пр. Ленина, 51, Уральский федеральный университет, Институт естественных наук и математики, кафедра физической и неорганической химии</p>
       </article>
     </main>
@@ -377,6 +385,14 @@ const thisPageURL = Astro.url.href;
     list-style-type: none;
     padding: 0 0 0 1rem;
     text-indent: -1rem;
+  }
+  #committees .dead {
+    display: inline-block;
+    padding-left: 1rem;
+    text-indent: 0;
+    border: 1px solid black;
+    padding: 2px 4px;
+    transform: translateX(-5px);
   }
   a[href^="tel:"]:before {
     content: "\260e\00a0";

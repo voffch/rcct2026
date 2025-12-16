@@ -258,12 +258,20 @@ const thisPageURL = Astro.url.href;
             <li>Russian Academy of Sciences</li>
             <li>Mendeleev Russian Chemical Society</li>
             <li>Scientific Council on Physical Chemistry RAS</li>
+            <li>Scientific Council on Ceramic Materials RAS</li>
+            <li>Scientific Council on Inorganic Chemistry RAS</li>
           </ul>
         </p>
       </article>
       <article id="news">
         <h2>News</h2>
         <ul class="list border news">
+          <li>
+            <div class="max">
+              <div class="wrap">Updated the information on the organizers and organizing committee members.</div>
+            </div>
+            <label>16.12.2025</label>
+          </li>
           <li>
             <i>attach_email</i>
             <div class="max">
@@ -323,7 +331,7 @@ const thisPageURL = Astro.url.href;
         <h2>Contacts</h2>
           <p><strong>Contact us:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></p>
           <p><strong>Additional resources:</strong> the information about the conference will be made available on the <a class="link underline" href="https://scievent.urfu.ru/rcct2026">university website</a></p>
-          <p><strong>Mass mail:</strong> the conference newsletters will be sent via the email (@urfu.email). The subscription to the newsletter is available by request only. You can unsubscribe by sending an empty letter with "unsubscribe conferenceusu" (without quotes) as the email subject to <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
+          <p><strong>Mass mail:</strong> the conference newsletters will be sent via the email (from @rcct2026.ru or @urfu.email). The subscription to the newsletter is available by request only. You can unsubscribe by sending an empty letter with "unsubscribe conferenceusu" (without quotes) as the email subject to <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
           <p><strong>Postal address:</strong> 620000, Ekaterinburg, 51 Lenin av., Ural Federal University, Institute of Natural Sciences and Mathematics, Department of Physical and Inorganic Chemistry</p>
       </article>
     </main>
@@ -367,6 +375,14 @@ const thisPageURL = Astro.url.href;
     list-style-type: none;
     padding: 0 0 0 1rem;
     text-indent: -1rem;
+  }
+  #committees .dead {
+    display: inline-block;
+    padding-left: 1rem;
+    text-indent: 0;
+    border: 1px solid black;
+    padding: 2px 4px;
+    transform: translateX(-5px);
   }
   a[href^="tel:"]:before {
     content: "\260e\00a0";
