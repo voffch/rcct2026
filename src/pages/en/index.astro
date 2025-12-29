@@ -124,6 +124,10 @@ const thisPageURL = Astro.url.href;
         <i>diversity_3</i>
         <div>Committees</div>
       </a>
+      <a href="#sponsors">
+        <i>loyalty</i>
+        <div>Sponsors</div>
+      </a>
       <a href="#contacts">
         <i>chat</i>
         <div>Contacts</div>
@@ -161,6 +165,10 @@ const thisPageURL = Astro.url.href;
       <a href="#committees">
         <i>diversity_3</i>
         <div>Committees</div>
+      </a>
+      <a href="#sponsors">
+        <i>loyalty</i>
+        <div>Sponsors</div>
       </a>
       <a href="#contacts">
         <i>chat</i>
@@ -230,10 +238,17 @@ const thisPageURL = Astro.url.href;
         </a>
       </li>
       <li class="wave round">
+        <a href="#sponsors">
+          <i>loyalty</i>
+          <div>Sponsors</div>
+        </a>
+      </li>
+      <li class="wave round">
         <a href="#contacts">
           <i>chat</i>
           <div>Contacts</div>
         </a>
+      </li>
       <li class="wave round">
         <a href={getRelativeLocaleUrl('ru', '')}>
           <i>language</i>
@@ -268,7 +283,13 @@ const thisPageURL = Astro.url.href;
         <ul class="list border news">
           <li>
             <div class="max">
-              <div class="wrap">Updated the information on the organizers and organizing committee members.</div>
+              <div class="wrap">Added the <a class="link underline" href="#sponsors">information for potential sponsors</a></div>
+            </div>
+            <label>29.12.2025</label>
+          </li>
+          <li>
+            <div class="max">
+              <div class="wrap">Updated the information on the organizers and organizing committee members</div>
             </div>
             <label>16.12.2025</label>
           </li>
@@ -276,14 +297,14 @@ const thisPageURL = Astro.url.href;
             <i>attach_email</i>
             <div class="max">
               <h5 class="small">Newsletter</h5>
-              <div class="wrap">Updated committee and contacts; distributed the first newsletter.</div>
+              <div class="wrap">Updated committee and contacts; distributed the first newsletter</div>
             </div>
             <a class="link underline" href="/docs/1st_newsletter_EN.pdf">Download</a>
             <label>01.10.2025</label>
           </li>
           <li>
             <div class="max">
-              <div class="wrap">Updated the information on the key dates, sections, participation fee and organizing committee members.</div>
+              <div class="wrap">Updated the information on the key dates, sections, participation fee and organizing committee members</div>
             </div>
             <label>03.09.2025</label>
           </li>
@@ -326,6 +347,10 @@ const thisPageURL = Astro.url.href;
       </article>
       <article id="committees">
         <Committees />
+      </article>
+      <article id="sponsors">
+        <h2>Sponsors</h2>
+        <p>If your company is registered in Russia and you would like to sponsor our conference, we invite you to read our official <a class="link underline" href="/docs/RCCT2026_спонсорам.pdf" target="_blank">letter to sponsors</a> (in Russian) and contact us to discuss further details.</p>
       </article>
       <article id="contacts">
         <h2>Contacts</h2>

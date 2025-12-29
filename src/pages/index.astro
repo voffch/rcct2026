@@ -124,6 +124,10 @@ const thisPageURL = Astro.url.href;
         <i>diversity_3</i>
         <div>Комитеты</div>
       </a>
+      <a href="#sponsors">
+        <i>loyalty</i>
+        <div>Спонсоры</div>
+      </a>
       <a href="#contacts">
         <i>chat</i>
         <div>Контакты</div>
@@ -161,6 +165,10 @@ const thisPageURL = Astro.url.href;
       <a href="#committees">
         <i>diversity_3</i>
         <div>Комитеты</div>
+      </a>
+      <a href="#sponsors">
+        <i>loyalty</i>
+        <div>Спонсоры</div>
       </a>
       <a href="#contacts">
         <i>chat</i>
@@ -230,10 +238,17 @@ const thisPageURL = Astro.url.href;
         </a>
       </li>
       <li class="wave round">
+        <a href="#sponsors">
+          <i>loyalty</i>
+          <div>Спонсоры</div>
+        </a>
+      </li>
+      <li class="wave round">
         <a href="#contacts">
           <i>chat</i>
           <div>Контакты</div>
         </a>
+      </li>
       <li class="wave round">
         <a href={getRelativeLocaleUrl('en', '')}>
           <i>language</i>
@@ -268,7 +283,13 @@ const thisPageURL = Astro.url.href;
         <ul class="list border news">
           <li>
             <div class="max">
-              <div class="wrap">Дополнена информация об организаторах и составе оргкомитета.</div>
+              <div class="wrap">Добавлена <a class="link underline" href="#sponsors">информация для потенциальных спонсоров</a></div>
+            </div>
+            <label>29.12.2025</label>
+          </li>
+          <li>
+            <div class="max">
+              <div class="wrap">Дополнена информация об организаторах и составе оргкомитета</div>
             </div>
             <label>16.12.2025</label>
           </li>
@@ -276,14 +297,14 @@ const thisPageURL = Astro.url.href;
             <i>attach_email</i>
             <div class="max">
               <h5 class="small">Рассылка</h5>
-              <div class="wrap">Обновлена информация об оргкомитете и контактах; разослан первый циркуляр.</div>
+              <div class="wrap">Обновлена информация об оргкомитете и контактах; разослан первый циркуляр</div>
             </div>
             <a class="link underline" href="/docs/1st_newsletter_RU.pdf">Скачать</a>
             <label>01.10.2025</label>
           </li>
           <li>
             <div class="max">
-              <div class="wrap">Актуализирована информация об основных датах, секциях, размере оргвзноса и составе оргкомитета.</div>
+              <div class="wrap">Актуализирована информация об основных датах, секциях, размере оргвзноса и составе оргкомитета</div>
             </div>
             <label>03.09.2025</label>
           </li>
@@ -336,6 +357,10 @@ const thisPageURL = Astro.url.href;
       </article>
       <article id="committees">
         <Committees />
+      </article>
+      <article id="sponsors">
+        <h2>Спонсоры</h2>
+        <p>Оргкомитет конференции приглашает к сотрудничеству заинтересованные организации. Если вы хотите выступить в качестве компании-спонсора, предлагаем вам ознакомиться с <a class="link underline" href="/docs/RCCT2026_спонсорам.pdf" target="_blank">официальным письмом</a> и связаться с нами для уточнения подробностей.</p>
       </article>
       <article id="contacts">
         <h2>Контакты</h2>
