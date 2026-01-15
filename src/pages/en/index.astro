@@ -9,6 +9,7 @@ import Calendar from '../../components/Calendar.astro';
 import {Content as Committees} from '../../md/committees_en.md';
 import {Content as Sections} from '../../md/sections_en.md';
 import {Content as Dates} from '../../md/dates_en.md';
+import {Content as Participate} from '../../md/participate_en.md';
 
 const thisPageURL = Astro.url.href;
 ---
@@ -283,6 +284,12 @@ const thisPageURL = Astro.url.href;
         <ul class="list border news">
           <li>
             <div class="max">
+              <div class="wrap">Updated the <a class="link underline" href="#participate">registration</a> section; you can now register for the conference</div>
+            </div>
+            <label>15.01.2026</label>
+          </li>
+          <li>
+            <div class="max">
               <div class="wrap">Added the <a class="link underline" href="#sponsors">information for potential sponsors</a></div>
             </div>
             <label>29.12.2025</label>
@@ -317,15 +324,7 @@ const thisPageURL = Astro.url.href;
       </article>
       <article id="participate">
         <h2>Registration and participation fees</h2>
-        <p>The participation fee is:
-          <ul>
-            <li><strong>3000 ₽</strong> for accompanying persons;</li>
-            <li><strong>5000 ₽</strong> for students and PhD students;</li>
-            <li><strong>12000 ₽</strong> - the regular fee.</li>
-          </ul>
-          The fee covers participation and access to all the events, including the oral and poster sessions, special sessions, meetings, discussions, exhibitions, welcome party, and coffee breaks.
-        </p>
-        <p>The registration has not been officially opened yet. More information will be available in due time.</p>
+        <Participate />
         <h2>Presentations and abstracts</h2>
         <article class="no-padding container presentation-card">
           <div class="grid no-space">
@@ -408,6 +407,10 @@ const thisPageURL = Astro.url.href;
     border: 1px solid black;
     padding: 2px 4px;
     transform: translateX(-5px);
+  }
+  #participate a {
+    text-decoration: underline;
+    color: var(--primary) !important;
   }
   a[href^="tel:"]:before {
     content: "\260e\00a0";

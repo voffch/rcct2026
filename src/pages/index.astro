@@ -9,6 +9,7 @@ import Calendar from '../components/Calendar.astro';
 import {Content as Committees} from '../md/committees_ru.md';
 import {Content as Sections} from '../md/sections_ru.md';
 import {Content as Dates} from '../md/dates_ru.md';
+import {Content as Participate} from '../md/participate_ru.md';
 
 const thisPageURL = Astro.url.href;
 ---
@@ -283,6 +284,12 @@ const thisPageURL = Astro.url.href;
         <ul class="list border news">
           <li>
             <div class="max">
+              <div class="wrap">Открыта <a class="link underline" href="#participate">регистрация</a> и обновлена информация о регистрации</div>
+            </div>
+            <label>15.01.2026</label>
+          </li>
+          <li>
+            <div class="max">
               <div class="wrap">Добавлена <a class="link underline" href="#sponsors">информация для потенциальных спонсоров</a></div>
             </div>
             <label>29.12.2025</label>
@@ -317,25 +324,7 @@ const thisPageURL = Astro.url.href;
       </article>
       <article id="participate">
         <h2>Регистрация и оргвзнос</h2>
-        <p>Размер организационного взноса составит:
-          <ul>
-            <li><strong>3000 ₽</strong> для сопровождающих лиц;</li>
-            <li><strong>5000 ₽</strong> для аспирантов и студентов;</li>
-            <li><strong>12000 ₽</strong> для прочих участников конференции.</li>
-          </ul>
-          Оргвзнос включает оплату участия во всех мероприятиях конференции (заседания и стендовая сессия, круглые столы, специальные сессии и выставки), материалов участника, приветственного фуршета и кофе-пауз.
-        </p>
-        <p>Регистрация на конференцию еще не открыта. Следующая информация будет предоставлена позднее:
-          <ul>
-            <li>о том, как зарегистрироваться</li>
-            <li>как оплачивать оргвзнос</li>
-            <li>о конкретном месте проведения и как до него добраться</li>
-            <li>как оформлять тезисы доклада (со ссылкой на шаблон с подробным описанием)</li>
-            <li>куда и как их потом загружать</li>
-            <li>как оформлять устные и стендовые доклады (регламент, размеры, шаблоны)</li>
-            <li>о сборнике тезисов и (возможно) о статьях по результатам конференции в рецензируемых журналах</li>
-          </ul>
-        </p>
+        <Participate />
         <h2>Доклады и тезисы</h2>
         <article class="no-padding container presentation-card">
           <div class="grid no-space">
@@ -418,6 +407,10 @@ const thisPageURL = Astro.url.href;
     border: 1px solid black;
     padding: 2px 4px;
     transform: translateX(-5px);
+  }
+  #participate a {
+    text-decoration: underline;
+    color: var(--primary) !important;
   }
   a[href^="tel:"]:before {
     content: "\260e\00a0";
