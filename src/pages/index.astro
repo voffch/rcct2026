@@ -40,15 +40,16 @@ const thisPageURL = Astro.url.href;
     {
       "@context": "https://schema.org/",
       "@type": "Event",
-      "eventStatus": "https://schema.org/EventScheduled",
+      "eventStatus": "https://schema.org/EventRescheduled",
       "name": "RCCT 2026 - XXV Международная конференция по химической термодинамике в России",
       "organizer": {
         "@type": "Organization",
         "name": "Уральский федеральный университет",
         "url": "https://www.urfu.ru/"
       },
-      "startDate": "2026-07-06",
-      "endDate": "2026-07-10",
+      "startDate": "2026-06-29",
+      "endDate": "2026-07-03",
+      "previousStartDate": "2026-07-06",
       "offers": [
         {
           "@type": "Offer",
@@ -76,8 +77,8 @@ const thisPageURL = Astro.url.href;
           "priceCurrency": "RUB"
         }
         ],
-      "description": "RCCT 2026 - XXV Международная конференция по химической термодинамике в России проводится в г. Екатеринбург, 06-10 июля 2026 г. на базе Уральского федерального университета. Конференция является одним из крупнейших научных событий в России и охватывает все аспекты химической термодинамики от фундаментальных до прикладных вопросов, включая мультидисциплинарные подходы и смежные области науки.",
-      "image": "https://rcct2026.ru/logos/Logo-03.svg",
+      "description": "RCCT 2026 - XXV Международная конференция по химической термодинамике в России проводится в г. Екатеринбург, 29 июня - 03 июля 2026 г. на базе Уральского федерального университета. Конференция является одним из крупнейших научных событий в России и охватывает все аспекты химической термодинамики от фундаментальных до прикладных вопросов, включая мультидисциплинарные подходы и смежные области науки.",
+      "image": "https://rcct2026.ru/logos/RCCT-logo-large-ru.svg",
       "location": {
         "@type": "Place",
         "name": "Уральский федеральный университет",
@@ -97,7 +98,7 @@ const thisPageURL = Astro.url.href;
     <nav class="left max l">
       <header>
         <nav>
-          <img src="/logos/Logo-05.svg" class="circle extra">
+          <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
           <h6>RCCT 2026</h6>
         </nav>
       </header>
@@ -141,7 +142,7 @@ const thisPageURL = Astro.url.href;
 
     <nav class="left m">
       <header>
-        <img src="/logos/Logo-05.svg" class="circle extra">
+        <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
       </header>
       <a href="#info">
         <i>help</i>
@@ -183,7 +184,7 @@ const thisPageURL = Astro.url.href;
 
     <nav class="top s">
       <header>
-        <img src="/logos/Logo-05.svg" class="circle extra">
+        <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
       </header>
       <button class="transparent large" onclick="document.querySelector('#small-screen-menu').showModal()">
         <i>menu</i>
@@ -260,7 +261,7 @@ const thisPageURL = Astro.url.href;
   </dialog>
 
     <main class="responsive">
-      <img src="/logos/Logo-03.svg" class="logo responsive small-height" />
+      <img src="/logos/RCCT-logo-large-ru.svg" class="logo responsive small-height" />
       <article id="info">
         <h2>О конференции</h2>
         <p>Конференция по химической термодинамике - одно из крупнейших научных событий в России. Первая конференция – «Всесоюзная конференция по калориметрии» – состоялась в 1961 году и затем проводилась каждые два-три года до 1977 года. В 1979 году она была переименована во «Всесоюзную конференцию по калориметрии и химической термодинамике» и проводилась регулярно до 1991 года. После длительной паузы, в 2002 году традиция проведения конференций по термодинамике возродилась, и с тех пор каждые два года «Международные конференции по химической термодинамике в России»  проводятся в крупных научных центрах России, в том числе в Москве (2005, 2013), Санкт-Петербурге (2002, 2019), Иванове (2007, <a class="link" target="_blank" href="https://rcct.isc-ras.ru">2024</a>), Казани (2009, <a class="link" target="_blank" href="https://rcct2021.kpfu.ru">2022</a>), Самаре (2011), Нижнем Новгороде (2015) и Новосибирске (<a class="link" target="_blank" href="https://rcct2017.ru">2017</a>).</p>
@@ -282,6 +283,22 @@ const thisPageURL = Astro.url.href;
       <article id="news">
         <h2>Новости</h2>
         <ul class="list border news">
+          <li>
+            <i>notification_important</i>
+            <div class="max">
+              <h5 class="small">Изменены даты конференции</h5>
+              <div class="wrap">Конференция состоится на неделю раньше, чем планировалось, <strong>с 29 июня по 3 июля</strong> для того, чтобы участники могли избежать проблем со стоимостью и доступностью проживания и перелетов, связанных с проведением в Екатеринбурге выставки <a class="link underline" href="https://expo.innoprom.com/" target="_blank">Иннопром</a>. Приносим свои извинения за возможные неудобства.</div>
+            </div>
+            <label>26.01.2026</label>
+          </li>
+          <li>
+            <i>send</i>
+            <div class="max">
+              <div class="wrap">Открыт официальный Telegram-канал конференции</div>
+            </div>
+            <a class="link underline" href="https://t.me/rcct2026" target="_blank">Подписаться</a>
+            <label>26.01.2026</label>
+          </li>
           <li>
             <div class="max">
               <div class="wrap">Открыта <a class="link underline" href="#participate">регистрация</a> и обновлена информация о регистрации</div>
@@ -320,7 +337,7 @@ const thisPageURL = Astro.url.href;
       <article id="dates">
         <h2>Основные даты</h2>
         <Dates />
-        <Calendar lang="ru" year="2026" importantDates="10.3 29.3 30.4 6.7 7.7 8.7 9.7 10.7" />
+        <Calendar lang="ru" year="2026" importantDates="10.3 29.3 30.4 29.6 30.6 1.7 2.7 3.7" />
       </article>
       <article id="participate">
         <h2>Регистрация и оргвзнос</h2>
@@ -353,8 +370,15 @@ const thisPageURL = Astro.url.href;
       </article>
       <article id="contacts">
         <h2>Контакты</h2>
-          <p><strong>Адрес для обратной связи:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></p>
-          <p><strong>Дополнительные ресурсы:</strong> информация о конференции будет продублирована <a class="link underline" href="https://scievent.urfu.ru/rcct2026">на портале научных мероприятий УрФУ</a></p>
+          <p class="p-with-icon">
+            <i>mail</i>
+            <span><strong>Адрес для обратной связи:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></span>
+          </p>
+          <p class="p-with-icon">
+            <i>send</i>
+            <span><strong>Телеграм-канал конференции:</strong> <a class="link underline" href="https://t.me/rcct2026" target="_blank">@rcct2026</a></span>
+          </p>
+          <p><strong>Дополнительные ресурсы:</strong> информация о конференции будет продублирована <a class="link underline" href="https://scievent.urfu.ru/rcct2026" target="_blank">на портале научных мероприятий УрФУ</a></p>
           <p><strong>Email-рассылка:</strong> общее информирование участников конференции производится при помощи рассылки (с адресов @rcct2026.ru или @urfu.email). Подписаться на рассылку в настоящее время можно только по запросу. Отписаться можно, отправив пустое письмо с темой "unsubscribe conferenceusu" (без кавычек) на <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
           <p><strong>Почтовый адрес:</strong> 620000, г. Екатеринбург, пр. Ленина, 51, Уральский федеральный университет, Институт естественных наук и математики, кафедра физической и неорганической химии</p>
       </article>
@@ -440,6 +464,11 @@ const thisPageURL = Astro.url.href;
   .list > li {
     cursor: unset;
     padding: 0.5rem 0;
+  }
+  .p-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
   @media all and (max-width: 600px) {
     main > article {

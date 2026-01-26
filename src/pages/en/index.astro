@@ -40,15 +40,16 @@ const thisPageURL = Astro.url.href;
     {
       "@context": "https://schema.org/",
       "@type": "Event",
-      "eventStatus": "https://schema.org/EventScheduled",
+      "eventStatus": "https://schema.org/EventRescheduled",
       "name": "RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia",
       "organizer": {
         "@type": "Organization",
         "name": "Ural Federal University",
         "url": "https://www.urfu.ru/en/"
       },
-      "startDate": "2026-07-06",
-      "endDate": "2026-07-10",
+      "startDate": "2026-06-29",
+      "endDate": "2026-07-03",
+      "previousStartDate": "2026-07-06",
       "offers": [
         {
           "@type": "Offer",
@@ -76,8 +77,8 @@ const thisPageURL = Astro.url.href;
           "priceCurrency": "RUB"
         }
         ],
-      "description": "RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia will be held in Ekaterinburg on June 6-10, 2026 in the Ural Federal University. The conference covers all aspects of chemical thermodynamics, from fundamental to applied issues, and is one of the leading scientific events in Russia.",
-      "image": "https://rcct2026.ru/logos/Logo-03.svg",
+      "description": "RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia will be held in Ekaterinburg on June 29 - July 3, 2026 in the Ural Federal University. The conference covers all aspects of chemical thermodynamics, from fundamental to applied issues, and is one of the leading scientific events in Russia.",
+      "image": "https://rcct2026.ru/logos/RCCT-logo-large-en.svg",
       "location": {
         "@type": "Place",
         "name": "Ural Federal University",
@@ -97,7 +98,7 @@ const thisPageURL = Astro.url.href;
     <nav class="left max l">
       <header>
         <nav>
-          <img src="/logos/Logo-05.svg" class="circle extra">
+          <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
           <h6>RCCT 2026</h6>
         </nav>
       </header>
@@ -141,7 +142,7 @@ const thisPageURL = Astro.url.href;
 
     <nav class="left m">
       <header>
-        <img src="/logos/Logo-05.svg" class="circle extra">
+        <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
       </header>
       <a href="#info">
         <i>help</i>
@@ -183,7 +184,7 @@ const thisPageURL = Astro.url.href;
 
     <nav class="top s">
       <header>
-        <img src="/logos/Logo-05.svg" class="circle extra">
+        <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
       </header>
       <button class="transparent large" onclick="document.querySelector('#small-screen-menu').showModal()">
         <i>menu</i>
@@ -260,7 +261,7 @@ const thisPageURL = Astro.url.href;
   </dialog>
 
     <main class="responsive">
-      <img src="/logos/Logo-03.svg" class="logo responsive small-height" />
+      <img src="/logos/RCCT-logo-large-en.svg" class="logo responsive small-height" />
       <article id="info">
         <h2>General info</h2>
         <p>RCCT ("Russian Conference on Chemical Thermodynamics", or "International Conference on Chemical Thermodynamics in Russia") is one of the most significant scientific events in Russia. Its history can be traced back to the "All-Union Conference on Calorimetry", which was held every two to three years between 1961 and 1977. In 1979 the conference was renamed as the "All-Union Conference on Calorimetry and Chemical Thermodynamics" and was held regularly under this name until 1991. After a long hiatus, the tradition of organizing the meetings on chemical thermodynamics was revived in 2002 with the first "International Conference on Chemical Thermodynamics in Russia" in Saint Petersburg. Since then, the RCCT International Conferences have been held biannually in large scientific centers of Russia, including Moscow (2005, 2013), Saint Petersburg (2002, 2019), Ivanovo (2007, <a class="link" target="_blank" href="https://rcct.isc-ras.ru">2024</a>), Kazan (2009, <a class="link" target="_blank" href="https://rcct2021.kpfu.ru">2022</a>), Samara (2011), Nizhny Novgorod (2015), and Novosibirsk (<a class="link" target="_blank" href="https://rcct2017.ru">2017</a>).</p>
@@ -282,6 +283,22 @@ const thisPageURL = Astro.url.href;
       <article id="news">
         <h2>News</h2>
         <ul class="list border news">
+          <li>
+            <i>notification_important</i>
+            <div class="max">
+              <h5 class="small">Changing the dates</h5>
+              <div class="wrap">The conference will be held on <strong>June 29 - July 3</strong>, a week earlier than planned, to avoid high transfer and accommodation costs due to the <a class="link underline" href="https://expo.innoprom.com/" target="_blank">Innoprom</a> expo. We apologize for the inconvenience.</div>
+            </div>
+            <label>26.01.2026</label>
+          </li>
+          <li>
+            <i>send</i>
+            <div class="max">
+              <div class="wrap">You can now subscribe to our official Telegram channel</div>
+            </div>
+            <a class="link underline" href="https://t.me/rcct2026" target="_blank">Subscribe</a>
+            <label>26.01.2026</label>
+          </li>
           <li>
             <div class="max">
               <div class="wrap">Updated the <a class="link underline" href="#participate">registration</a> section; you can now register for the conference</div>
@@ -306,7 +323,6 @@ const thisPageURL = Astro.url.href;
               <h5 class="small">Newsletter</h5>
               <div class="wrap">Updated committee and contacts; distributed the first newsletter</div>
             </div>
-            <a class="link underline" href="/docs/1st_newsletter_EN.pdf">Download</a>
             <label>01.10.2025</label>
           </li>
           <li>
@@ -320,7 +336,7 @@ const thisPageURL = Astro.url.href;
       <article id="dates">
         <h2>Key Dates</h2>
         <Dates />
-        <Calendar lang="en" year="2026" importantDates="10.3 29.3 30.4 6.7 7.7 8.7 9.7 10.7" />
+        <Calendar lang="en" year="2026" importantDates="10.3 29.3 30.4 29.6 30.6 1.7 2.7 3.7" />
       </article>
       <article id="participate">
         <h2>Registration and participation fees</h2>
@@ -353,7 +369,14 @@ const thisPageURL = Astro.url.href;
       </article>
       <article id="contacts">
         <h2>Contacts</h2>
-          <p><strong>Contact us:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></p>
+          <p class="p-with-icon">
+            <i>mail</i>
+            <span><strong>Contact us:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></span>
+          </p>
+          <p class="p-with-icon">
+            <i>send</i>
+            <span><strong>Telegram channel:</strong> <a class="link underline" href="https://t.me/rcct2026" target="_blank">@rcct2026</a></span>
+          </p>
           <p><strong>Additional resources:</strong> the information about the conference will be made available on the <a class="link underline" href="https://scievent.urfu.ru/rcct2026">university website</a></p>
           <p><strong>Mass mail:</strong> the conference newsletters will be sent via the email (from @rcct2026.ru or @urfu.email). The subscription to the newsletter is available by request only. You can unsubscribe by sending an empty letter with "unsubscribe conferenceusu" (without quotes) as the email subject to <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
           <p><strong>Postal address:</strong> 620000, Ekaterinburg, 51 Lenin av., Ural Federal University, Institute of Natural Sciences and Mathematics, Department of Physical and Inorganic Chemistry</p>
@@ -440,6 +463,11 @@ const thisPageURL = Astro.url.href;
   .list > li {
     cursor: unset;
     padding: 0.5rem 0;
+  }
+  .p-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
   @media all and (max-width: 600px) {
     main > article {
