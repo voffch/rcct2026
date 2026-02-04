@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import cssHasPseudo from 'css-has-pseudo';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +12,14 @@ export default defineConfig({
     },
   },
   vite: {
+    css: {
+      transformer: 'postcss', 
+      postcss: {
+        plugins: [
+          cssHasPseudo({ preserve: true }),
+        ]
+      }
+    },
     ssr: {
       noExternal: ["beercss"],
     },
