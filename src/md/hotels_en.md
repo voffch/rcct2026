@@ -79,7 +79,8 @@ Address: Rozy Luxemburg, 49
 
 Special offers:
 - Standard room – 7500 ₽
-- Deluxe – 9000 ₽
+- Studio – 9000 ₽
+- Deluxe – 12000 ₽
 
 The price includes:
 - Breakfast on the 15th floor
