@@ -10,6 +10,7 @@ import {Content as Committees} from '../md/committees_ru.md';
 import {Content as Sections} from '../md/sections_ru.md';
 import {Content as Dates} from '../md/dates_ru.md';
 import {Content as Participate} from '../md/participate_ru.md';
+import {Content as Hotels} from '../md/hotels_ru.md';
 
 const thisPageURL = Astro.url.href;
 ---
@@ -126,13 +127,17 @@ const thisPageURL = Astro.url.href;
         <i>checklist</i>
         <div>Секции</div>
       </a>
-      <a href="#committees">
-        <i>diversity_3</i>
-        <div>Комитеты</div>
+      <a href="#hotels">
+        <i>hotel</i>
+        <div>Гостиницы</div>
       </a>
       <a href="#sponsors">
         <i>loyalty</i>
         <div>Спонсоры</div>
+      </a>
+      <a href="#committees">
+        <i>diversity_3</i>
+        <div>Комитеты</div>
       </a>
       <a href="#contacts">
         <i>chat</i>
@@ -168,13 +173,17 @@ const thisPageURL = Astro.url.href;
         <i>checklist</i>
         <div>Секции</div>
       </a>
-      <a href="#committees">
-        <i>diversity_3</i>
-        <div>Комитеты</div>
+      <a href="#hotels">
+        <i>hotel</i>
+        <div>Гостиницы</div>
       </a>
       <a href="#sponsors">
         <i>loyalty</i>
         <div>Спонсоры</div>
+      </a>
+      <a href="#committees">
+        <i>diversity_3</i>
+        <div>Комитеты</div>
       </a>
       <a href="#contacts">
         <i>chat</i>
@@ -238,15 +247,21 @@ const thisPageURL = Astro.url.href;
         </a>
       </li>
       <li class="wave round">
-        <a href="#committees">
-          <i>diversity_3</i>
-          <div>Комитеты</div>
+        <a href="#hotels">
+          <i>hotel</i>
+          <div>Гостиницы</div>
         </a>
       </li>
       <li class="wave round">
         <a href="#sponsors">
           <i>loyalty</i>
           <div>Спонсоры</div>
+        </a>
+      </li>
+      <li class="wave round">
+        <a href="#committees">
+          <i>diversity_3</i>
+          <div>Комитеты</div>
         </a>
       </li>
       <li class="wave round">
@@ -287,6 +302,12 @@ const thisPageURL = Astro.url.href;
       <article id="news">
         <h2>Новости</h2>
         <ul class="list border news">
+          <li>
+            <div class="max">
+              <div class="wrap">Добавлена информация <a class="link underline" href="#hotels">о гостиницах</a></div>
+            </div>
+            <label>12.02.2026</label>
+          </li>
           <li>
             <i>notification_important</i>
             <div class="max">
@@ -365,12 +386,15 @@ const thisPageURL = Astro.url.href;
       <article id="sections">
         <Sections />
       </article>
-      <article id="committees">
-        <Committees />
+      <article id="hotels">
+        <Hotels />
       </article>
       <article id="sponsors">
         <h2>Спонсоры</h2>
         <p>Оргкомитет конференции приглашает к сотрудничеству заинтересованные организации. Если вы хотите выступить в качестве компании-спонсора, предлагаем вам ознакомиться с <a class="link underline" href="/docs/RCCT2026_спонсорам.pdf" target="_blank">официальным письмом</a> и связаться с нами для уточнения подробностей.</p>
+      </article>
+      <article id="committees">
+        <Committees />
       </article>
       <article id="contacts">
         <h2>Контакты</h2>
@@ -436,7 +460,8 @@ const thisPageURL = Astro.url.href;
     padding: 2px 4px;
     transform: translateX(-5px);
   }
-  #participate a {
+  #participate a,
+  #hotels a {
     text-decoration: underline;
     color: var(--primary) !important;
   }
@@ -473,6 +498,14 @@ const thisPageURL = Astro.url.href;
     display: flex;
     align-items: center;
     gap: 0.25rem;
+  }
+  .hotel-header-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .hotel-header-wrapper span {
+    margin-left: 0.5rem;
+    font-weight: bold;
   }
   @media all and (max-width: 600px) {
     main > article {
