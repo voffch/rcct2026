@@ -47,6 +47,21 @@ Special offers with promo code RCCT-2026:
 Breakfast included. To use the offers, please contact the manager: Mukhametova Svetlana Marsel'evna, [MukhametovaSM@marinshotels.ru](mailto:MukhametovaSM@marinshotels.ru), [+7(343)270-22-22](tel:+73432702222) (add. 4230), [+7(982)722-38-46](tel:+79827223846)
 
 <p class="hotel-header-wrapper">
+    <i>star</i><i>star</i><i>star</i>
+    <span>SENSA ROOM Apart-hotel</span>
+</p>
+
+[https://sensaroom.ru/en](https://sensaroom.ru/en)
+
+Address: Gor'kogo, 69/1
+
+Studio:
+- Single room with/without breakfast: 6900 ₽/6000 ₽
+- Double room with/without breakfast: 8800 ₽/7000 ₽
+
+To use the offer, please mention the RCCT 2026 promo code and book via the email [sales@sensaroom.ru](mailto:sales@sensaroom.ru) or by calling [+7(982)722-38-46](tel:+79827223846)
+
+<p class="hotel-header-wrapper">
     <i>star</i><i>star</i><i>star</i><i>star</i>
     <span>SLIDE  HOTEL</span>
 </p>
@@ -66,7 +81,7 @@ The hotel offers 20% discount if you mention RCCT-2026 promo code in the comment
 
 Address: Mamina-Sibiryaka, 98
 
-The hodel offers 25% discount if you use the promo code RCCT-2026.
+The hodel offers 25% discount if you use the promo code RCCT-2026. To use the special offer, please contact the manager: Yuriy Kartavtsev, [reservations.ekaterinburg@cosmoshotels.ru](mailto:reservations.ekaterinburg@cosmoshotels.ru), [+7(343)216-60-00](tel:+73432166000), [+7(343)216-36-06](tel:+73432163606)
 
 <p class="hotel-header-wrapper">
     <i>star</i><i>star</i><i>star</i><i>star</i>

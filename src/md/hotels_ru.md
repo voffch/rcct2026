@@ -47,6 +47,21 @@
 Завтрак включен в стоимость. Для бронирования по специальным ценам необходимо связаться с менеджером: Мухаметова Светлана Марсельевна, [MukhametovaSM@marinshotels.ru](mailto:MukhametovaSM@marinshotels.ru), [+7(343)270-22-22](tel:+73432702222) (доб. 4230), [+7(982)722-38-46](tel:+79827223846)
 
 <p class="hotel-header-wrapper">
+    <i>star</i><i>star</i><i>star</i>
+    <span>Апарт-отель SENSA ROOM</span>
+</p>
+
+[https://sensaroom.ru](https://sensaroom.ru)
+
+Адрес: ул. Горького, 69/1
+
+Студия:
+- Одноместное размещение с завтраком/без: 6900 ₽/6000 ₽
+- Двухместное размещение с завтраком/без: 8800 ₽/7000 ₽
+
+Бронирование по спец. тарифу доступно по кодовому слову RCCT 2026. Забронировать номер можно по электронной почте [sales@sensaroom.ru](mailto:sales@sensaroom.ru) или по телефону [+7(982)722-38-46](tel:+79827223846)
+
+<p class="hotel-header-wrapper">
     <i>star</i><i>star</i><i>star</i><i>star</i>
     <span>SLIDE  HOTEL</span>
 </p>
@@ -66,7 +81,7 @@
 
 Адрес: ул. Мамина-Сибиряка, 98
 
-По кодовому слову RCCT-2026 доступна скидка 25% на размещение.
+По кодовому слову RCCT-2026 доступна скидка 25% на размещение. По вопросам бронирования вы можете связаться с менеджером: Юрий Картавцев, [reservations.ekaterinburg@cosmoshotels.ru](mailto:reservations.ekaterinburg@cosmoshotels.ru), [+7(343)216-60-00](tel:+73432166000), [+7(343)216-36-06](tel:+73432163606)
 
 <p class="hotel-header-wrapper">
     <i>star</i><i>star</i><i>star</i><i>star</i>
