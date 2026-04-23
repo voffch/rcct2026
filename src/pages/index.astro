@@ -1,8 +1,5 @@
 ---
-import "beercss";
-import "../settings.css"
-
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import LayoutRu from '../components/Layout_ru.astro';
 
 import Calendar from '../components/Calendar.astro';
 
@@ -11,524 +8,149 @@ import {Content as Sections} from '../md/sections_ru.md';
 import {Content as Dates} from '../md/dates_ru.md';
 import {Content as Participate} from '../md/participate_ru.md';
 import {Content as Hotels} from '../md/hotels_ru.md';
-
-const thisPageURL = Astro.url.href;
 ---
 
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google" content="notranslate">
-    <meta name="description" content="RCCT - одно из крупнейших научных событий в России, охватывающее все аспекты химической термодинамики. Конференция RCCT 2026 проводится в Екатеринбурге 6-10 июля 2026 г.">
-    <meta property="og:title" content="RCCT 2026 - XXV Международная конференция по химической термодинамике в России" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={thisPageURL} />
-    <meta property="og:image" content="/android-chrome-512x512.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image" content="/android-chrome-192x192.png" />
-    <meta property="og:image:width" content="192" />
-    <meta property="og:image:height" content="192" />
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:description" content="RCCT - одно из крупнейших научных событий в России, охватывающее все аспекты химической термодинамики. Конференция RCCT 2026 проводится в Екатеринбурге 6-10 июля 2026 г." />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <title>RCCT 2026 - XXV Международная конференция по химической термодинамике в России</title>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Event",
-      "eventStatus": "https://schema.org/EventRescheduled",
-      "name": "RCCT 2026 - XXV Международная конференция по химической термодинамике в России",
-      "organizer": {
-        "@type": "Organization",
-        "name": "Уральский федеральный университет",
-        "url": "https://www.urfu.ru/"
-      },
-      "startDate": "2026-06-29",
-      "endDate": "2026-07-03",
-      "previousStartDate": "2026-07-06",
-      "offers": [
-        {
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2025-09-03T23:59:59",
-          "validThrough": "2026-04-30T23:59:59",
-          "description": "Оргвзнос для обычных участников конференции",
-          "price": "12000.00",
-          "priceCurrency": "RUB"
-        },{
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2025-09-03T23:59:59",
-          "validThrough": "2026-04-30T23:59:59",
-          "description": "Оргвзнос для студентов и аспирантов",
-          "price": "5000.00",
-          "priceCurrency": "RUB"
-        },{
-          "@type": "Offer",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2025-09-03T23:59:59",
-          "validThrough": "2026-04-30T23:59:59",
-          "description": "Оргвзнос для сопровождающих лиц",
-          "price": "3000.00",
-          "priceCurrency": "RUB"
-        }
-        ],
-      "description": "RCCT 2026 - XXV Международная конференция по химической термодинамике в России проводится в г. Екатеринбург, 29 июня - 03 июля 2026 г. на базе Уральского федерального университета. Конференция является одним из крупнейших научных событий в России и охватывает все аспекты химической термодинамики от фундаментальных до прикладных вопросов, включая мультидисциплинарные подходы и смежные области науки.",
-      "image": "https://rcct2026.ru/logos/RCCT-logo-large-ru.svg",
-      "location": {
-        "@type": "Place",
-        "name": "Уральский федеральный университет",
-        "url": "https://urfu.ru/",
-        "address": {
-          "@type": "PostalAddress",
-          "postalCode": "620026",
-          "streetAddress": "ул. Куйбышева, 48",
-          "addressLocality": "Екатеринбург, Россия",
-          "addressCountry": "RU"
-        }
-      }
-    }
-    </script>
-    <script>
-      import cssHasPseudo from 'css-has-pseudo/browser';
-      cssHasPseudo(document);
-    </script>
-  </head>
-  <body class="light">
-    <nav class="left max l">
-      <header>
-        <nav>
-          <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
-          <h6>RCCT 2026</h6>
-        </nav>
-      </header>
-      <a href="#info">
-        <i>help</i>
-        <div>Информация</div>
-      </a>
-      <a href="#news">
-        <i>breaking_news</i>
-        <div>Новости</div>
-      </a>
-      <a href="#dates">
-        <i>calendar_month</i>
-        <div>Основные даты</div>
-      </a>
-      <a href="#participate">
-        <i>person_raised_hand</i>
-        <div>Участвовать!</div>
-      </a>
-      <a href="#sections">
-        <i>checklist</i>
-        <div>Секции</div>
-      </a>
-      <a href="#hotels">
-        <i>hotel</i>
-        <div>Гостиницы</div>
-      </a>
-      <a href="#sponsors">
-        <i>loyalty</i>
-        <div>Спонсоры</div>
-      </a>
-      <a href="#committees">
-        <i>diversity_3</i>
-        <div>Комитеты</div>
-      </a>
-      <a href="#contacts">
-        <i>chat</i>
-        <div>Контакты</div>
-      </a>
-      <a href={getRelativeLocaleUrl('en', '')}>
-        <i>language</i>
-        <div>In English</div>
-      </a>
-    </nav>
-
-    <nav class="left m">
-      <header>
-        <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
-      </header>
-      <a href="#info">
-        <i>help</i>
-        <div>Информация</div>
-      </a>
-      <a href="#news">
-        <i>breaking_news</i>
-        <div>Новости</div>
-      </a>
-      <a href="#dates">
-        <i>calendar_month</i>
-        <div>Основные даты</div>
-      </a>
-      <a href="#participate">
-        <i>person_raised_hand</i>
-        <div>Участвовать!</div>
-      </a>
-      <a href="#sections">
-        <i>checklist</i>
-        <div>Секции</div>
-      </a>
-      <a href="#hotels">
-        <i>hotel</i>
-        <div>Гостиницы</div>
-      </a>
-      <a href="#sponsors">
-        <i>loyalty</i>
-        <div>Спонсоры</div>
-      </a>
-      <a href="#committees">
-        <i>diversity_3</i>
-        <div>Комитеты</div>
-      </a>
-      <a href="#contacts">
-        <i>chat</i>
-        <div>Контакты</div>
-      </a>
-      <a href={getRelativeLocaleUrl('en', '')}>
-        <i>language</i>
-        <div>In English</div>
-      </a>
-    </nav>
-
-    <nav class="top s">
-      <header>
-        <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
-      </header>
-      <button class="transparent large" onclick="document.querySelector('#small-screen-menu').showModal()">
-        <i>menu</i>
-        <div>Меню</div>
-      </button>
-    </nav>
-
-  <dialog id="small-screen-menu" class="right small modal">
-    <header>
-      <nav>
-        <h6 class="max">Navigation</h6>
-        <button class="transparent circle large" onclick="document.querySelector('#small-screen-menu').close()">
-          <i>close</i>
-        </button>
-      </nav>
-    </header>
-    <div class="space"></div>
-    <ul class="list">
-      <li class="wave round">
-        <a href="#info">
-          <i>help</i>
-          <div>Информация</div>
-        </a>
+<LayoutRu>
+  <img src="/logos/RCCT-logo-large-ru.svg" class="logo responsive small-height" />
+  <article id="info">
+    <h2>О конференции</h2>
+    <p>Конференция по химической термодинамике - одно из крупнейших научных событий в России. Первая конференция – «Всесоюзная конференция по калориметрии» – состоялась в 1961 году и затем проводилась каждые два-три года до 1977 года. В 1979 году она была переименована во «Всесоюзную конференцию по калориметрии и химической термодинамике» и проводилась регулярно до 1991 года. После длительной паузы, в 2002 году традиция проведения конференций по термодинамике возродилась, и с тех пор каждые два года «Международные конференции по химической термодинамике в России»  проводятся в крупных научных центрах России, в том числе в Москве (2005, 2013), Санкт-Петербурге (2002, 2019), Иванове (2007, <a class="link" target="_blank" href="https://rcct.isc-ras.ru">2024</a>), Казани (2009, <a class="link" target="_blank" href="https://rcct2021.kpfu.ru">2022</a>), Самаре (2011), Нижнем Новгороде (2015) и Новосибирске (<a class="link" target="_blank" href="https://rcct2017.ru">2017</a>).</p>
+    <p>Каждая конференция RCCT — уникальное и важное научное событие как для российского, так и для международного термодинамического сообщества. Конференция традиционно охватывает все аспекты химической термодинамики от фундаментальных до прикладных вопросов, включая мультидисциплинарные подходы и смежные области науки. В 2026 году XXV Международная конференция по химической термодинамике в России (RCCT-2026) будет проведена в г. Екатеринбурге на базе Уральского федерального университета.</p>
+    <p>
+      Организаторы конференции RCCT-2026:
+      <ul>
+        <li>Уральский федеральный университет</li>
+        <li>Институт общей и неорганической химии им. Курнакова РАН</li>
+        <li>Министерство науки и высшего образования РФ</li>
+        <li>Российская академия наук</li>
+        <li>Российское химическое общество им. Д.И. Менделеева</li>
+        <li>Научный совет РАН по физической химии</li>
+        <li>Научный совет РАН по керамическим материалам</li>
+        <li>Научный совет РАН по неорганической химии</li>
+      </ul>
+    </p>
+  </article>
+  <article id="news">
+    <h2>Новости</h2>
+    <ul class="list border news">
+      <li>
+        <div class="max">
+          <div class="wrap">Регистрация продлена до 15 апреля, а прием оргвзноса - до 15 мая</div>
+        </div>
+        <label>30.03.2026</label>
       </li>
-      <li class="wave round">
-        <a href="#news">
-          <i>breaking_news</i>
-          <div>Новости</div>
-        </a>
+      <li>
+        <div class="max">
+          <div class="wrap">Регистрация продлена до 29 марта</div>
+        </div>
+        <label>11.03.2026</label>
       </li>
-      <li class="wave round">
-        <a href="#dates">
-          <i>calendar_month</i>
-          <div>Основные даты</div>
-        </a>
+      <li>
+        <div class="max">
+          <div class="wrap">Добавлена информация <a class="link underline" href="#hotels">о гостиницах</a></div>
+        </div>
+        <label>12.02.2026</label>
       </li>
-      <li class="wave round">
-        <a href="#participate">
-          <i>person_raised_hand</i>
-          <div>Участвовать!</div>
-        </a>
+      <li>
+        <i>notification_important</i>
+        <div class="max">
+          <h5 class="small">Изменены даты конференции</h5>
+          <div class="wrap">Конференция состоится на неделю раньше, чем планировалось, <strong>с 29 июня по 3 июля</strong> для того, чтобы участники могли избежать проблем со стоимостью и доступностью проживания и перелетов, связанных с проведением в Екатеринбурге выставки <a class="link underline" href="https://expo.innoprom.com/" target="_blank">Иннопром</a>. Приносим свои извинения за возможные неудобства.</div>
+        </div>
+        <label>26.01.2026</label>
       </li>
-      <li class="wave round">
-        <a href="#sections">
-          <i>checklist</i>
-          <div>Секции</div>
-        </a>
+      <li>
+        <i>send</i>
+        <div class="max">
+          <div class="wrap">Открыт официальный Telegram-канал конференции</div>
+        </div>
+        <a class="link underline" href="https://t.me/rcct2026" target="_blank">Подписаться</a>
+        <label>26.01.2026</label>
       </li>
-      <li class="wave round">
-        <a href="#hotels">
-          <i>hotel</i>
-          <div>Гостиницы</div>
-        </a>
+      <li>
+        <div class="max">
+          <div class="wrap">Открыта <a class="link underline" href="#participate">регистрация</a> и обновлена информация о регистрации</div>
+        </div>
+        <label>15.01.2026</label>
       </li>
-      <li class="wave round">
-        <a href="#sponsors">
-          <i>loyalty</i>
-          <div>Спонсоры</div>
-        </a>
+      <li>
+        <div class="max">
+          <div class="wrap">Добавлена <a class="link underline" href="#sponsors">информация для потенциальных спонсоров</a></div>
+        </div>
+        <label>29.12.2025</label>
       </li>
-      <li class="wave round">
-        <a href="#committees">
-          <i>diversity_3</i>
-          <div>Комитеты</div>
-        </a>
+      <li>
+        <div class="max">
+          <div class="wrap">Дополнена информация об организаторах и составе оргкомитета</div>
+        </div>
+        <label>16.12.2025</label>
       </li>
-      <li class="wave round">
-        <a href="#contacts">
-          <i>chat</i>
-          <div>Контакты</div>
-        </a>
+      <li>
+        <i>attach_email</i>
+        <div class="max">
+          <h5 class="small">Рассылка</h5>
+          <div class="wrap">Обновлена информация об оргкомитете и контактах; разослан первый циркуляр</div>
+        </div>
+        <a class="link underline" href="/docs/1st_newsletter_RU.pdf">Скачать</a>
+        <label>01.10.2025</label>
       </li>
-      <li class="wave round">
-        <a href={getRelativeLocaleUrl('en', '')}>
-          <i>language</i>
-          <div>In English</div>
-        </a>
+      <li>
+        <div class="max">
+          <div class="wrap">Актуализирована информация об основных датах, секциях, размере оргвзноса и составе оргкомитета</div>
+        </div>
+        <label>03.09.2025</label>
       </li>
     </ul>
-  </dialog>
-
-    <main class="responsive">
-      <img src="/logos/RCCT-logo-large-ru.svg" class="logo responsive small-height" />
-      <article id="info">
-        <h2>О конференции</h2>
-        <p>Конференция по химической термодинамике - одно из крупнейших научных событий в России. Первая конференция – «Всесоюзная конференция по калориметрии» – состоялась в 1961 году и затем проводилась каждые два-три года до 1977 года. В 1979 году она была переименована во «Всесоюзную конференцию по калориметрии и химической термодинамике» и проводилась регулярно до 1991 года. После длительной паузы, в 2002 году традиция проведения конференций по термодинамике возродилась, и с тех пор каждые два года «Международные конференции по химической термодинамике в России»  проводятся в крупных научных центрах России, в том числе в Москве (2005, 2013), Санкт-Петербурге (2002, 2019), Иванове (2007, <a class="link" target="_blank" href="https://rcct.isc-ras.ru">2024</a>), Казани (2009, <a class="link" target="_blank" href="https://rcct2021.kpfu.ru">2022</a>), Самаре (2011), Нижнем Новгороде (2015) и Новосибирске (<a class="link" target="_blank" href="https://rcct2017.ru">2017</a>).</p>
-        <p>Каждая конференция RCCT — уникальное и важное научное событие как для российского, так и для международного термодинамического сообщества. Конференция традиционно охватывает все аспекты химической термодинамики от фундаментальных до прикладных вопросов, включая мультидисциплинарные подходы и смежные области науки. В 2026 году XXV Международная конференция по химической термодинамике в России (RCCT-2026) будет проведена в г. Екатеринбурге на базе Уральского федерального университета.</p>
-        <p>
-          Организаторы конференции RCCT-2026:
-          <ul>
-            <li>Уральский федеральный университет</li>
-            <li>Институт общей и неорганической химии им. Курнакова РАН</li>
-            <li>Министерство науки и высшего образования РФ</li>
-            <li>Российская академия наук</li>
-            <li>Российское химическое общество им. Д.И. Менделеева</li>
-            <li>Научный совет РАН по физической химии</li>
-            <li>Научный совет РАН по керамическим материалам</li>
-            <li>Научный совет РАН по неорганической химии</li>
-          </ul>
-        </p>
-      </article>
-      <article id="news">
-        <h2>Новости</h2>
-        <ul class="list border news">
-          <li>
-            <div class="max">
-              <div class="wrap">Регистрация продлена до 15 апреля, а прием оргвзноса - до 15 мая</div>
-            </div>
-            <label>30.03.2026</label>
-          </li>
-          <li>
-            <div class="max">
-              <div class="wrap">Регистрация продлена до 29 марта</div>
-            </div>
-            <label>11.03.2026</label>
-          </li>
-          <li>
-            <div class="max">
-              <div class="wrap">Добавлена информация <a class="link underline" href="#hotels">о гостиницах</a></div>
-            </div>
-            <label>12.02.2026</label>
-          </li>
-          <li>
-            <i>notification_important</i>
-            <div class="max">
-              <h5 class="small">Изменены даты конференции</h5>
-              <div class="wrap">Конференция состоится на неделю раньше, чем планировалось, <strong>с 29 июня по 3 июля</strong> для того, чтобы участники могли избежать проблем со стоимостью и доступностью проживания и перелетов, связанных с проведением в Екатеринбурге выставки <a class="link underline" href="https://expo.innoprom.com/" target="_blank">Иннопром</a>. Приносим свои извинения за возможные неудобства.</div>
-            </div>
-            <label>26.01.2026</label>
-          </li>
-          <li>
-            <i>send</i>
-            <div class="max">
-              <div class="wrap">Открыт официальный Telegram-канал конференции</div>
-            </div>
-            <a class="link underline" href="https://t.me/rcct2026" target="_blank">Подписаться</a>
-            <label>26.01.2026</label>
-          </li>
-          <li>
-            <div class="max">
-              <div class="wrap">Открыта <a class="link underline" href="#participate">регистрация</a> и обновлена информация о регистрации</div>
-            </div>
-            <label>15.01.2026</label>
-          </li>
-          <li>
-            <div class="max">
-              <div class="wrap">Добавлена <a class="link underline" href="#sponsors">информация для потенциальных спонсоров</a></div>
-            </div>
-            <label>29.12.2025</label>
-          </li>
-          <li>
-            <div class="max">
-              <div class="wrap">Дополнена информация об организаторах и составе оргкомитета</div>
-            </div>
-            <label>16.12.2025</label>
-          </li>
-          <li>
-            <i>attach_email</i>
-            <div class="max">
-              <h5 class="small">Рассылка</h5>
-              <div class="wrap">Обновлена информация об оргкомитете и контактах; разослан первый циркуляр</div>
-            </div>
-            <a class="link underline" href="/docs/1st_newsletter_RU.pdf">Скачать</a>
-            <label>01.10.2025</label>
-          </li>
-          <li>
-            <div class="max">
-              <div class="wrap">Актуализирована информация об основных датах, секциях, размере оргвзноса и составе оргкомитета</div>
-            </div>
-            <label>03.09.2025</label>
-          </li>
-        </ul>
-      </article>
-      <article id="dates">
-        <h2>Основные даты</h2>
-        <Dates />
-        <Calendar lang="ru" year="2026" importantDates="15.4 15.5 29.6 30.6 1.7 2.7 3.7" />
-      </article>
-      <article id="participate">
-        <h2>Регистрация и оргвзнос</h2>
-        <Participate />
-        <h2>Доклады и тезисы</h2>
-        <article class="no-padding container presentation-card">
-          <div class="grid no-space">
-            <div class="s12 m6">
-              <img class="responsive" src="/img/presentation_templates_new.png" alt="Шаблоны презентаций">
-            </div>
-            <div class="s12 m6">
-              <div class="padding">
-                <h5>Шаблоны презентаций</h5>
-                <p>В этом файле несколько примеров оформления титульных слайдов презентаций к устным докладам.</p>
-                <a class="link underline" href="/docs/RCCT_presentation_templates.pptx">Скачать (pptx, &lt;3 Mb)</a>
-              </div>
-            </div>
+  </article>
+  <article id="dates">
+    <h2>Основные даты</h2>
+    <Dates />
+    <Calendar lang="ru" year="2026" importantDates="15.4 15.5 29.6 30.6 1.7 2.7 3.7" />
+  </article>
+  <article id="participate">
+    <h2>Регистрация и оргвзнос</h2>
+    <Participate />
+    <h2>Доклады и тезисы</h2>
+    <article class="no-padding container presentation-card">
+      <div class="grid no-space">
+        <div class="s12 m6">
+          <img class="responsive" src="/img/presentation_templates_new.png" alt="Шаблоны презентаций">
+        </div>
+        <div class="s12 m6">
+          <div class="padding">
+            <h5>Шаблоны презентаций</h5>
+            <p>В этом файле несколько примеров оформления титульных слайдов презентаций к устным докладам.</p>
+            <a class="link underline" href="/docs/RCCT_presentation_templates.pptx">Скачать (pptx, &lt;3 Mb)</a>
           </div>
-        </article>
-      </article>
-      <article id="sections">
-        <Sections />
-      </article>
-      <article id="hotels">
-        <Hotels />
-      </article>
-      <article id="sponsors">
-        <h2>Спонсоры</h2>
-        <p>Оргкомитет конференции приглашает к сотрудничеству заинтересованные организации. Если вы хотите выступить в качестве компании-спонсора, предлагаем вам ознакомиться с <a class="link underline" href="/docs/RCCT2026_спонсорам.pdf" target="_blank">официальным письмом</a> и связаться с нами для уточнения подробностей.</p>
-      </article>
-      <article id="committees">
-        <Committees />
-      </article>
-      <article id="contacts">
-        <h2>Контакты</h2>
-          <p class="p-with-icon">
-            <i>mail</i>
-            <span><strong>Адрес для обратной связи:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></span>
-          </p>
-          <p class="p-with-icon">
-            <i>send</i>
-            <span><strong>Телеграм-канал конференции:</strong> <a class="link underline" href="https://t.me/rcct2026" target="_blank">@rcct2026</a></span>
-          </p>
-          <p><strong>Дополнительные ресурсы:</strong> информация о конференции будет продублирована <a class="link underline" href="https://scievent.urfu.ru/rcct2026" target="_blank">на портале научных мероприятий УрФУ</a></p>
-          <p><strong>Email-рассылка:</strong> общее информирование участников конференции производится при помощи рассылки (с адресов @rcct2026.ru или @urfu.email). Подписаться на рассылку в настоящее время можно только по запросу. Отписаться можно, отправив пустое письмо с темой "unsubscribe conferenceusu" (без кавычек) на <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
-          <p><strong>Почтовый адрес:</strong> 620000, г. Екатеринбург, пр. Ленина, 51, Уральский федеральный университет, Институт естественных наук и математики, кафедра физической и неорганической химии</p>
-      </article>
-    </main>
-  </body>
-</html>
-
-<style>
-	img.logo {
-		object-fit: contain;
-		max-width: 800px;
-	}
-  main {
-    font-size: 16px;
-    max-width: 64rem;
-    margin: 0 0.5rem;
-  }
-  /*#info {
-    columns: auto 32em;
-  }*/
-  .committee-card {
-    max-width: 256px;
-    margin: 0 auto;
-  }
-  .committee-card img {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .committee-card, .committee-card > div {
-    background-color: var(--surface-container-high);
-  }
-  .presentation-card img {
-    object-fit: scale-down;
-  }
-</style>
-
-<style is:global>
-  #committees {
-    columns: auto 20em;
-  }
-  #committees ul {
-    list-style-type: none;
-    padding: 0 0 0 1rem;
-    text-indent: -1rem;
-  }
-  #committees .dead {
-    display: inline-block;
-    padding-left: 1rem;
-    text-indent: 0;
-    border: 1px solid black;
-    padding: 2px 4px;
-    transform: translateX(-5px);
-  }
-  #participate a,
-  #hotels a {
-    text-decoration: underline;
-    color: var(--primary) !important;
-  }
-  a[href^="tel:"]:before {
-    content: "\260e\00a0";
-  }
-  a[href^="mailto:"]:before {
-    content: "\2709\00a0";
-  }
-  main a[href^="http"]::after,
-  main a[href^="https://"]::after {
-    content: "";
-    width: 11px;
-    height: 11px;
-    margin-left: 4px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .list > li > a,
-  .list > li > a:only-child {
-    white-space: wrap;
-  }
-  .list > li > a[href^="http"],
-  .list > li > a[href^="https://"] {
-    gap: 0
-  }
-  .list > li {
-    cursor: unset;
-    padding: 0.5rem 0;
-  }
-  .p-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  .hotel-header-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  .hotel-header-wrapper span {
-    margin-left: 0.5rem;
-    font-weight: bold;
-  }
-  @media all and (max-width: 600px) {
-    main > article {
-      scroll-margin-top: 5rem;
-    }
-  }
-</style>
-
-<script is:inline>
-  const smallScreenMenuLinks = document.querySelectorAll('#small-screen-menu a');
-  smallScreenMenuLinks.forEach((a) => a.addEventListener('click', () => {
-    document.querySelector('#small-screen-menu').close();
-  }));
-</script>
+        </div>
+      </div>
+    </article>
+  </article>
+  <article id="sections">
+    <Sections />
+  </article>
+  <article id="hotels">
+    <Hotels />
+  </article>
+  <article id="sponsors">
+    <h2>Спонсоры</h2>
+    <p>Оргкомитет конференции приглашает к сотрудничеству заинтересованные организации. Если вы хотите выступить в качестве компании-спонсора, предлагаем вам ознакомиться с <a class="link underline" href="/docs/RCCT2026_спонсорам.pdf" target="_blank">официальным письмом</a> и связаться с нами для уточнения подробностей.</p>
+  </article>
+  <article id="committees">
+    <Committees />
+  </article>
+  <article id="contacts">
+    <h2>Контакты</h2>
+      <p class="p-with-icon">
+        <i>mail</i>
+        <span><strong>Адрес для обратной связи:</strong> <a class="link underline" href="mailto:info@rcct2026.ru">info@rcct2026.ru</a></span>
+      </p>
+      <p class="p-with-icon">
+        <i>send</i>
+        <span><strong>Телеграм-канал конференции:</strong> <a class="link underline" href="https://t.me/rcct2026" target="_blank">@rcct2026</a></span>
+      </p>
+      <p><strong>Дополнительные ресурсы:</strong> информация о конференции будет продублирована <a class="link underline" href="https://scievent.urfu.ru/rcct2026" target="_blank">на портале научных мероприятий УрФУ</a></p>
+      <p><strong>Email-рассылка:</strong> общее информирование участников конференции производится при помощи рассылки (с адресов @rcct2026.ru или @urfu.email). Подписаться на рассылку в настоящее время можно только по запросу. Отписаться можно, отправив пустое письмо с темой "unsubscribe conferenceusu" (без кавычек) на <a class="link underline" href="mailto:sympa@urfu.email?subject=unsubscribe%20conferenceusu">sympa@urfu.email</a>.</p>
+      <p><strong>Почтовый адрес:</strong> 620000, г. Екатеринбург, пр. Ленина, 51, Уральский федеральный университет, Институт естественных наук и математики, кафедра физической и неорганической химии</p>
+  </article>
+</LayoutRu>

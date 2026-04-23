@@ -1,0 +1,182 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+---
+
+<nav class="left max l">
+  <header>
+    <nav>
+      <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
+      <h6>RCCT 2026</h6>
+    </nav>
+  </header>
+  <a href="#info">
+    <i>help</i>
+    <div>Информация</div>
+  </a>
+  <a href="#news">
+    <i>breaking_news</i>
+    <div>Новости</div>
+  </a>
+  <a href="#dates">
+    <i>calendar_month</i>
+    <div>Основные даты</div>
+  </a>
+  <a href="#participate">
+    <i>person_raised_hand</i>
+    <div>Участвовать!</div>
+  </a>
+  <a href="#sections">
+    <i>checklist</i>
+    <div>Секции</div>
+  </a>
+  <a href="#hotels">
+    <i>hotel</i>
+    <div>Гостиницы</div>
+  </a>
+  <a href="#sponsors">
+    <i>loyalty</i>
+    <div>Спонсоры</div>
+  </a>
+  <a href="#committees">
+    <i>diversity_3</i>
+    <div>Комитеты</div>
+  </a>
+  <a href="#contacts">
+    <i>chat</i>
+    <div>Контакты</div>
+  </a>
+  <a href={getRelativeLocaleUrl('en', '')}>
+    <i>language</i>
+    <div>In English</div>
+  </a>
+</nav>
+
+<nav class="left m">
+  <header>
+    <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
+  </header>
+  <a href="#info">
+    <i>help</i>
+    <div>Информация</div>
+  </a>
+  <a href="#news">
+    <i>breaking_news</i>
+    <div>Новости</div>
+  </a>
+  <a href="#dates">
+    <i>calendar_month</i>
+    <div>Основные даты</div>
+  </a>
+  <a href="#participate">
+    <i>person_raised_hand</i>
+    <div>Участвовать!</div>
+  </a>
+  <a href="#sections">
+    <i>checklist</i>
+    <div>Секции</div>
+  </a>
+  <a href="#hotels">
+    <i>hotel</i>
+    <div>Гостиницы</div>
+  </a>
+  <a href="#sponsors">
+    <i>loyalty</i>
+    <div>Спонсоры</div>
+  </a>
+  <a href="#committees">
+    <i>diversity_3</i>
+    <div>Комитеты</div>
+  </a>
+  <a href="#contacts">
+    <i>chat</i>
+    <div>Контакты</div>
+  </a>
+  <a href={getRelativeLocaleUrl('en', '')}>
+    <i>language</i>
+    <div>In English</div>
+  </a>
+</nav>
+
+<nav class="top s">
+  <header>
+    <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
+  </header>
+  <button class="transparent large" onclick="document.querySelector('#small-screen-menu').showModal()">
+    <i>menu</i>
+    <div>Меню</div>
+  </button>
+</nav>
+
+<dialog id="small-screen-menu" class="right small modal">
+<header>
+  <nav>
+    <h6 class="max">Navigation</h6>
+    <button class="transparent circle large" onclick="document.querySelector('#small-screen-menu').close()">
+      <i>close</i>
+    </button>
+  </nav>
+</header>
+<div class="space"></div>
+<ul class="list">
+  <li class="wave round">
+    <a href="#info">
+      <i>help</i>
+      <div>Информация</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href="#news">
+      <i>breaking_news</i>
+      <div>Новости</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href="#dates">
+      <i>calendar_month</i>
+      <div>Основные даты</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href="#participate">
+      <i>person_raised_hand</i>
+      <div>Участвовать!</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href="#sections">
+      <i>checklist</i>
+      <div>Секции</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href="#hotels">
+      <i>hotel</i>
+      <div>Гостиницы</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href="#sponsors">
+      <i>loyalty</i>
+      <div>Спонсоры</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href="#committees">
+      <i>diversity_3</i>
+      <div>Комитеты</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href="#contacts">
+      <i>chat</i>
+      <div>Контакты</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href={getRelativeLocaleUrl('en', '')}>
+      <i>language</i>
+      <div>In English</div>
+    </a>
+  </li>
+</ul>
+</dialog>

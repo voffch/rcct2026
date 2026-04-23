@@ -1,0 +1,60 @@
+img.logo {
+    object-fit: contain;
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 800px;
+    height: auto !important;
+}
+.committee-card {
+    max-width: 256px;
+    margin: 0 auto;
+}
+.committee-card img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.committee-card, .committee-card > div {
+    background-color: var(--surface-container-high);
+}
+.presentation-card img {
+    object-fit: scale-down;
+}
+#committees {
+    columns: auto 20em;
+}
+#committees ul {
+    list-style-type: none;
+    padding: 0 0 0 1rem;
+    text-indent: -1rem;
+}
+#committees .dead {
+    display: inline-block;
+    padding-left: 1rem;
+    text-indent: 0;
+    border: 1px solid black;
+    padding: 2px 4px;
+    transform: translateX(-5px);
+}
+#participate a,
+#hotels a {
+    text-decoration: underline;
+    color: var(--primary) !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.hotel-header-wrapper {
+    display: flex;
+    align-items: center;
+}
+.hotel-header-wrapper span {
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+@media all and (max-width: 600px) {
+    #news li {
+        white-space: unset !important;
+        flex-direction: column;
+        text-align: center;
+    }
+}
