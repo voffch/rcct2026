@@ -1,5 +1,10 @@
 ---
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getAbsoluteLocaleUrl } from 'astro:i18n';
+
+function url(lang: string, href: string) {
+  let url = getAbsoluteLocaleUrl(lang, href);
+  return (url.includes('#') && url.endsWith('/')) ? url.slice(0, -1) : url;
+}
 ---
 
 <nav class="left max l">
@@ -9,43 +14,43 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
       <h6>RCCT 2026</h6>
     </nav>
   </header>
-  <a href="#info">
+  <a href={url('ru', '#info')}>
     <i>help</i>
     <div>Информация</div>
   </a>
-  <a href="#news">
+  <a href={url('ru', '#news')}>
     <i>breaking_news</i>
     <div>Новости</div>
   </a>
-  <a href="#dates">
+  <a href={url('ru', '#dates')}>
     <i>calendar_month</i>
     <div>Основные даты</div>
   </a>
-  <a href="#participate">
+  <a href={url('ru', '#participate')}>
     <i>person_raised_hand</i>
     <div>Участвовать!</div>
   </a>
-  <a href="#sections">
+  <a href={url('ru', '#sections')}>
     <i>checklist</i>
     <div>Секции</div>
   </a>
-  <a href="#hotels">
+  <a href={url('ru', '#hotels')}>
     <i>hotel</i>
     <div>Гостиницы</div>
   </a>
-  <a href="#sponsors">
+  <a href={url('ru', '#sponsors')}>
     <i>loyalty</i>
     <div>Спонсоры</div>
   </a>
-  <a href="#committees">
+  <a href={url('ru', '#committees')}>
     <i>diversity_3</i>
     <div>Комитеты</div>
   </a>
-  <a href="#contacts">
+  <a href={url('ru', '#contacts')}>
     <i>chat</i>
     <div>Контакты</div>
   </a>
-  <a href={getRelativeLocaleUrl('en', '')}>
+  <a href={url('en', '')}>
     <i>language</i>
     <div>In English</div>
   </a>
@@ -55,43 +60,43 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
   <header>
     <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
   </header>
-  <a href="#info">
+  <a href={url('ru', '#info')}>
     <i>help</i>
     <div>Информация</div>
   </a>
-  <a href="#news">
+  <a href={url('ru', '#news')}>
     <i>breaking_news</i>
     <div>Новости</div>
   </a>
-  <a href="#dates">
+  <a href={url('ru', '#dates')}>
     <i>calendar_month</i>
     <div>Основные даты</div>
   </a>
-  <a href="#participate">
+  <a href={url('ru', '#participate')}>
     <i>person_raised_hand</i>
     <div>Участвовать!</div>
   </a>
-  <a href="#sections">
+  <a href={url('ru', '#sections')}>
     <i>checklist</i>
     <div>Секции</div>
   </a>
-  <a href="#hotels">
+  <a href={url('ru', '#hotels')}>
     <i>hotel</i>
     <div>Гостиницы</div>
   </a>
-  <a href="#sponsors">
+  <a href={url('ru', '#sponsors')}>
     <i>loyalty</i>
     <div>Спонсоры</div>
   </a>
-  <a href="#committees">
+  <a href={url('ru', '#committees')}>
     <i>diversity_3</i>
     <div>Комитеты</div>
   </a>
-  <a href="#contacts">
+  <a href={url('ru', '#contacts')}>
     <i>chat</i>
     <div>Контакты</div>
   </a>
-  <a href={getRelativeLocaleUrl('en', '')}>
+  <a href={url('en', '')}>
     <i>language</i>
     <div>In English</div>
   </a>
@@ -110,7 +115,7 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 <dialog id="small-screen-menu" class="right small modal">
 <header>
   <nav>
-    <h6 class="max">Navigation</h6>
+    <h6 class="max">Разделы</h6>
     <button class="transparent circle large" onclick="document.querySelector('#small-screen-menu').close()">
       <i>close</i>
     </button>
@@ -119,61 +124,61 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 <div class="space"></div>
 <ul class="list">
   <li class="wave round">
-    <a href="#info">
+    <a href={url('ru', '#info')}>
       <i>help</i>
       <div>Информация</div>
     </a>
   </li>
   <li class="wave round">
-    <a href="#news">
+    <a href={url('ru', '#news')}>
       <i>breaking_news</i>
       <div>Новости</div>
     </a>
   </li>
   <li class="wave round">
-    <a href="#dates">
+    <a href={url('ru', '#dates')}>
       <i>calendar_month</i>
       <div>Основные даты</div>
     </a>
   </li>
   <li class="wave round">
-    <a href="#participate">
+    <a href={url('ru', '#participate')}>
       <i>person_raised_hand</i>
       <div>Участвовать!</div>
     </a>
   </li>
   <li class="wave round">
-    <a href="#sections">
+    <a href={url('ru', '#sections')}>
       <i>checklist</i>
       <div>Секции</div>
     </a>
   </li>
   <li class="wave round">
-    <a href="#hotels">
+    <a href={url('ru', '#hotels')}>
       <i>hotel</i>
       <div>Гостиницы</div>
     </a>
   </li>
   <li class="wave round">
-    <a href="#sponsors">
+    <a href={url('ru', '#sponsors')}>
       <i>loyalty</i>
       <div>Спонсоры</div>
     </a>
   </li>
   <li class="wave round">
-    <a href="#committees">
+    <a href={url('ru', '#committees')}>
       <i>diversity_3</i>
       <div>Комитеты</div>
     </a>
   </li>
   <li class="wave round">
-    <a href="#contacts">
+    <a href={url('ru', '#contacts')}>
       <i>chat</i>
       <div>Контакты</div>
     </a>
   </li>
   <li class="wave round">
-    <a href={getRelativeLocaleUrl('en', '')}>
+    <a href={url('en', '')}>
       <i>language</i>
       <div>In English</div>
     </a>
@@ -187,3 +192,12 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
     document.querySelector('#small-screen-menu').close();
   }));
 </script>
+
+<style>
+  nav.left {
+    overflow-y: scroll;
+  }
+  nav.left header {
+    margin-bottom: 0;
+  }
+</style>
