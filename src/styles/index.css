@@ -1,3 +1,5 @@
+@import "./global.css";
+
 img.logo {
     object-fit: contain;
     margin-left: 0;

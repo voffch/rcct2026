@@ -1,3 +1,5 @@
+@import "./settings.css";
+
 main {
     font-size: 16px !important;
     max-width: 64rem !important;
