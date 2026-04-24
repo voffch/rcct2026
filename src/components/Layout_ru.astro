@@ -100,10 +100,3 @@ const thisPageURL = Astro.url.href;
     </main>
   </body>
 </html>
-
-<script is:inline>
-  const smallScreenMenuLinks = document.querySelectorAll('#small-screen-menu a');
-  smallScreenMenuLinks.forEach((a) => a.addEventListener('click', () => {
-    document.querySelector('#small-screen-menu').close();
-  }));
-</script>
