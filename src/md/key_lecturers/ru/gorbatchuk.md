@@ -1,7 +1,7 @@
 ---
 img: "gorbatchuk.jpg"
 name: "Валерий Виленович Горбачук"
-title: ""
+title: "Thermodynamics of Drug Polymorphism: Problems and Solutions"
 ---
 
 Доктор химических наук, профессор кафедры физической химии Химического института им. А.М.Бутлерова КФУ, <a class="link underline" href="https://kpfu.ru/Valery.Gorbatchuk" target="_blank">kpfu.ru/Valery.Gorbatchuk</a>.
