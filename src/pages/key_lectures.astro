@@ -1,0 +1,36 @@
+---
+import LayoutRu from '../components/Layout_ru.astro';
+import KeyLecturerCard from '../components/KeyLecturerCard.astro';
+
+const keyLecturers = Object.values(import.meta.glob('../md/key_lecturers/ru/*.md', { eager: true }));
+---
+
+<LayoutRu>
+  <section>
+    <h2>Пленарные и ключевые доклады</h2>
+    <p>В этом разделе представлены предварительные названия пленарных и ключевых докладов, а также информация о самих докладчиках. Чтобы просмотреть информацию о докладчике, нажмите на конкретный доклад/докладчика (можно также <a href="#" class="link unwrap-all">развернуть или скрыть всех</a>).</p>
+  </section>
+  <section class="card-wrapper">
+    {keyLecturers.map((lecturer: any) => <KeyLecturerCard 
+      img={lecturer.frontmatter.img}
+      name={lecturer.frontmatter.name}
+      title={lecturer.frontmatter.title}>
+        <lecturer.Content />
+      </KeyLecturerCard>)}
+  </section>
+</LayoutRu>
+
+<style>
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>
+
+<script is:inline>
+  document.querySelector('a.unwrap-all').addEventListener('click', e => {
+    e.preventDefault();
+    Array.from(document.querySelectorAll('main button')).forEach(b => b.click());
+  });
+</script>
