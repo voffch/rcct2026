@@ -54,7 +54,7 @@ function url(lang: string, href: string) {
     <i>chat</i>
     <div>Контакты</div>
   </a>
-  <a href={url('en', '')}>
+  <a href={url('en', Astro.url.pathname)}>
     <i>language</i>
     <div>In English</div>
   </a>
@@ -104,7 +104,7 @@ function url(lang: string, href: string) {
     <i>chat</i>
     <div>Контакты</div>
   </a>
-  <a href={url('en', '')}>
+  <a href={url('en', Astro.url.pathname)}>
     <i>language</i>
     <div>In English</div>
   </a>
@@ -192,7 +192,7 @@ function url(lang: string, href: string) {
     </a>
   </li>
   <li class="wave round">
-    <a href={url('en', '')}>
+    <a href={url('en', Astro.url.pathname)}>
       <i>language</i>
       <div>In English</div>
     </a>

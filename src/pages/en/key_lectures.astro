@@ -1,0 +1,36 @@
+---
+import LayoutEn from '../../components/Layout_en.astro';
+import KeyLecturerCard from '../../components/KeyLecturerCard.astro';
+
+const keyLecturers = Object.values(import.meta.glob('../../md/key_lecturers/en/*.md', { eager: true }));
+---
+
+<LayoutEn>
+  <section>
+    <h2>Plenary and key lectures</h2>
+    <p>This section contains preliminary titles of the plenary and key lectures along with the short bio of the lecturers. To see the bio, please click the title the name (you can also <a href="#" class="link unwrap-all">show or hide everything</a>).</p>
+  </section>
+  <section class="card-wrapper">
+    {keyLecturers.map((lecturer: any) => <KeyLecturerCard 
+      img={lecturer.frontmatter.img}
+      name={lecturer.frontmatter.name}
+      title={lecturer.frontmatter.title}>
+        <lecturer.Content />
+      </KeyLecturerCard>)}
+  </section>
+</LayoutEn>
+
+<style>
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>
+
+<script is:inline>
+  document.querySelector('a.unwrap-all').addEventListener('click', e => {
+    e.preventDefault();
+    Array.from(document.querySelectorAll('main button')).forEach(b => b.click());
+  });
+</script>

@@ -1,8 +1,14 @@
 ---
 import { getAbsoluteLocaleUrl } from 'astro:i18n';
 
-function url(lang: string, href: string) {
-  let url = getAbsoluteLocaleUrl(lang, href);
+function url(lang: string, href: string, removeLangPathPart=true) {
+  let url;
+  if (removeLangPathPart && href.startsWith('/en/')) {
+    const hrefWithoutLang = href.slice(3);
+    url = getAbsoluteLocaleUrl(lang, hrefWithoutLang);
+  } else {
+    url = getAbsoluteLocaleUrl(lang, href);
+  }
   return (url.includes('#') && url.endsWith('/')) ? url.slice(0, -1) : url;
 }
 ---
@@ -34,6 +40,10 @@ function url(lang: string, href: string) {
     <i>checklist</i>
     <div>Sections</div>
   </a>
+  <a href={url('en', 'key_lectures')}>
+    <i>key</i>
+    <div>Key lectures</div>
+  </a>
   <a href={url('en', '#hotels')}>
     <i>hotel</i>
     <div>Hotels</div>
@@ -50,7 +60,7 @@ function url(lang: string, href: string) {
     <i>chat</i>
     <div>Contacts</div>
   </a>
-  <a href={url('ru', '')}>
+  <a href={url('ru', Astro.url.pathname, true)}>
     <i>language</i>
     <div>По-русски</div>
   </a>
@@ -80,6 +90,10 @@ function url(lang: string, href: string) {
     <i>checklist</i>
     <div>Sections</div>
   </a>
+  <a href={url('en', 'key_lectures')}>
+    <i>key</i>
+    <div>Key lectures</div>
+  </a>
   <a href={url('en', '#hotels')}>
     <i>hotel</i>
     <div>Hotels</div>
@@ -96,7 +110,7 @@ function url(lang: string, href: string) {
     <i>chat</i>
     <div>Contacts</div>
   </a>
-  <a href={url('ru', '')}>
+  <a href={url('ru', Astro.url.pathname, true)}>
     <i>language</i>
     <div>По-русски</div>
   </a>
@@ -154,6 +168,12 @@ function url(lang: string, href: string) {
     </a>
   </li>
   <li class="wave round">
+    <a href={url('en', 'key_lectures')}>
+      <i>key</i>
+      <div>Key lectures</div>
+    </a>
+  </li>
+  <li class="wave round">
     <a href={url('en', '#hotels')}>
       <i>hotel</i>
       <div>Hotels</div>
@@ -178,7 +198,7 @@ function url(lang: string, href: string) {
     </a>
   </li>
   <li class="wave round">
-    <a href={url('ru', '')}>
+    <a href={url('ru', Astro.url.pathname, true)}>
       <i>language</i>
       <div>По-русски</div>
     </a>

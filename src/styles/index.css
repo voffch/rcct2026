@@ -43,7 +43,7 @@ img.logo {
     color: var(--primary) !important;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    word-break: break-all;
+    word-break: break-word;
 }
 .hotel-header-wrapper {
     display: flex;

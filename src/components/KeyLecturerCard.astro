@@ -6,7 +6,7 @@ const imgPath = `/img/key_lecturers/${img}`;
 <details>
   <summary>
     <button class="responsive border" onclick="this.closest('details').open = !this.closest('details').open">
-      { title && <div class="presentation-title" set:html={title}></div> }
+      { title && <div class="presentation-title"><strong set:html={title}></strong></div> }
       <div>{ name }</div>
     </button>
   </summary>
@@ -27,9 +27,6 @@ const imgPath = `/img/key_lecturers/${img}`;
     height: fit-content;
     padding: 0.5rem;
     border-radius: 0.25rem;
-  }
-  .presentation-title {
-    text-transform: uppercase;
   }
   .key-lecturer {
     overflow-y: auto;

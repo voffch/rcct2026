@@ -1,0 +1,7 @@
+---
+img: "cherepanov.jpg"
+name: "Vladimir A. Cherepanov"
+title: "Peculiarities of phase equilibria in oxide systems based on rare earth, alkali earth and 3d (Fe, Co) metals"
+---
+
+Vladimir A. Cherepanov (Professor, Institute of Natural Sciences and Mathematics, Ural Federal University, Ekaterinburg, Russia) graduated from Ural State University in 1977. He received his PhD in 1984. Since 1977 to 2001 he has been working in the Ural State University starting from research fellow and later as Lecturer, and Assistant Professor. After defending Dr. Sci. Thesis at 2001, he became a full professor (2002) and served as Dean of the Chemical Faculty (2002 – 2011) and Head of the Department of Physical Chemistry (Physical and Inorganic Chemistry since 2016) (2008 – 2025). Currently, he is a professor of this Department and a chief researcher in the Institute of Natural Sciences and Mathematics. He worked under exchange and grant programs at the universities of Birmingham (1987–1988), Edinburgh (1993–1994), Oxford (2006) in the UK, and at ITAC Company (Japan, 2000, 2001). His research interests are mainly focused on the study of phase equilibria in oxide systems, as well as stability, oxygen nonstoichiometry, defect structure and functional properties of oxide materials.
