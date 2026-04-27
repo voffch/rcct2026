@@ -1,36 +1,15 @@
 ---
-import "beercss";
-import "../styles/index.css";
-
+import CommonHead from "./CommonHead.astro";
 import NavRu from "../components/Nav_ru.astro";
-
-const thisPageURL = Astro.url.href;
-
-import { pwaInfo } from 'virtual:pwa-info';
 ---
 
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google" content="notranslate">
+    <CommonHead />
     <meta name="description" content="RCCT - одно из крупнейших научных событий в России, охватывающее все аспекты химической термодинамики. Конференция RCCT 2026 проводится в Екатеринбурге 6-10 июля 2026 г.">
     <meta property="og:title" content="RCCT 2026 - XXV Международная конференция по химической термодинамике в России" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={thisPageURL} />
-    <meta property="og:image" content="/android-chrome-512x512.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image" content="/android-chrome-192x192.png" />
-    <meta property="og:image:width" content="192" />
-    <meta property="og:image:height" content="192" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:description" content="RCCT - одно из крупнейших научных событий в России, охватывающее все аспекты химической термодинамики. Конференция RCCT 2026 проводится в Екатеринбурге 6-10 июля 2026 г." />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>RCCT 2026 - XXV Международная конференция по химической термодинамике в России</title>
     <script type="application/ld+json">
     {
@@ -89,12 +68,6 @@ import { pwaInfo } from 'virtual:pwa-info';
       }
     }
     </script>
-    <script>
-      import cssHasPseudo from 'css-has-pseudo/browser';
-      cssHasPseudo(document);
-    </script>
-    <script src="/src/pwa.js"></script>
-    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
   </head>
   <body class="light">
     <NavRu />

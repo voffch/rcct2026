@@ -1,34 +1,15 @@
 ---
-import "beercss";
-import "../styles/index.css";
-
+import CommonHead from "./CommonHead.astro";
 import NavEn from "../components/Nav_en.astro";
-
-const thisPageURL = Astro.url.href;
 ---
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google" content="notranslate">
+    <CommonHead />
     <meta name="description" content="RCCT, one of the most important scientific events in Russia, covers all aspects of chemical thermodynamics. RCCT 2026 will be held in Ekaterinburg on June 6-10, 2026.">
     <meta property="og:title" content="RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={thisPageURL} />
-    <meta property="og:image" content="/android-chrome-512x512.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image" content="/android-chrome-192x192.png" />
-    <meta property="og:image:width" content="192" />
-    <meta property="og:image:height" content="192" />
-    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:description" content="RCCT, one of the most important scientific events in Russia, covers all aspects of chemical thermodynamics. RCCT 2026 will be held in Ekaterinburg on June 6-10, 2026." />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title>RCCT 2026 - XXV International Conference on Chemical Thermodynamics in Russia</title>
     <script type="application/ld+json">
     {
@@ -87,12 +68,6 @@ const thisPageURL = Astro.url.href;
       }
     }
     </script>
-    <script>
-      import cssHasPseudo from 'css-has-pseudo/browser';
-      cssHasPseudo(document);
-    </script>
-    <script src="/src/pwa.js"></script>
-    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
   </head>
   <body class="light">
     <NavEn/>
