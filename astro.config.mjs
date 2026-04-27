@@ -64,6 +64,9 @@ export default defineConfig({
     },
     workbox: {
       navigateFallback: '/',
+      navigateFallbackDenylist: [
+        /\.(?:pdf|docx?|pptx?|zip)$/i,
+      ],
       globPatterns: ['**/*.{js,css,html,ico,jpg,png,svg,woff2}'],
     },
     experimental: {
