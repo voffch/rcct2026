@@ -25,6 +25,7 @@ const thisPageURL = Astro.url.href;
     <meta property="og:image:height" content="192" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:description" content="RCCT, one of the most important scientific events in Russia, covers all aspects of chemical thermodynamics. RCCT 2026 will be held in Ekaterinburg on June 6-10, 2026." />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -90,6 +91,8 @@ const thisPageURL = Astro.url.href;
       import cssHasPseudo from 'css-has-pseudo/browser';
       cssHasPseudo(document);
     </script>
+    <script src="/src/pwa.js"></script>
+    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
   </head>
   <body class="light">
     <NavEn/>

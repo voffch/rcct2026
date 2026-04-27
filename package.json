@@ -12,5 +12,8 @@
     "astro": "^5.16.9",
     "beercss": "^3.11.20",
     "css-has-pseudo": "^8.0.0"
+  },
+  "devDependencies": {
+    "@vite-pwa/astro": "^1.2.0"
   }
 }

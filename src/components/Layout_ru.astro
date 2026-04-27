@@ -5,6 +5,8 @@ import "../styles/index.css";
 import NavRu from "../components/Nav_ru.astro";
 
 const thisPageURL = Astro.url.href;
+
+import { pwaInfo } from 'virtual:pwa-info';
 ---
 
 <html lang="ru">
@@ -25,6 +27,7 @@ const thisPageURL = Astro.url.href;
     <meta property="og:image:height" content="192" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:description" content="RCCT - одно из крупнейших научных событий в России, охватывающее все аспекты химической термодинамики. Конференция RCCT 2026 проводится в Екатеринбурге 6-10 июля 2026 г." />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -90,6 +93,8 @@ const thisPageURL = Astro.url.href;
       import cssHasPseudo from 'css-has-pseudo/browser';
       cssHasPseudo(document);
     </script>
+    <script src="/src/pwa.js"></script>
+    { pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} /> }
   </head>
   <body class="light">
     <NavRu />
