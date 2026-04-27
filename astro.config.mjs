@@ -34,7 +34,7 @@ export default defineConfig({
     manifest: {
       name: 'RCCT 2026',
       short_name: 'RCCT 2026',
-      theme_color: '#ffffff',
+      theme_color: '#fafaf2',
       icons: [
         {
           src: 'android-chrome-192x192.png',
