@@ -44,7 +44,7 @@ Special offers with promo code RCCT-2026:
     - single 6600 ₽
     - single with double bed 7600 ₽
 
-Breakfast included. To use the offers, please contact the manager: Mukhametova Svetlana Marsel'evna, [MukhametovaSM@marinshotels.ru](mailto:MukhametovaSM@marinshotels.ru), [+7(343)270-22-22](tel:+73432702222) (add. 4230), [+7(982)722-38-46](tel:+79827223846)
+Breakfast included. To use the offers, please contact the manager: Polfuntikov Kirill Vladimirovich, [PolfuntikovKV@marinshotels.ru](mailto:PolfuntikovKV@marinshotels.ru), [+7(343)270-22-22](tel:+73432702222) (доб. 42-36), [+7(929)223-75-73](tel:+79292237573)
 
 <p class="hotel-header-wrapper">
     <i>star</i><i>star</i><i>star</i>
