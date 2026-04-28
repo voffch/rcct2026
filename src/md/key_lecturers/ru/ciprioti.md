@@ -1,0 +1,19 @@
+---
+img: ""
+name: "Stefano Vecchio Ciprioti"
+title: "Structure-property relationship in substituted benzenes: multifidelity methods to quantify and understand interactions among substituents on the benzene ring"
+---
+
+Stefano Vecchio Ciprioti с отличием окончил химический факультет в 1991 году и получил степень доктора химических наук в 1995 году. С декабря 1996 года он работал ассистентом, а с марта 2019 года – доцентом кафедры фундаментальных и прикладных наук для инженерии (S.B.A.I.) (химическое отделение «Паоло Сильвестрони») факультета гражданского и промышленного строительства Римского университета Сапиенца.
+
+Он является автором более 150 статей, опубликованных в международных рецензируемых журналах, и более 150 докладов на национальных и международных конгрессах, посвященных развитию термического анализа в областях экологии, фармацевтики, пищевой промышленности и культурного наследия, с особым акцентом на кинетические и термодинамические исследования химических процессов и фазовых переходов. Его статьи получили более 3600 цитирований, индекс Хирша = 37 (источник – Scopus, апрель 2026 г.).
+
+В настоящее время (2026-2028) он является президентом Лациоской территориальной секции Итальянского химического общества (SCI), в которую входят более 400 членов из более чем 6000 членов общества SCI. В период с 2020 по 2025 год он был председателем Итальянской ассоциации термического анализа и калориметрии (A.I.C.A.T.).
+
+С 2026 года он является членом правления GICAT.
+
+С 2022 года он является председателем Международного научного комитета «Термодинамика и термохимия» <a class="link underline" href="http://www.ictac.org/scientific_commission.html" target="_blank">ICTAC</a>, Международной конфедерации термического анализа и калориметрии.
+
+Он был председателем XXXIV Национального конгресса по калориметрии, термическому анализу и прикладной термодинамике, состоявшегося в Риме в июне 2012 года, и сопредседателем 5-й Центральной и Восточной Европы и 14-й Средиземноморской объединенной конференции по калориметрии и термическому анализу, состоявшейся в августе 2019 года. В мае 2022 и мае 2024 года он организовал в Лаурино, Салерно (Италия) первый и второй Международный симпозиум по химической термодинамике для молодых ученых (ISCTYR и ISCTYR 2 соответственно), а также первый (2024) семинар, посвященный определению теплоемкости. В настоящее время (апрель 2026 года) он организует третий Международный симпозиум по химической термодинамике для молодых ученых (ISCTYR 3) и второй (2026) семинар, посвященный ионным жидкостям и глубоким эвтектическим растворителям. Все эти мероприятия были организованы под эгидой ICTAC.
+
+Он является ассоциированным редактором журнала «Thermal Analysis and Calorimetry» (Springer) и членом редакционных советов журналов «Thermochimica Acta» (издательство Elsevier), «Hybrid Advances» (издательство Elsevier), «Russian Journal of Physical Chemistry A» (издательство Springer) и журнала с открытым доступом «Polymers» (MDPI). Он является рецензентом в ряде важных международных журналов, таких как Material Chemistry and Physics, Microchimica Acta, International Journal of Chemical Kinetics, Journal of Pharmaceutical and Biomedical Analysis, the European Physical Journal of Applied Physics, Journal of Chemical Thermodynamics, Journal of Chemical and Engineering Data, Journal of the Solid State Chemistry, Fuel Processing Technology, Industrial and Engineering Chemistry Research, Journal of Molecular Structure, Fluid Phase Equilibria, Bullettin of the Chemical Society of Ethiopia, Fuel, Food Science and Technology, Energy and Fuels, BMC Biophysics, The Journal of Physical Chemistry, Journal of Molecular Liquids, Polymer Degradation and Stability, Archives of Metallurgy and Materials, Toxicological & Environmental Chemistry, Italian Journal of Food Science.

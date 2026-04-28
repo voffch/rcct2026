@@ -1,0 +1,19 @@
+---
+img: ""
+name: "Stefano Vecchio Ciprioti"
+title: "Structure-property relationship in substituted benzenes: multifidelity methods to quantify and understand interactions among substituents on the benzene ring"
+---
+
+Stefano Vecchio Ciprioti graduated in Chemistry with honor in 1991 and received his Ph.D. degree in Chemical Science in 1995. He is an Assistant Professor since December 1996 and an Associate Professor since March 2019 in the Department of Basic and Applied Science for Engineering (S.B.A.I.) (Chemical section “Paolo Silvestroni”) of the Faculty of Civil and Industrial Engineering of Sapienza University of Rome.
+
+He is an author of more than 150 papers published in international peer-reviewed journals and more than 150 contributions to national and international congresses devoted to the development of thermal analysis in the fields of environment, pharmaceutical, food and cultural heritage (being them the most important ones) with particular reference to kinetic and thermodynamic study of chemical and phase change processes. His papers provided more than 3600 citations, Hirsch index=37 (source - Scopus, April 2026).
+
+He is currently (2026-2028) the President of the Lazio Territorial Section of the Italian Chemical Society (SCI), which includes more than 400 members among more than 6000 members of the SCI society. Between 2020 and 2025 he was the Chair of the Italian Association of Thermal Analysis and Calorimetry (A.I.C.A.T.).
+
+Since 2026 he is a member of the GICAT Board.
+
+Since 2022 he is a Chairperson of the International Scientific Committee of “Thermodynamics & Thermochemistry” of <a class="link underline" href="http://www.ictac.org/scientific_commission.html" target="_blank">ICTAC</a>, International Confederation of Thermal Analysis and Calorimetry.
+
+He was the Chairman of XXXIV National Congress on Calorimetry, Thermal Analysis and Applied Thermodynamics, held in Rome in June 2012, and a co-Chairperson of the 5th Central and Eastern European and 14th Mediterranean Joint Conference on Calorimetry and Thermal Analysis held in August 2019. In May 2022 and May 2024 he organized in Laurino, Salerno (Italy) the first and the second editions of the International Symposium of Chemical Thermodynamics for Young Scientists (ISCTYR and ISCTYR 2, respectively), and the first edition (2024) of a Workshop devoted to the determination of heat capacity. Currently (April 2026) he is organizing the third edition of the International Symposium of Chemical Thermodynamics for Young Scientists (ISCTYR 3), and the second edition (2026) of a Workshop devoted to ionic liquids and deep eutectic solvents. All these events were organized under the aegis of ICTAC.
+
+He is an Associate Editor of the Journal of Thermal Analysis and Calorimetry (Springer) and he is a member of the Editorial Boards of Thermochimica Acta (Ed. Elsevier), Hybrid Advances (Ed. Elsevier), Russian Journal of Physical Chemistry A (Ed. Springer) and of the Open Access journal Polymers (MDPI). Finally, he is a referee in some important international journals, such as Material Chemistry and Physics, Microchimica Acta, International Journal of Chemical Kinetics, Journal of Pharmaceutical and Biomedical Analysis, the European Physical Journal of Applied Physics, Journal of Chemical Thermodynamics, Journal of Chemical and Engineering Data, Journal of the Solid State Chemistry, Fuel Processing Technology, Industrial and Engineering Chemistry Research, Journal of Molecular Structure, Fluid Phase Equilibria, Bullettin of the Chemical Society of Ethiopia, Fuel, Food Science and Technology, Energy and Fuels, BMC Biophysics, The Journal of Physical Chemistry, Journal of Molecular Liquids, Polymer Degradation and Stability, Archives of Metallurgy and Materials, Toxicological & Environmental Chemistry, Italian Journal of Food Science.
