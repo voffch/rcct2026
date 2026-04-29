@@ -31,6 +31,11 @@ const imgPath = `/img/key_lecturers/${img}`;
   .key-lecturer {
     overflow-y: auto;
   }
+  .key-lecturer :global(ul),
+  .key-lecturer :global(ol) {
+    padding-left: 0;
+    list-style-position: inside;
+  }
   .key-lecturer img {
     float: left;
     max-width: 16rem;
