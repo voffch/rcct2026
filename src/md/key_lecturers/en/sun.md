@@ -1,6 +1,6 @@
 ---
 img: "sun.jpg"
-name: "Li-xian Sun"
+name: "Li-Xian Sun"
 title: "Thermodynamic Tuning and Database on New Energy Materials"
 ---
 
@@ -12,7 +12,7 @@ title: "Thermodynamic Tuning and Database on New Energy Materials"
 - Guangxi Bagui Scholar, China
 - Guilin Lijiang Scholar, China
 
-Li-xian Sun is one of the candidates for the 100 talents Scheme of the Chinese Academy of Sciences (received the final Assessment Excellence Award), the German Humboldt Scholar, member of Royal Society of Chemistry, the first full-time candidates for batch of “Banggui Scholars” in Guangxi (excellent examination), Head of Guangxi Collaborative Innovation Center, Head of Guangxi Key Laboratory of Information Materials. In recent years, he has chaired an impressive number of domestic and international research projects.
+Li-Xian Sun is one of the candidates for the 100 talents Scheme of the Chinese Academy of Sciences (received the final Assessment Excellence Award), the German Humboldt Scholar, member of Royal Society of Chemistry, the first full-time candidates for batch of “Banggui Scholars” in Guangxi (excellent examination), Head of Guangxi Collaborative Innovation Center, Head of Guangxi Key Laboratory of Information Materials. In recent years, he has chaired an impressive number of domestic and international research projects.
 
 So far, he has published more than 700 scientific papers with more than 12200 citations and H-index of 59, and was granted 142 patents. In 2015, he was elected fellow of the Royal Chemical Society. He was identified as an Elsevier China Highly Cited Scholar every year from 2014 to 2018, and was in the top 10 ranking of highly cited scholars in the energy category in 2017. The research on the structure and electrochemical performance of the new (La, Mg)-Ni hydrogen storage alloy was awarded the second prize of Guangxi Natural Science in 2012. The research on low-dimensional functional material design, hydrogen storage and biosensing characteristics won the second prize of Guangxi Natural Science in the 2017. In addition, he has won 7 provincial and ministerial achievement awards. During his tenure, he organized 12 international and domestic academic conferences, some of which served as chairman or co-chair of the Organizing Committee.
 

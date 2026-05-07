@@ -4,7 +4,7 @@
 
 - Full member of RAS V.L. Stolyarova
 - Prof. K.S. Gavrichev
-- President of UrFU V.A. Koksharov
+- Rector of UrFU I.N. Obabkov
 
 ### Vice-Chair
 
