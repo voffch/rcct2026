@@ -30,3 +30,9 @@ The fee covers participation and access to all the events, including the oral an
 The payment method will be provided after the abstract acceptance; the moderation of abstracts will begin after the abstract submission deadline.
 
 Official invitations are sent by request after the conference fee has been paid.
+
+#### Presentations
+
+**Oral presentations:** the plenary lecture lasts 40 min, the key lecture - 30 min, and the regular oral presentation - 15 min *including the time for the questions to the lecturer*. The presentations should be provided in either Microsoft PowerPoint (.pptx) or Portable Document Format (.pdf) format.
+
+**Poster presentations:** the poster size — A1 (594 х 841 mm), vertical (portrait) orientation.

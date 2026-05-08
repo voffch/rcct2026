@@ -59,4 +59,15 @@ img.logo {
         flex-direction: column;
         text-align: center;
     }
+    ul > li {
+        padding: 0 0 0 0.5rem;
+    }
+    #info ul,
+    #dates ul,
+    #participate ul,
+    #participate ol,
+    #sections ol,
+    #hotels ul {
+        padding-left: 1rem;
+    }
 }

@@ -27,7 +27,7 @@ export default defineConfig({
   },
   integrations: [AstroPWA({
     devOptions: {
-      enabled: true
+      enabled: false
     },
     registerType: 'autoUpdate',
     includeAssets: ['favicon.ico'],

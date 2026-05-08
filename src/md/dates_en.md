@@ -1,3 +1,38 @@
-- **15 April** – registration and abstract submission deadline
-- **15 May** – participation fee payment deadline
+- **April 15** – registration and abstract submission deadline
+- **June 01** – participation fee payment deadline
 - **June 29 - July 3** – the conference days
+
+#### Conference Schedule
+
+- June 29
+  - 11.00-15.00: Registration
+  - 15.00-15.20: Opening ceremony
+  - 15.20-18.00: Plenary lectures
+  - 18.30-20.30: Welcome party
+- June 30
+  - 9.00-11.00: Plenary lectures
+  - 11.00-11.15: Coffee break
+  - 11.15-13.00: Section presentations
+  - 13.00-14.00: Dinner time
+  - 14.00-16.00: Section presentations
+  - 16.00-16.15: Coffee break
+  - 16.15-18.00: Section presentations
+  - 18.00-20.00: Poster presentations
+- July 01
+  - 9.00-11.40: Plenary lectures
+  - 11.40-12.40: Dinner time
+  - 13.00-20.30: Экскурсия
+- July 02
+  - 9.00-11.40: Plenary lectures
+  - 11.00-11.15: Coffee break
+  - 11.15-13.00: Section presentations
+  - 13.00-14.00: Dinner time
+  - 14.00-16.00: Section presentations
+  - 16.00-16.15: Coffee break
+  - 16.15-18.00: Section presentations
+  - 18.00-20.00: Poster presentations
+- July 03
+  - 9.00-11.00: Plenary lectures
+  - 11.00-11.15: Coffee break
+  - 11.15-12.15: Section presentations
+  - 12.45-13.00: Closing ceremony
