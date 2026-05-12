@@ -1,0 +1,7 @@
+---
+img: "tsvetkov.jpg"
+name: "Dmitry S. Tsvetkov"
+title: "Thermodynamics of compositionally complex (“high-entropy”) oxides"
+---
+
+Dmitry Tsvetkov (Head of the Department of Physical and Inorganic Chemistry, Institute of Natural Sciences and Mathematics, Ural Federal University, Ekaterinburg, Russia) graduated from the Ural State University in 2007. He received his PhD in 2010. Since 2003, he has worked at the Ural State University (since 2012, Ural Federal University), first as a laboratory assistant, then as an engineer, assistant, and associate professor. After defending his doctoral dissertation in 2021, he worked as a professor, and from 2025 to the present, he has been the Head of the Department of Physical and Inorganic Chemistry. He completed internships at Ecole Centrale Paris; CRISMAT, University of Caen; Peter A. Rock Thermochemistry Laboratory, University of California, Davis. Research interests include the study of thermodynamics of formation and disordering and transport phenomena in solid oxide and halide materials for application in various electrochemical and photovoltaic devices such as solar cells, solid oxide fuel cells and oxygen-permeable membranes; as well as the development of experimental setups and automation of experiments.
