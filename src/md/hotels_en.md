@@ -36,10 +36,11 @@ Address: Cheluskintsev, 106
 
 Special offers with promo code RCCT-2026:
 
+- «Optima» rooms:
+    - single 4700 ₽
+    - double with two separate beds 6700 ₽
 - «Standard» rooms:
-    - single 5300 ₽
-    - single with double bed 6400 ₽
-    - single with two beds 7400 ₽
+    - single 4900 ₽
 - «Standard Plus» rooms:
     - single 6600 ₽
     - single with double bed 7600 ₽
