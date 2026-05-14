@@ -21,7 +21,7 @@
 - July 01
   - 9.00-11.40: Plenary lectures
   - 11.40-12.40: Dinner time
-  - 13.00-20.30: Экскурсия
+  - 13.00-20.30: Organized leisure (city tour or site visit)
 - July 02
   - 9.00-11.40: Plenary lectures
   - 11.00-11.15: Coffee break
