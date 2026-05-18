@@ -1,7 +1,7 @@
 ---
 img: "zherikova.jpg"
 name: "Kseniya V. Zherikova"
-title: "Phase thermodynamics for gas-phase processes: volatile metal-organic compounds"
+title: "Structure-property relationships as a primary tool for assessing the CVD precursors properties"
 ---
 
 Kseniya V. Zherikova graduated from the Faculty of Natural Sciences at Novosibirsk State University in 2003. She then entered graduate school at the A.V. Nikolaev Institute of Inorganic Chemistry, Siberian Branch of the Russian Academy of Sciences (IIC SB RAS), where she defended her PhD dissertation in inorganic and physical chemistry in 2007, titled "Volatile Compounds of Hafnium(IV) and Zirconium(IV): Synthesis, Structure, and Properties." Since 2012, she has held the position of Senior Researcher at IIC SB RAS.
