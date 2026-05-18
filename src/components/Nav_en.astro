@@ -56,6 +56,10 @@ function url(lang: string, href: string, removeLangPathPart=true) {
     <i>diversity_3</i>
     <div>Committees</div>
   </a>
+  <a href={url('en', 'rusanov')}>
+    <i>deceased</i>
+    <div>In memory of <br/>A.I. Rusanov</div>
+  </a>
   <a href={url('en', '#contacts')}>
     <i>chat</i>
     <div>Contacts</div>
@@ -105,6 +109,10 @@ function url(lang: string, href: string, removeLangPathPart=true) {
   <a href={url('en', '#committees')}>
     <i>diversity_3</i>
     <div>Committees</div>
+  </a>
+  <a href={url('en', 'rusanov')}>
+    <i>deceased</i>
+    <div>In memory of A.I. Rusanov</div>
   </a>
   <a href={url('en', '#contacts')}>
     <i>chat</i>
@@ -192,6 +200,12 @@ function url(lang: string, href: string, removeLangPathPart=true) {
     </a>
   </li>
   <li class="wave round">
+    <a href={url('en', 'rusanov')}>
+      <i>deceased</i>
+      <div>In memory of <br/>A.I. Rusanov</div>
+    </a>
+  </li>
+  <li class="wave round">
     <a href={url('en', '#contacts')}>
       <i>chat</i>
       <div>Contacts</div>
@@ -219,5 +233,11 @@ function url(lang: string, href: string, removeLangPathPart=true) {
   }
   nav.left header {
     margin-bottom: 0;
+  }
+  nav.left.max.l {
+    text-align: left;
+  }
+  nav.left.m {
+    min-inline-size: 7rem;
   }
 </style>

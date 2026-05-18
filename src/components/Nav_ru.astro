@@ -50,6 +50,10 @@ function url(lang: string, href: string) {
     <i>diversity_3</i>
     <div>Комитеты</div>
   </a>
+  <a href={url('ru', 'rusanov')}>
+    <i>deceased</i>
+    <div>Памяти академика <br/>А.И. Русанова</div>
+  </a>
   <a href={url('ru', '#contacts')}>
     <i>chat</i>
     <div>Контакты</div>
@@ -99,6 +103,10 @@ function url(lang: string, href: string) {
   <a href={url('ru', '#committees')}>
     <i>diversity_3</i>
     <div>Комитеты</div>
+  </a>
+  <a href={url('ru', 'rusanov')}>
+    <i>deceased</i>
+    <div>Памяти академика А.И. Русанова</div>
   </a>
   <a href={url('ru', '#contacts')}>
     <i>chat</i>
@@ -186,6 +194,12 @@ function url(lang: string, href: string) {
     </a>
   </li>
   <li class="wave round">
+    <a href={url('ru', 'rusanov')}>
+      <i>deceased</i>
+      <div>Памяти академика <br/>А.И. Русанова</div>
+    </a>
+  </li>
+  <li class="wave round">
     <a href={url('ru', '#contacts')}>
       <i>chat</i>
       <div>Контакты</div>
@@ -213,5 +227,11 @@ function url(lang: string, href: string) {
   }
   nav.left header {
     margin-bottom: 0;
+  }
+  nav.left.max.l {
+    text-align: left;
+  }
+  nav.left.m {
+    min-inline-size: 7rem;
   }
 </style>
