@@ -1,0 +1,29 @@
+---
+import LayoutEn from '../../components/Layout_en.astro';
+
+import {Content as Rusanov} from '../../md/rusanov_en.md';
+---
+
+<LayoutEn>
+  <section class="content-section">
+    <h2>In memory of A.I. Rusanov</h2>
+    <img src="/img/people/rusanov.jpg" alt="A.I. Rusanov" />
+    <Rusanov />
+  </section>
+</LayoutEn>
+
+<style>
+  .content-section img {
+    max-height: 384px;
+    display: block;
+    margin: 1rem 0 1rem 1rem;
+    border-radius: 0.5rem;
+    float: right;
+  }
+  @media all and (max-width: 680px) {
+    .content-section img {
+      float: none;
+      margin: 1rem auto;
+    }
+  }
+</style>

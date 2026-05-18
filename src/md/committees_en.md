@@ -26,7 +26,7 @@
 - Full member of RAS A.B. Yaroslavtsev (IGIC RAS)
 - Full member of RAS  V.L. Kozhevnikov (Institute of Solid State Chemistry UB RAS)
 - Full member of RAS  Yu.G. Gorbunova (MSU)
-- Full member of RAS A.I. Rusanov (SPbU)
+- <span class="dead"><a class="link underline" href="rusanov">Full member of RAS A.I. Rusanov</a></span> (SPbU)
 - Corresponding member of RAS O.V. Almyasheva (ETU "LETI")
 - Corresponding member of RAS V.V. Gusarov (Ioffe Institute RAS)
 - Corresponding member of RAS O.L. Kuskov (Institute of Geochemistry and Analytical Chemistry RAS)

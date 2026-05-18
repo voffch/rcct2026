@@ -1,0 +1,29 @@
+---
+import LayoutRu from '../components/Layout_ru.astro';
+
+import {Content as Rusanov} from '../md/rusanov_ru.md';
+---
+
+<LayoutRu>
+  <section class="content-section">
+    <h2>Памяти академика А.И. Русанова</h2>
+    <img src="/img/people/rusanov.jpg" alt="А.И. Русанов" />
+    <Rusanov />
+  </section>
+</LayoutRu>
+
+<style>
+  .content-section img {
+    max-height: 384px;
+    display: block;
+    margin: 1rem 0 1rem 1rem;
+    border-radius: 0.5rem;
+    float: right;
+  }
+  @media all and (max-width: 680px) {
+    .content-section img {
+      float: none;
+      margin: 1rem auto;
+    }
+  }
+</style>
