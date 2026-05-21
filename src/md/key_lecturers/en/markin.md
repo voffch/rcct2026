@@ -1,0 +1,11 @@
+---
+img: "markin.jpg"
+name: "Alexey V. Markin"
+title: "Thermodynamic investigation of new organic and polymeric materials"
+---
+
+Alexey Vladimirovich Markin is a Doctor of Sciences in Chemistry, Professor, Honorary Worker of Education of the Russian Federation, Dean of the Faculty of Chemistry, and Head of the Department of Physical Chemistry at the Lobachevsky State University of Nizhny Novgorod. He has published over 350 scientific papers, eight textbooks, and 16 teaching aids, as well as one chapter in a monograph. He has supervised the defense of six PhD dissertations and trained over 45 specialists and master's students. Since 2018, he has been a member of the Expert Council for Chemistry of the Higher Attestation Commission under the Ministry of Education and Science of the Russian Federation.
+
+He received grants from the President of the Russian Federation for young PhD candidates and eight grants from the Russian Foundation for Basic Research; he participated in three State Programs of the Federal Target Program "Scientific and Scientific-Pedagogical Personnel of Innovative Russia" for 2009-2013. He is an expert at the Russian Science Foundation, was a reviewer of grant applications from the Russian Foundation for Basic Research, and is a reviewer for international journals such as The Journal of Chemical and Engineering Data, The Journal of Chemical Thermodynamics, Journal of Thermal Analysis and Calorimetry, Molecules, and the Russian Journal of Physical Chemistry (Журнал физической химии).
+
+He specializes in the chemical thermodynamics of fullerene and dendrimer materials, as well as organoelement and polymer compounds. His primary research interests involve the use of experimental calorimetric methods to determine the thermodynamic properties of these materials over a wide temperature range. These calorimetric methods serve as reference values ​​for various thermophysical and technological calculations, when planning and conducting research into the synthesis and properties of promising materials with potential for practical application.
