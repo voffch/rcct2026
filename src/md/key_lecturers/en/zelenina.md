@@ -1,5 +1,5 @@
 ---
-img: ""
+img: "zelenina.jpg"
 name: "Lyudmila N. Zelenina"
 title: "Different states of water in a- β- and γ-cyclodextrin hydrates"
 ---
