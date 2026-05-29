@@ -57,8 +57,8 @@ Breakfast included. To use the offers, please contact the manager: Polfuntikov K
 Address: Gor'kogo, 69/1
 
 Studio:
-- Single room with/without breakfast: 6900 ₽/6000 ₽
-- Double room with/without breakfast: 8800 ₽/7000 ₽
+- Single room with/without breakfast: 6900 ₽ / 6000 ₽
+- Double room with/without breakfast: 8800 ₽ / 7000 ₽
 
 To use the offer, please mention the RCCT 2026 promo code and book via the email [sales@sensaroom.ru](mailto:sales@sensaroom.ru) or by calling [+7(982)722-38-46](tel:+79827223846)
 
@@ -106,3 +106,29 @@ The price includes:
 - A hotel souvenir in each room
 
 To use the offers, please contact the hotel at [+7(343)253-56-78](tel:+73432535678), telegram [+7(982)686-01-17](https://t.me/Hotel_Onegin), email [reservations@hotelonegin.pro](mailto:reservations@hotelonegin.pro), promo code: RCCT-2026.
+
+<p class="hotel-header-wrapper">
+    <i>star</i><i>star</i><i>star</i><i>star</i>
+    <span>Palais Royal</span>
+</p>
+
+[https://paleroyal.ru/en/](https://paleroyal.ru/en/)
+
+Адрес: Sibirskiy Trakt, 90
+
+Special offers for 1 / 2 guests:
+- "Standard" room – 6500 / 7500 ₽
+- "Suite" – 8000 / 9000 ₽
+- "Exclusive" – 10000 / 12000 ₽
+
+The price includes:
+- Breakfast from 7:00 to 10:00
+- Essentials in the rooms (bathrobe, slippers, cosmetics, toothpaste and toothbrush, shaving and sewing kits, comb, air dryer, safe, etc.)
+- Bottled water
+- 15% disrount for renting a sauna
+- Free parking
+- Gift from the hotel
+
+The code word for using the special offer: RCCT-2026
+
+Contacts: [+7(343)247-34-07](tel:+73432473407) (reception), [+7(919)365-75-44](tel:+79193657544) (personal manager Natalya Denisova), email [crm@paleroyal.ru](mailto:crm@paleroyal.ru)
