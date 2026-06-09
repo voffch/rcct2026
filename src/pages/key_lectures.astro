@@ -2,7 +2,7 @@
 import LayoutRu from '../components/Layout_ru.astro';
 import KeyLecturerCard from '../components/KeyLecturerCard.astro';
 
-const keyLecturers = Object.values(import.meta.glob('../md/key_lecturers/ru/*.md', { eager: true }));
+const keyLecturers = import.meta.glob('../md/key_lecturers/ru/*.md', { eager: true });
 ---
 
 <LayoutRu>
@@ -11,7 +11,8 @@ const keyLecturers = Object.values(import.meta.glob('../md/key_lecturers/ru/*.md
     <p>В этом разделе представлены предварительные названия пленарных и ключевых докладов, а также информация о самих докладчиках. Чтобы посмотреть информацию о докладчике, нажмите на конкретный доклад/докладчика (можно также <a href="#" class="link unwrap-all">развернуть или скрыть всех</a>).</p>
   </section>
   <section class="card-wrapper">
-    {keyLecturers.map((lecturer: any) => <KeyLecturerCard 
+    {Object.entries(keyLecturers).map(([path, lecturer]: [any, any]) => <KeyLecturerCard 
+      id={path.split('/').pop().split('.').shift()}
       img={lecturer.frontmatter.img}
       name={lecturer.frontmatter.name}
       title={lecturer.frontmatter.title}>

@@ -2,7 +2,7 @@
 import LayoutEn from '../../components/Layout_en.astro';
 import KeyLecturerCard from '../../components/KeyLecturerCard.astro';
 
-const keyLecturers = Object.values(import.meta.glob('../../md/key_lecturers/en/*.md', { eager: true }));
+const keyLecturers = import.meta.glob('../../md/key_lecturers/en/*.md', { eager: true });
 ---
 
 <LayoutEn>
@@ -11,7 +11,8 @@ const keyLecturers = Object.values(import.meta.glob('../../md/key_lecturers/en/*
     <p>This section contains preliminary titles of the plenary and key lectures along with the short bio of the lecturers. To see the bio, please click the title the name (you can also <a href="#" class="link unwrap-all">show or hide everything</a>).</p>
   </section>
   <section class="card-wrapper">
-    {keyLecturers.map((lecturer: any) => <KeyLecturerCard 
+    {Object.entries(keyLecturers).map(([path, lecturer]: [any, any]) => <KeyLecturerCard 
+      id={path.split('/').pop().split('.').shift()}
       img={lecturer.frontmatter.img}
       name={lecturer.frontmatter.name}
       title={lecturer.frontmatter.title}>

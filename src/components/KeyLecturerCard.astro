@@ -1,5 +1,5 @@
 ---
-const { img, name, title } = Astro.props;
+const { id, img, name, title } = Astro.props;
 const imgPath = `/img/key_lecturers/${img}`;
 ---
 
@@ -10,7 +10,7 @@ const imgPath = `/img/key_lecturers/${img}`;
       <div>{ name }</div>
     </button>
   </summary>
-  <article class="key-lecturer">
+  <article class="key-lecturer" id={id}>
     <h5>{ name }</h5>
     { img && <img src={ imgPath } loading="lazy" alt="photo" /> }
     <div>
