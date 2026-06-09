@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "rcct2026",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/vue": "^5.1.4",
     "astro": "^5.16.9",
     "beercss": "^3.11.20",
     "css-has-pseudo": "^8.0.0"

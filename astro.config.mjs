@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import vue from '@astrojs/vue';
 import cssHasPseudo from 'css-has-pseudo';
 import AstroPWA from '@vite-pwa/astro';
 
@@ -65,12 +66,13 @@ export default defineConfig({
     workbox: {
       navigateFallback: '/',
       navigateFallbackDenylist: [
-        /\.(?:pdf|docx?|pptx?|zip)$/i,
+        /\.(?:pdf|docx?|xlsx?|pptx?|zip)$/i,
       ],
       globPatterns: ['**/*.{js,css,html,ico,jpg,png,svg,woff2}'],
     },
     experimental: {
       directoryAndTrailingSlashHandler: true,
     },
-  })],
+  }),
+  vue()],
 });
