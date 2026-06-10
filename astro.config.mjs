@@ -67,8 +67,10 @@ export default defineConfig({
       navigateFallback: '/',
       navigateFallbackDenylist: [
         /\.(?:pdf|docx?|xlsx?|pptx?|zip)$/i,
+        /^\/abstracts\//
       ],
-      globPatterns: ['**/*.{js,css,html,ico,jpg,png,svg,woff2}'],
+      globIgnores: ['**/abstracts/**'],
+      globPatterns: ['**/*.{js,json,css,html,ico,jpg,png,svg,woff2}'],
     },
     experimental: {
       directoryAndTrailingSlashHandler: true,
