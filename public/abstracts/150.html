@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="pandoc" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<meta content="en" name="citation_language"/>
+<meta content="SIMPLIFIED PROCEDURE FOR ANALYZING VAPOR-LIQUID EQUILIBRIUM DIAGRAMS OF MULTICOMPONENT SYSTEMS" name="citation_title"/>
+<meta content="Frolkova, A.V." name="citation_author"/>
+<meta content="MIREA – Russian Technological University, Moscow" name="citation_author_institution"/>
+<meta content="Novruzova, A.N." name="citation_author"/>
+<meta content="MIREA – Russian Technological University, Moscow" name="citation_author_institution"/>
+<meta content="Shibaeva, V.V." name="citation_author"/>
+<meta content="MIREA – Russian Technological University, Moscow" name="citation_author_institution"/>
+<meta content="150" name="citation_firstpage"/>
+<meta content="150" name="citation_lastpage"/>
+<meta content="2026" name="citation_publication_date"/>
+<meta content="https://rcct2026.ru/abstracts/150.html" name="citation_fulltext_html_url"/>
+<meta content="https://rcct2026.ru/abstracts/150.pdf" name="citation_pdf_url"/>
+<meta content="XXV International Conference on Chemical Thermodynamics in Russia (RCCT-2026)" name="citation_conference_title"/>
+<meta content="Ural Federal University publishing house" name="citation_publisher"/>
+<title>SIMPLIFIED PROCEDURE FOR ANALYZING VAPOR-LIQUID EQUILIBRIUM DIAGRAMS OF MULTICOMPONENT SYSTEMS</title>
+<style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+body {
+font-size: 16px;
+font-family: "Times New Roman", Times, Georgia, serif;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+@media (max-width: 600px) {
+font-size: 16px;
+}
+header {
+border-bottom: 1px solid black;
+padding: 0 0.25rem 0.25rem 0.25rem;
+margin-bottom: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 2rem;
+}
+.header-text {
+hyphens: none;
+}
+footer {
+margin-top: 1rem;
+}
+p {
+hyphens: auto;
+text-align: justify;
+line-height: 1.2;
+}
+.text-center {
+text-align: center;
+}
+.text-right {
+text-align: right;
+}
+.image-container {
+display: flex;
+justify-content: space-around;
+}
+.full-width-image {
+width: 100%;
+}
+table {
+display: table;
+margin: 1em auto;
+}
+.header-p {
+text-align: center;
+margin: 0;
+}
+.empty-p {
+margin: 0 0 2rem 0;
+}
+.one-row-table th {
+border-top: none;
+font-weight: normal;
+}
+</style>
+</head>
+<body>
+<header><span class="header-text">XXV International Conference on Chemical Thermodynamics in Russia</span><span class="header-page-number">150</span></header>
+<article>
+<p class="header-p"><strong>SIMPLIFIED PROCEDURE FOR ANALYZING VAPOR-LIQUID
+EQUILIBRIUM DIAGRAMS OF MULTICOMPONENT SYSTEMS</strong></p>
+<p class="header-p"><em><u>Frolkova A.V.</u>, Novruzova A.N., Shibaeva V.V.</em></p>
+<p class="header-p">MIREA – Russian Technological University</p>
+<p class="header-p">119571, Moscow, Vernadsky ave., 86</p>
+<p class="header-p empty-p"></p>
+<p>The study of VLE diagrams of multicomponent systems is a rather
+difficult task. Well-known methods involve the graphical construction of
+a boundary or complete phase space, the construction and analysis of
+adjacency and reachability matrices. In some cases, this procedure can
+be simplified; in particular, when azeotropes relative to the
+constituents of the same component number are nodal points [1-2].</p>
+<p>The initial information is data on the boiling points (BP) of all
+singular points. Let's illustrate specifics mentioned and stages of VLE
+diagram analysis using the example of a methanol (M) + ethanol (E) +
+ethyl acetate (EA) + toluene (T) + hexane (N) system. BP, type and
+Poincare index (PI) are given in the tables.</p>
+
+<p class="text-right">Boiling points and types of singular points (N<sup>(un)st</sup> –
+(un)stable node, S – saddle)</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 18%"/>
+<col style="width: 14%"/>
+<col style="width: 12%"/>
+<col style="width: 14%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Sing. point</strong></th>
+<th style="text-align: center;"><strong>M</strong></th>
+<th style="text-align: center;"><strong>E</strong></th>
+<th style="text-align: center;"><strong>EA</strong></th>
+<th style="text-align: center;"><strong>T</strong></th>
+<th style="text-align: center;"><strong>H</strong></th>
+<th style="text-align: center;"><strong>M+H</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BP, °C</td>
+<td style="text-align: center;">64.53</td>
+<td style="text-align: center;">78.31</td>
+<td style="text-align: center;">77.20</td>
+<td style="text-align: center;">110.68</td>
+<td style="text-align: center;">68.73</td>
+<td style="text-align: center;">50.98</td>
+</tr>
+<tr>
+<td style="text-align: center;">Type (PI)</td>
+<td style="text-align: center;">S (0)</td>
+<td style="text-align: center;">N<sup>st</sup> (+1)</td>
+<td style="text-align: center;">S (0)</td>
+<td style="text-align: center;">N<sup>st</sup> (+1)</td>
+<td style="text-align: center;">S (0)</td>
+<td style="text-align: center;">N<sup>un</sup> (+1)</td>
+</tr>
+</tbody>
+</table>
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 18%"/>
+<col style="width: 14%"/>
+<col style="width: 12%"/>
+<col style="width: 14%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Sing. point</strong></th>
+<th style="text-align: center;"><strong>M+T</strong></th>
+<th style="text-align: center;"><strong>E+H</strong></th>
+<th style="text-align: center;"><strong>EA+H</strong></th>
+<th style="text-align: center;"><strong>E+EA</strong></th>
+<th style="text-align: center;"><strong>M+EA</strong></th>
+<th style="text-align: center;"><strong>E+T</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BP, °C</td>
+<td style="text-align: center;">63.60</td>
+<td style="text-align: center;">58.37</td>
+<td style="text-align: center;">65.37</td>
+<td style="text-align: center;">72.02</td>
+<td style="text-align: center;">62.52</td>
+<td style="text-align: center;">76.96</td>
+</tr>
+<tr>
+<td style="text-align: center;">Type (PI)</td>
+<td style="text-align: center;">S (0)</td>
+<td style="text-align: center;">S (0)</td>
+<td style="text-align: center;">S (0)</td>
+<td style="text-align: center;">S (0)</td>
+<td style="text-align: center;">S (0)</td>
+<td style="text-align: center;">S (-1)</td>
+</tr>
+</tbody>
+</table>
+
+<p>There are 4 edges adjacent to the vertex of each singular point,
+comparing the boiling points, it is possible to determine the type of
+points at the vertex (table). There will always be one unstable node in
+systems of type considered; it is azeotrope M+H. By solving the
+following equation [2], the number of binary saddles with a nonzero
+Poincare index can be determined:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msubsup><mi>N</mi><mn>5</mn><mo>+</mo></msubsup><mo>+</mo><msubsup><mi>N</mi><mn>4</mn><mo>+</mo></msubsup><mo>−</mo><msubsup><mi>C</mi><mn>4</mn><mo>−</mo></msubsup><mo>+</mo><msubsup><mi>N</mi><mn>3</mn><mo>+</mo></msubsup><mo>+</mo><msubsup><mi>C</mi><mn>3</mn><mo>+</mo></msubsup><mo>+</mo><msubsup><mi>N</mi><mn>2</mn><mo>+</mo></msubsup><mo>−</mo><msubsup><mi>C</mi><mn>2</mn><mo>−</mo></msubsup><mo>+</mo><msubsup><mi>N</mi><mn>1</mn><mo>+</mo></msubsup><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2N_{5}^{+} + N_{4}^{+} - C_{4}^{-} + N_{3}^{+} + C_{3}^{+} + N_{2}^{+} - C_{2}^{-} + N_{1}^{+} = 2</annotation></semantics></math></p>
+<p>The terms
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>N</mi><mn>5</mn><mo>+</mo></msubsup><mo>,</mo><mspace width="0.222em"></mspace><msubsup><mi>N</mi><mn>4</mn><mo>+</mo></msubsup><mo>,</mo><msubsup><mi>C</mi><mn>4</mn><mo>−</mo></msubsup><mo>,</mo><mspace width="0.222em"></mspace><msubsup><mi>N</mi><mn>3</mn><mo>+</mo></msubsup><mo>,</mo><msubsup><mi>C</mi><mn>3</mn><mo>+</mo></msubsup><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">N_{5}^{+},\ N_{4}^{+},C_{4}^{-},\ N_{3}^{+},C_{3}^{+}\ </annotation></semantics></math>are
+equal to zero due to the absence of such points,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>N</mi><mn>2</mn><mo>+</mo></msubsup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N_{2}^{+} = 1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>N</mi><mn>1</mn><mo>+</mo></msubsup><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">N_{1}^{+} = 2</annotation></semantics></math>,
+so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mn>2</mn><mo>−</mo></msubsup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">C_{2}^{-} = 1</annotation></semantics></math>.
+The system contains one binary azeotrope of the saddle type with index
+-1 that can be formed only by points of pure components of the stable
+node type, i.e. azeotrope E+T. The latter will generate an internal
+separatric hypersurface of the third dimension (SH<sub>3</sub>). The
+remaining singular points are saddles with zero index. Such binary
+azeotropes will generate separatric manifolds, but of a smaller
+dimension, which will form a boundary surface of SH<sub>3</sub>.
+SH<sub>3</sub> separates diagram into two distillation regions. Thus,
+the complete structure of the composition pentatope is determined only
+based on qualitative analysis.</p>
+
+<p>1. A.V. Frolkova. <em>Theor. Found. Chem. Eng</em>. 2024, 4,
+1017.</p>
+<p>2. A.V. Frolkova, etc. <em>Theor. Found. Chem. Eng</em>. 2025, 3,
+23.</p>
+</article>
+<footer class="text-center"><a href="https://rcct2026.ru/abstracts/150.pdf">Open this abstract as a PDF</a></footer>
+</body>
+</html>

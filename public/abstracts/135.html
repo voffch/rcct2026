@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="pandoc" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<meta content="en" name="citation_language"/>
+<meta content="STUDY OF THE CRYSTALLIZATION PROCESS OF THE ANTIVIRAL DRUG TECOVIRIMAT USING THE MOLECULAR DYNAMICS METHOD" name="citation_title"/>
+<meta content="Ivlev, A.A." name="citation_author"/>
+<meta content='SRF "SKIF", Koltsovo; Novosibirsk State University, Novosibirsk' name="citation_author_institution"/>
+<meta content="Kadtsyn, E.D." name="citation_author"/>
+<meta content='SRF "SKIF", Koltsovo; Novosibirsk State University, Novosibirsk' name="citation_author_institution"/>
+<meta content="135" name="citation_firstpage"/>
+<meta content="135" name="citation_lastpage"/>
+<meta content="2026" name="citation_publication_date"/>
+<meta content="https://rcct2026.ru/abstracts/135.html" name="citation_fulltext_html_url"/>
+<meta content="https://rcct2026.ru/abstracts/135.pdf" name="citation_pdf_url"/>
+<meta content="XXV International Conference on Chemical Thermodynamics in Russia (RCCT-2026)" name="citation_conference_title"/>
+<meta content="Ural Federal University publishing house" name="citation_publisher"/>
+<title>STUDY OF THE CRYSTALLIZATION PROCESS OF THE ANTIVIRAL DRUG TECOVIRIMAT USING THE MOLECULAR DYNAMICS METHOD</title>
+<style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+body {
+font-size: 16px;
+font-family: "Times New Roman", Times, Georgia, serif;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+@media (max-width: 600px) {
+font-size: 16px;
+}
+header {
+border-bottom: 1px solid black;
+padding: 0 0.25rem 0.25rem 0.25rem;
+margin-bottom: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 2rem;
+}
+.header-text {
+hyphens: none;
+}
+footer {
+margin-top: 1rem;
+}
+p {
+hyphens: auto;
+text-align: justify;
+line-height: 1.2;
+}
+.text-center {
+text-align: center;
+}
+.text-right {
+text-align: right;
+}
+.image-container {
+display: flex;
+justify-content: space-around;
+}
+.full-width-image {
+width: 100%;
+}
+table {
+display: table;
+margin: 1em auto;
+}
+.header-p {
+text-align: center;
+margin: 0;
+}
+.empty-p {
+margin: 0 0 2rem 0;
+}
+.one-row-table th {
+border-top: none;
+font-weight: normal;
+}
+</style>
+</head>
+<body>
+<header><span class="header-text">XXV International Conference on Chemical Thermodynamics in Russia</span><span class="header-page-number">135</span></header>
+<article>
+<p class="header-p"><strong>STUDY OF THE CRYSTALLIZATION PROCESS OF THE ANTIVIRAL
+DRUG TECOVIRIMAT USING THE MOLECULAR DYNAMICS METHOD</strong></p>
+<p class="header-p"><em><u>Ivlev A.A.</u><sup>(1,2)</sup>, Kadtsyn
+E.D.<sup>(1,2)</sup></em></p>
+<p class="header-p"><sup>(1)</sup> SRF "SKIF"</p>
+<p class="header-p">630559, Koltsovo, Nikolskiy pr., 1</p>
+<p class="header-p"><sup>(2)</sup> Novosibirsk State University</p>
+<p class="header-p">630090, Novosibirsk, Pirogova st., 2</p>
+<p class="header-p empty-p"></p>
+<p>The active ingredients of drugs are often solid phases. However, the
+polymorphism inherent in molecular crystals necessitates strict control
+over the polymorphic composition of active substances during drug
+production, as different solid forms can vary significantly in their
+physicochemical properties. Precipitation from solution is a widely
+employed method for producing solid pharmaceutical forms, where the
+formation of specific polymorphs primarily depends on the properties of
+the chosen solvent. Currently, identifying the crystallization
+conditions for particular polymorphs remains purely empirical. It is
+generally accepted that the precipitation process involves the formation
+of molecule clusters that gradually grow into crystal nuclei. The
+structure of these clusters is believed to dictate the architecture of
+the resulting solid form.</p>
+<p>Molecular dynamics (MD) simulation, is well-suited for investigating
+processes occurring in solution. MD provides a comprehensive set of
+atomic coordinates, enabling the extraction of detailed information
+regarding molecular orientation, cluster size and morphology, and
+intermolecular interactions—both within solute clusters and with the
+surrounding solvent. Furthermore, these simulations allow for the
+calculation of various thermodynamic properties. Such data are essential
+for analyzing of a specific solvent influence on cluster architecture
+and, consequently, the structure of the resulting solid phase.</p>
+<p>The antiviral drug Tecovirimat, having six known solid forms, was
+selected as the object of this study [1]. Using MD simulations, we
+constructed models of Tecovirimat solutions in various solvents and at
+different concentrations. The conformations of individual Tecovirimat
+molecules were investigated as well as mutual molecular orientation.
+Furthermore, the structure and stability of the resulting molecular
+associates in solution were examined. Finally, a comparative analysis
+was performed between the MD simulation data and experimental X-ray
+diffraction data for Tecovirimat. The correspondence between the
+structure of clusters and the precipitated solid form was shown.</p>
+
+<p>1. Tyavanagimatt S. R. et al. Polymorphic forms of ST-246 and methods
+of preparation: pat. 9339466 USA. - 2016.</p>
+<p><em>This work was supported by the Ministry of Science and Higher
+Education of the Russian Federation within the governmental order for
+SRF ""SKIF"" Boreskov Institute of Catalysis (FWUR-2024-0040).</em></p>
+</article>
+<footer class="text-center"><a href="https://rcct2026.ru/abstracts/135.pdf">Open this abstract as a PDF</a></footer>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="pandoc" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<meta content="en" name="citation_language"/>
+<meta content="METHOD FOR DETERMINING INFORMATIVE PARAMETERS IN NEURAL NETWORK MODELING OF CHEMICAL KINETICS" name="citation_title"/>
+<meta content="Kolesnikova, O.P." name="citation_author"/>
+<meta content="National Research Center Kurchatov Institute - NIISI, Moscow; Moscow Institute of Physics and Technology, Dolgoprudny" name="citation_author_institution"/>
+<meta content="Malsagov, M.Yu." name="citation_author"/>
+<meta content="Moscow Institute of Physics and Technology, Dolgoprudny" name="citation_author_institution"/>
+<meta content="Mikhalchenko, E.V." name="citation_author"/>
+<meta content="Moscow Institute of Physics and Technology, Dolgoprudny" name="citation_author_institution"/>
+<meta content="Karandashev, I.M." name="citation_author"/>
+<meta content="Moscow Institute of Physics and Technology, Dolgoprudny; Peoples' Friendship University of Russia, Moscow" name="citation_author_institution"/>
+<meta content="213" name="citation_firstpage"/>
+<meta content="213" name="citation_lastpage"/>
+<meta content="2026" name="citation_publication_date"/>
+<meta content="https://rcct2026.ru/abstracts/213.html" name="citation_fulltext_html_url"/>
+<meta content="https://rcct2026.ru/abstracts/213.pdf" name="citation_pdf_url"/>
+<meta content="XXV International Conference on Chemical Thermodynamics in Russia (RCCT-2026)" name="citation_conference_title"/>
+<meta content="Ural Federal University publishing house" name="citation_publisher"/>
+<title>METHOD FOR DETERMINING INFORMATIVE PARAMETERS IN NEURAL NETWORK MODELING OF CHEMICAL KINETICS</title>
+<style>
+
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+body {
+font-size: 16px;
+font-family: "Times New Roman", Times, Georgia, serif;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+@media (max-width: 600px) {
+font-size: 16px;
+}
+header {
+border-bottom: 1px solid black;
+padding: 0 0.25rem 0.25rem 0.25rem;
+margin-bottom: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 2rem;
+}
+.header-text {
+hyphens: none;
+}
+footer {
+margin-top: 1rem;
+}
+p {
+hyphens: auto;
+text-align: justify;
+line-height: 1.2;
+}
+.text-center {
+text-align: center;
+}
+.text-right {
+text-align: right;
+}
+.image-container {
+display: flex;
+justify-content: space-around;
+}
+.full-width-image {
+width: 100%;
+}
+table {
+display: table;
+margin: 1em auto;
+}
+.header-p {
+text-align: center;
+margin: 0;
+}
+.empty-p {
+margin: 0 0 2rem 0;
+}
+.one-row-table th {
+border-top: none;
+font-weight: normal;
+}
+</style>
+</head>
+<body>
+<header><span class="header-text">XXV International Conference on Chemical Thermodynamics in Russia</span><span class="header-page-number">213</span></header>
+<article>
+<p class="header-p"><strong>METHOD FOR DETERMINING INFORMATIVE PARAMETERS
+IN NEURAL NETWORK MODELING OF CHEMICAL KINETICS</strong></p>
+<p class="header-p"><em><u>Kolesnikova O.P.</u><sup>(1,2)</sup>, Malsagov
+M.Yu.<sup>(2)</sup>, Mikhalchenko E.V.<sup>(2)</sup>, Karandashev
+I.M.<sup>(2,3)</sup></em></p>
+<p class="header-p"><sup>(1)</sup> National Research Center Kurchatov Institute -
+NIISI</p>
+<p class="header-p">117218, Moscow, Nakhimovsky ave, 36.1</p>
+<p class="header-p"><sup>(2)</sup> Moscow Institute of Physics and Technology</p>
+<p class="header-p">141700, Dolgoprudny, Institutsky lane, 9</p>
+<p class="header-p"><sup>(3)</sup> Peoples' Friendship University of Russia</p>
+<p class="header-p">117198, Moscow, Miklukho-Maklaya st., 6</p>
+<p class="header-p empty-p"></p>
+<p>The problem of approximating the temporal evolution of a
+hydrogen–oxygen mixture using a neural network is considered. A fully
+connected network with 5 layers and LeakyReLU activation was used,
+trained with Adam (lr = 0.01, 100 epochs) on MSE. Both the input and
+output of the neural network are vectors comprising the time step Δt,
+the system temperature, and the molar concentrations of 11 chemical
+species, with relevant parameter ranges:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>∈</mo><mo form="prefix" stretchy="false">[</mo><mn>250</mn><mo>,</mo><mspace width="0.222em"></mspace><mn>5000</mn><mo form="postfix" stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">T \in \lbrack 250,\ 5000\rbrack</annotation></semantics></math>
+K,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>∈</mo><mo form="prefix" stretchy="false">[</mo><msup><mn>10</mn><mn>4</mn></msup><mo>,</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>7</mn></msup><mo form="postfix" stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">p \in \lbrack 10^{4},2 \times 10^{7}\rbrack</annotation></semantics></math>
+Pa, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>∈</mo><mo form="prefix" stretchy="false">[</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>10</mn></mrow></msup><mo>,</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>5</mn></mrow></msup><mo form="postfix" stretchy="false">]</mo><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">\Delta t \in \lbrack 10^{- 10},10^{- 5}\rbrack\ </annotation></semantics></math>s.</p>
+<p>Analysis of the test trajectories revealed significant heterogeneity
+in the error. For the groups with minimal and maximal errors, the
+spectrum of the Jacobian of the original system was studied. It was
+found that the key difference is associated with the minimal
+eigenvalues: for well-approximated trajectories,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mspace width="0.222em"></mspace></mrow></msub><annotation encoding="application/x-tex">\lambda_{min\ }</annotation></semantics></math>is
+on the order of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mn>4</mn></msup><annotation encoding="application/x-tex">10^{4}</annotation></semantics></math>,
+while for poorly approximated ones,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mspace width="0.222em"></mspace></mrow></msub><annotation encoding="application/x-tex">\lambda_{min\ }</annotation></semantics></math>ranges
+from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mi>−</mi><mn>2</mn></mrow></msup><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">10^{- 2}\ </annotation></semantics></math>to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mn>1</mn></msup><annotation encoding="application/x-tex">10^{1}</annotation></semantics></math>.
+Small
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mi mathvariant="normal">min</mi></msub><annotation encoding="application/x-tex">\lambda_{\min}</annotation></semantics></math>
+values are caused by slow reactions (small
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>),
+low concentrations, and quasi-steady-state balancing of forward and
+reverse reactions. Therefore, the model error is determined by the
+regimes of the predicted profiles.</p>
+<p>Based on this identified relationship, a modification of the loss
+function is proposed. In addition to the standard MSE term, an
+additional term is introduced that accounts for the discrepancy between
+predicted and true values of the logarithms of reaction rate constants,
+computed using the Arrhenius formula from the predicted temperature.</p>
+<p>Comparison of different training variants shows: baseline model: MSE
+=
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.374</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1.374 \times 10^{- 3}</annotation></semantics></math>,
+STD =
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.183</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2.183 \times 10^{- 2}</annotation></semantics></math>;
+using all rate constants: MSE =
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.554</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">6.554 \times 10^{- 2}</annotation></semantics></math>,
+STD =
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8.211</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">8.211 \times 10^{- 2}</annotation></semantics></math>;
+using the selected subset of constants associated with the formation of
+the slow modes of the system: MSE =
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6.482</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>4</mn></mrow></msup></mrow><annotation encoding="application/x-tex">6.482 \times 10^{- 4}</annotation></semantics></math>,
+STD =
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9.308</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">9.308 \times 10^{- 3}</annotation></semantics></math>.</p>
+<p>It is shown that the inclusion of a physically informed term in the
+loss function is effective only with a targeted selection of reactions.
+Using all constants leads to a deterioration of model quality, whereas
+considering the reactions that determine slow modes results in more than
+a twofold reduction in error compared to the baseline approach.</p>
+<p>Thus, spectral analysis of the Jacobian can serve as a tool for
+identifying informative kinetic parameters in neural network modeling of
+chemical kinetics.</p>
+
+<p><em>The work was carried out within the framework on the topics
+FNEF-2024-0001 and FNEF-2024-0002.</em></p>
+</article>
+<footer class="text-center"><a href="https://rcct2026.ru/abstracts/213.pdf">Open this abstract as a PDF</a></footer>
+</body>
+</html>
