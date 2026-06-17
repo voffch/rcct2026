@@ -1,7 +1,7 @@
 ---
 img: "khvan.jpg"
 name: "Alexandra V. Khvan"
-title: ""
+title: "Thermodynamic modelling: from thermodynamic database to industrial process simulation"
 ---
 
 In 2008, Alexandra V. Khvan received her PhD in metallurgy, and in 2020- D.Sc. degree in physical chemistry. For over two decades, she has been working at leading research organizations and universities in Russia and Germany. Currently, Alexandra Vyacheslavovna is a senior researcher and head of the Chemical Thermodynamics Laboratory at the Faculty of Chemistry of the Lomonosov Moscow State University.

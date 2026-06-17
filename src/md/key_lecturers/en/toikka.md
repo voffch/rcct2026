@@ -1,7 +1,7 @@
 ---
 img: "toikka.jpg"
 name: "Alexander M. Toikka"
-title: "On the 75<sup>th</sup> anniversary of the department of chemical thermodynamics and kinetics of Saint-Petersburg State University"
+title: "On the 75<sup>th</sup> anniversary of the department of chemical thermodynamics and kinetics of Saint Petersburg State University"
 ---
 
 Alexander Matveevich Toikka is a Doctor of Chemical Sciences, Professor, Head of the Department of Chemical Thermodynamics and Kinetics at the Institute of Chemistry at Saint Petersburg State University (SPbU), and an Honorary Professor of SPbU. He is a graduate of the Leningrad (Saint Petersburg) State University (Faculty of Chemistry, Department of Solution Theory – Chemical Thermodynamics and Kinetics), completed his postgraduate studies at the same department, and then worked as a research fellow, associate professor, and professor of the department. From 1999 to the present, he has been the Head of the Department of Chemical Thermodynamics and Kinetics at Saint Petersburg University. In his work, A.M. Toikka continues the traditions of the founder of the department (1951), Professor A.V. Storonkin, and other outstanding scientists whose names are associated with the formation and development of the Department of Solution Theory (since 1978 – Chemical Thermodynamics and Kinetics): Academicians A.I. Rusanov and M.M. Shultz, Professors M.P. Susarev, V.T. Zharov, V.K. Filippov, and others.

@@ -1,7 +1,7 @@
 ---
 img: ""
 name: "Alexander P. Nemudry"
-title: ""
+title: "Quasi-equilibrium oxygen release method for studying materials with mixed ionic - electronic conductivity"
 ---
 
 A.P. Nemudry, Doctor of Chemical Sciences, Corresponding Member of the Russian Academy of Sciences, Director of the Institute of Solid State Chemistry and Mechanochemistry SB RAS, is a specialist in solid-state chemistry and materials science and the author of over 500 scientific papers, including one monograph, two chapters in monographs, and eight patents.

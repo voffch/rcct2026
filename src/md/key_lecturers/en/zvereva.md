@@ -1,7 +1,7 @@
 ---
 img: "zvereva.jpg"
 name: "Irina A. Zvereva"
-title: ""
+title: "Thermodynamic aspects of piezophotocatalysis and design of piezophotocatalytic materials"
 ---
 
 Irina A. Zvereva is a professor in the Department of Chemical Thermodynamics and Kinetics at the Institute of Chemistry at St. Petersburg State University. She is the founder and long-time director of the Thermal Analysis and Calorimetry Resource Center at the St. Petersburg State University Science Park.
