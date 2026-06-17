@@ -14,6 +14,10 @@ main.wide {
     overflow-x: scroll;
 }
 
+.presentation-card .company-logo {
+    border-radius: 0;
+}
+
 a[href^="tel:"]:before {
     content: "\260e\00a0";
 }
