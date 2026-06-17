@@ -1,6 +1,8 @@
 ---
 import CommonHead from "./CommonHead.astro";
 import NavRu from "../components/Nav_ru.astro";
+
+const {wide=false} = Astro.props;
 ---
 
 <html lang="ru">
@@ -70,8 +72,8 @@ import NavRu from "../components/Nav_ru.astro";
     </script>
   </head>
   <body class="light">
-    <NavRu />
-    <main class="responsive">
+    <NavRu small={wide} />
+    <main class:list={[{ 'wide': wide, 'responsive': !wide }]}>
       <slot />
     </main>
   </body>

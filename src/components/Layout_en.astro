@@ -1,6 +1,8 @@
 ---
 import CommonHead from "./CommonHead.astro";
 import NavEn from "../components/Nav_en.astro";
+
+const {wide=false} = Astro.props;
 ---
 
 <html lang="en">
@@ -70,8 +72,8 @@ import NavEn from "../components/Nav_en.astro";
     </script>
   </head>
   <body class="light">
-    <NavEn/>
-    <main class="responsive">
+    <NavEn small={wide} />
+    <main class:list={[{ 'wide': wide, 'responsive': !wide }]}>
       <slot/>
     </main>
   </body>

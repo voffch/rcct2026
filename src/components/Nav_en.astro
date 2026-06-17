@@ -11,9 +11,11 @@ function url(lang: string, href: string, removeLangPathPart=true) {
   }
   return (url.includes('#') && url.endsWith('/')) ? url.slice(0, -1) : url;
 }
+
+const {small=false} = Astro.props;
 ---
 
-<nav class="left max l">
+{!small && (<nav class="left max l">
   <header>
     <nav>
       <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
@@ -69,8 +71,9 @@ function url(lang: string, href: string, removeLangPathPart=true) {
     <div>По-русски</div>
   </a>
 </nav>
+)}
 
-<nav class="left m">
+<nav class="left m" class:list={[{ 'l': small }]}>
   <header>
     <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
   </header>

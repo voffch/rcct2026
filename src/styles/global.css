@@ -9,6 +9,11 @@ main {
     max-width: 64rem !important;
     margin: 0 0.5rem !important;
 }
+main.wide {
+    max-width: 100% !important;
+    overflow-x: scroll;
+}
+
 a[href^="tel:"]:before {
     content: "\260e\00a0";
 }
