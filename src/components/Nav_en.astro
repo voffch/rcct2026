@@ -22,6 +22,10 @@ const {small=false} = Astro.props;
       <h6>RCCT 2026</h6>
     </nav>
   </header>
+  <a href={url('ru', Astro.url.pathname, true)}>
+    <i>language</i>
+    <div>По-русски</div>
+  </a>
   <a href={url('en', '#info')}>
     <i>help</i>
     <div>Info</div>
@@ -66,10 +70,6 @@ const {small=false} = Astro.props;
     <i>chat</i>
     <div>Contacts</div>
   </a>
-  <a href={url('ru', Astro.url.pathname, true)}>
-    <i>language</i>
-    <div>По-русски</div>
-  </a>
 </nav>
 )}
 
@@ -77,6 +77,10 @@ const {small=false} = Astro.props;
   <header>
     <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
   </header>
+  <a href={url('ru', Astro.url.pathname, true)}>
+    <i>language</i>
+    <div>По-русски</div>
+  </a>
   <a href={url('en', '#info')}>
     <i>help</i>
     <div>Info</div>
@@ -121,10 +125,6 @@ const {small=false} = Astro.props;
     <i>chat</i>
     <div>Contacts</div>
   </a>
-  <a href={url('ru', Astro.url.pathname, true)}>
-    <i>language</i>
-    <div>По-русски</div>
-  </a>
 </nav>
 
 <nav class="top s">
@@ -148,6 +148,12 @@ const {small=false} = Astro.props;
 </header>
 <div class="space"></div>
 <ul class="list">
+  <li class="wave round">
+    <a href={url('ru', Astro.url.pathname, true)}>
+      <i>language</i>
+      <div>По-русски</div>
+    </a>
+  </li>
   <li class="wave round">
     <a href={url('en', '#info')}>
       <i>help</i>
@@ -212,12 +218,6 @@ const {small=false} = Astro.props;
     <a href={url('en', '#contacts')}>
       <i>chat</i>
       <div>Contacts</div>
-    </a>
-  </li>
-  <li class="wave round">
-    <a href={url('ru', Astro.url.pathname, true)}>
-      <i>language</i>
-      <div>По-русски</div>
     </a>
   </li>
 </ul>
