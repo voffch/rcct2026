@@ -26,6 +26,10 @@ const {small=false} = Astro.props;
     <i>language</i>
     <div>По-русски</div>
   </a>
+  <a href={url('en', 'prog')}>
+    <i>overview</i>
+    <div>Program</div>
+  </a>
   <a href={url('en', '#info')}>
     <i>help</i>
     <div>Info</div>
@@ -80,6 +84,10 @@ const {small=false} = Astro.props;
   <a href={url('ru', Astro.url.pathname, true)}>
     <i>language</i>
     <div>По-русски</div>
+  </a>
+  <a href={url('en', 'prog')}>
+    <i>overview</i>
+    <div>Program</div>
   </a>
   <a href={url('en', '#info')}>
     <i>help</i>
@@ -152,6 +160,12 @@ const {small=false} = Astro.props;
     <a href={url('ru', Astro.url.pathname, true)}>
       <i>language</i>
       <div>По-русски</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href={url('en', 'prog')}>
+      <i>overview</i>
+      <div>Program</div>
     </a>
   </li>
   <li class="wave round">

@@ -7,32 +7,32 @@
 - June 29
   - 11.00-15.00: Registration
   - 15.00-15.20: Opening ceremony
-  - 15.20-18.00: Plenary lectures
+  - 15.20-18.30: Plenary lectures
   - 18.30-20.30: Welcome party
 - June 30
-  - 9.00-11.00: Plenary lectures
-  - 11.00-11.15: Coffee break
-  - 11.15-13.00: Section presentations
-  - 13.00-14.00: Dinner time
-  - 14.00-16.00: Section presentations
-  - 16.00-16.15: Coffee break
-  - 16.15-18.00: Section presentations
-  - 18.00-20.00: Poster presentations
+  - 9.00-11.55: Plenary lectures
+  - 11.55-12.25: Coffee break
+  - 12.25-13.25: Section presentations (S1, S2, S3, S4, S6)
+  - 13.25-14.30: Dinner time
+  - 14.30-16.00: Section presentations (S1, S2, S3, S4, S6)
+  - 16.00-16.30: Coffee break
+  - 16.30-18.00: Section presentations (S1, S2, S3, S4, S6)
+  - 18.00-20.00: Poster presentations (S1, S3, S4, S5)
 - July 01
-  - 9.00-11.40: Plenary lectures
-  - 11.40-12.40: Dinner time
-  - 13.00-20.30: Organized leisure (city tour or site visit)
+  - 9.00-11.00: Plenary lectures
+  - 11.00-12.00: Dinner time
+  - 12.00-20.30: Cultural Program (city tour or site visit)
 - July 02
-  - 9.00-11.40: Plenary lectures
-  - 11.00-11.15: Coffee break
-  - 11.15-13.00: Section presentations
-  - 13.00-14.00: Dinner time
-  - 14.00-16.00: Section presentations
-  - 16.00-16.15: Coffee break
-  - 16.15-18.00: Section presentations
-  - 18.00-20.00: Poster presentations
+  - 9.00-11.55: Plenary lectures
+  - 11.55-12.25: Coffee break
+  - 12.25-13.40: Section presentations (S2, S4, S5, S8)
+  - 13.40-14.45: Dinner time
+  - 14.45-16.00: Section presentations (S3, S4, S5, S6)
+  - 16.00-16.30: Coffee break
+  - 16.30-17.30: Section presentations (S2, S4, S5, S6)
+  - 17.30-19.30: Poster presentations (S2, S3, S6, S8)
 - July 03
   - 9.00-11.00: Plenary lectures
-  - 11.00-11.15: Coffee break
-  - 11.15-12.15: Section presentations
-  - 12.45-13.00: Closing ceremony
+  - 11.00-11.30: Coffee break
+  - 11.30-12.30: Section presentations (S5, S7, S8)
+  - 12.30-13.30: Closing ceremony
