@@ -2,6 +2,10 @@
 import { computed } from 'vue';
 
 const props = defineProps({
+  lang: {
+    type: String,
+    default: 'en'
+  },
   event: Object,
   filter: Object,
   spanTwoRows: {
@@ -32,7 +36,7 @@ const wrapperClass = computed(() => {
 
 <template>
   <div class="event-wrapper" :class="wrapperClass">
-    <div v-html="event.title"></div>
+    <div v-html="(lang === 'ru' && event.title_ru) ? event.title_ru : event.title"></div>
     <div class="authors" v-if="event.presenter && filter.showAuthors === 'presenter'">{{ event.presenter }}</div>
     <div class="authors" v-else-if="event.authors && filter.showAuthors === 'coauthors'" v-html="event.authors"></div>
     <div class="affs" v-if="event.affs && filter.showAffs">{{ event.affs }}</div>
@@ -73,7 +77,12 @@ const wrapperClass = computed(() => {
   .type-plenary, 
   .type-key, 
   .section-vip {
-    border: 1px solid black;
+    border: 1.5px solid #33691E;
+    background: #F1F8E9;
+  }
+  .type-event {
+    border: 1.5px solid gold;
+    background: #FFFDE7;
   }
   .authors {
     font-style: italic;

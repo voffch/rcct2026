@@ -3,12 +3,19 @@ import { ref, computed, onMounted, watch } from 'vue';
 import Filter from './Filter.vue';
 import EventCard from './EventCard.vue';
 import prog from './prog.json';
-import { sectionTranslationsEn, translateDateEn, defaultFilter } from './helpers.js';
+import { tr, defaultFilter } from './helpers.js';
+
+const props = defineProps({
+  lang: {
+    type: String,
+    default: 'ru'
+  }
+});
 
 const days = [...new Set(prog.map(p => p.start.split('T')[0]))].sort();
 
 function explainSection(sectionTitle) {
-  return sectionTranslationsEn[sectionTitle] ?? sectionTitle;
+  return tr.sectionNames[props.lang][sectionTitle] ?? sectionTitle;
 }
 
 const localStorageFilterName = 'rcct2026-filter-settings';
@@ -54,7 +61,9 @@ const sortedProg = ref(prog.sort((a, b) => new Date(a.start) - new Date(b.start)
 sortedProg.value.forEach(event => {
   const match = event.authors.match(/<u>(.*?)<\/u>/);
   event.presenter = match ? match[1] : event.authors;
-  event.textToSearch = htmlToPlaintext(event.title).toLowerCase() + htmlToPlaintext(event.authors).toLowerCase();
+  event.textToSearch = htmlToPlaintext(event.title).toLowerCase() + 
+                       htmlToPlaintext(event.authors).toLowerCase() + 
+                       (event.title_ru ? htmlToPlaintext(event.title_ru).toLowerCase() : '');
   event.day = event.start.split('T')[0];
 });
 
@@ -207,10 +216,10 @@ function dontShowSectionTitles(sectionTitles) {
 </script>
 
 <template>
-  <Filter v-model="filter" :days="days" />
+  <Filter v-model="filter" :lang="lang" />
   <div class="program-wrapper">
     <div class="day-wrapper" v-for="dayObj in scheduleGrid" :key="dayObj.day">
-      <h4>{{ translateDateEn(dayObj.day) }}</h4>
+      <h4>{{ tr.trDate[lang](dayObj.day) }}</h4>
 
       <template v-for="(block, index) in dayObj.blocks" :key="index">
 
@@ -231,6 +240,7 @@ function dontShowSectionTitles(sectionTitles) {
                 <div v-if="!slot.events[sectionTitle]" class="empty-placeholder"></div>
                 <EventCard v-else-if="slot.events[sectionTitle] && !slot.events[sectionTitle].skip"
                           :key="slot.events[sectionTitle].id"
+                          :lang="lang"
                           :event="slot.events[sectionTitle]"
                           :filter="filter"
                           :spanTwoRows="((index < block.timeSlots.length - 1) && (block.timeSlots[index + 1].start < slot.events[sectionTitle].end))
@@ -250,7 +260,7 @@ function dontShowSectionTitles(sectionTitles) {
               <template v-for="slot in block.timeSlots" :key="slot.start">
                 <div class="event-card-with-time-wrapper" v-if="slot.events[sectionTitle] && !slot.events[sectionTitle].skip">
                   <div class="time">{{ formatTime(slot.events[sectionTitle].start) }}-<wbr/>{{ formatTime(slot.events[sectionTitle].end) }}</div>
-                  <EventCard :event="slot.events[sectionTitle]" :filter="filter" v-model="checkedPresentations" />
+                  <EventCard :lang="lang" :event="slot.events[sectionTitle]" :filter="filter" v-model="checkedPresentations" />
                 </div>
               </template>
             </div>
@@ -260,12 +270,13 @@ function dontShowSectionTitles(sectionTitles) {
         <div v-else class="poster-block">
           <template v-for="slot in block.timeSlots" :key="slot.start">
             <div class="section-title">
-              {{ formatTime(slot.start) }}-<wbr/>{{ formatTime(slot.end) }} Poster Session
+              {{ formatTime(slot.start) }}-<wbr/>{{ formatTime(slot.end) }} {{ tr.posterSession[lang] }}
             </div>
             <template v-for="(eventArray, sectionTitle) in slot.events">
               <div class="section-title">{{ explainSection(sectionTitle) }}</div>
               <EventCard v-for="event in eventArray"
                           :key="event.id"
+                          :lang="lang"
                           :event="event"
                           :filter="filter"
                           v-model="checkedPresentations" />

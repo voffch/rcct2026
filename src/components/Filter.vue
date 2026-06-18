@@ -1,18 +1,21 @@
 <script setup>
 import { ref, computed } from 'vue';
-import { sectionTranslationsEn, presentationTypesTranslationsEn, translateDateEn, defaultFilter } from './helpers.js';
+import { tr, days, defaultFilter } from './helpers.js';
 
 const props = defineProps({
-  days: Array,
+  lang: {
+    type: String,
+    default: 'ru'
+  }
 });
 
 const untouchableSections = ['events', 'vip'];
 
-const toggleableSections = Object.keys(sectionTranslationsEn).filter(section => !untouchableSections.includes(section));
+const toggleableSections = Object.keys(tr.sectionNames[props.lang]).filter(section => !untouchableSections.includes(section));
 
 const untouchableType = 'event';
 
-const toggleableTypes = Object.keys(presentationTypesTranslationsEn).filter(type => type !== untouchableType);
+const toggleableTypes = Object.keys(tr.eventTypeNames[props.lang]).filter(type => type !== untouchableType);
 
 const filter = defineModel();
 
@@ -66,7 +69,7 @@ const handleToggleTypes = () => {
   <article>
     <button class="show-hide border small-round small-elevate" @click="showHideButtonClick">
       <i>{{ filter.hidden ? 'expand_circle_down' : 'expand_circle_up' }}</i>
-      <span>{{ (filter.hidden ? 'Show' : 'Hide') + ' filter and display settings' }}</span>
+      <span>{{ tr.hideFilterButton[lang](filter.hidden) }}</span>
     </button>
     <div class="filter-wrapper" v-if="!filter.hidden">
       <div class="fieldset-wrapper">
@@ -75,11 +78,11 @@ const handleToggleTypes = () => {
             <button class="transparent square small" @click="handleToggleSections">
               <i>{{ toggleSections ? 'check_box' : 'check_box_outline_blank' }}</i>
             </button>
-          Sections
+          {{ tr.sections[lang] }}
           </legend>
           <label v-for="section in toggleableSections" :key="section" class="checkbox">
             <input type="checkbox" :value="section" v-model="filter.sections">
-            <span>{{ sectionTranslationsEn[section] }}</span>
+            <span>{{ tr.sectionNames[lang][section] }}</span>
           </label>
         </fieldset>
         <fieldset class="grid-checkboxes">
@@ -87,11 +90,11 @@ const handleToggleTypes = () => {
             <button class="transparent square small" @click="handleToggleTypes">
               <i>{{ toggleTypes ? 'check_box' : 'check_box_outline_blank' }}</i>
             </button>
-            Event types
+            {{ tr.eventType[lang] }}
           </legend>
           <label v-for="type in toggleableTypes" :key="type" class="checkbox">
             <input type="checkbox" :value="type" v-model="filter.types">
-            <span>{{ presentationTypesTranslationsEn[type] }}</span>
+            <span>{{ tr.eventTypeNames[lang][type] }}</span>
           </label>
         </fieldset>
         <fieldset class="grid-checkboxes">
@@ -99,40 +102,41 @@ const handleToggleTypes = () => {
             <button class="transparent square small" @click="handleToggleDays">
               <i>{{ toggleDays ? 'check_box' : 'check_box_outline_blank' }}</i>
             </button>
-            Days
+            {{ tr.days[lang] }}
           </legend>
           <label v-for="day in days" :key="day" class="checkbox">
             <input type="checkbox" :value="day" v-model="filter.days">
-            <span>{{ translateDateEn(day) }}</span>
+            <span>{{ tr.trDate[lang](day) }}</span>
           </label>
         </fieldset>
         <fieldset class="grid-display-settings">
-          <legend>Display settings</legend>
+          <legend>{{ tr.displaySettings[lang] }}</legend>
           <div class="display-settings field suffix small border">
             <select v-model="filter.display">
-              <option value="list">List</option>
-              <option value="grid">Grid</option>
+              <option v-for="v in Object.keys(tr.displaySettingNames[lang])" :key="v" :value="v">
+                {{ tr.displaySettingNames[lang][v] }}
+              </option>
             </select>
             <i>arrow_drop_down</i>
           </div>
           <div class="presenter-settings field suffix small border">
             <select v-model="filter.showAuthors">
-              <option value="presenter">Show presenter only</option>
-              <option value="coauthors">Show all coauthors</option>
-              <option value="none">Do not show authors</option>
+              <option v-for="v in Object.keys(tr.showPresenterNames[lang])" :key="v" :value="v">
+                {{ tr.showPresenterNames[lang][v] }}
+              </option>
             </select>
             <i>arrow_drop_down</i>
           </div>
           <label class="checkbox">
             <input type="checkbox" v-model="filter.showAffs">
-            <span>Show Affiliations</span>
+            <span>{{ tr.showAffs[lang] }}</span>
           </label>
         </fieldset>
         <fieldset class="grid-display-settings">
-          <legend>Show only</legend>
+          <legend>{{ tr.showOnly[lang] }}</legend>
           <label class="checkbox">
             <input type="checkbox" v-model="filter.showOnlyChecked">
-            <span>Checked -&nbsp;</span><i class="tiny">check_box</i>
+            <span>{{ tr.checked[lang] }} -&nbsp;</span><i class="tiny">check_box</i>
           </label>
         </fieldset>
       </div>
@@ -140,15 +144,15 @@ const handleToggleTypes = () => {
         <div class="filter-input field label prefix border small">
           <i>search</i>
           <input v-model.trim="filter.searchString" type="text" placeholder=" ">
-          <label>title or coauthor</label>
+          <label>{{ tr.titleOrCoauthor[lang] }}</label>
         </div>
         <button class="clear-filter border small-round small-elevate" @click="clearSearch">
           <i>ink_eraser</i>
-          <span>Clear Search</span>
+          <span>{{ tr.clearSearch[lang] }}</span>
         </button>
         <button class="clear-filter border small-round small-elevate" @click="clearFilter">
           <i>delete</i>
-          <span>Clear ALL</span>
+          <span>{{ tr.clearAll[lang] }}</span>
         </button>
       </div>
     </div>
@@ -228,7 +232,7 @@ const handleToggleTypes = () => {
     flex-wrap: wrap;
   }
   .display-settings {
-    min-width: 7rem;
+    min-width: 8rem;
     margin: 0;
   }
   .presenter-settings {
