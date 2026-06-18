@@ -87,8 +87,8 @@ const wrapperClass = computed(() => {
   .authors {
     font-style: italic;
   }
-  .authors u {
-    vertical-align: unset;
+  .authors :deep(u) {
+    vertical-align: unset !important;
   }
   .affs {
     font-size: 0.9em;
