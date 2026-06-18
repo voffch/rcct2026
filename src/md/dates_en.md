@@ -1,7 +1,3 @@
-- **April 15** – registration and abstract submission deadline
-- **June 01** – participation fee payment deadline
-- **June 29 - July 3** – the conference days
-
 #### Conference Schedule
 
 - June 29

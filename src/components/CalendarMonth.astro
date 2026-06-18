@@ -3,7 +3,9 @@ import type { Code } from "astro:components";
 
 const { lang, month, year, importantDates } = Astro.props;
 //the month is 1-indexed
-const daysOfTheWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+const daysOfTheWeekEN = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+const daysOfTheWeekRU = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+const daysOfTheWeek = lang == 'ru' ? daysOfTheWeekRU : daysOfTheWeekEN;
 function daysInMonth (month, year) {
   return new Date(year, month, 0).getDate();
 }
@@ -113,15 +115,15 @@ const monthNames = lang == 'ru' ? monthNamesRU : monthNamesEN;
   .calendar__number--current,
   .calendar__number:hover,
   .calendar__number--important {
-      background-color: var(--primary);
-      color: #fff !important;
-      font-weight: bold;
-      cursor: pointer;
+    background-color: goldenrod;
+    color: #fff !important;
+    font-weight: bold;
+    cursor: pointer;
   }
   .calendar__number:hover {
     background-color: var(--secondary);
   }
   .calendar__number--important {
-      background-color: var(--tertiary);
+    background-color: var(--tertiary);
   }
   </style>
