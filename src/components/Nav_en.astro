@@ -18,7 +18,7 @@ const {small=false} = Astro.props;
 {!small && (<nav class="left max l">
   <header>
     <nav>
-      <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
+      <img src="/logos/RCCT-logo-small-en.svg" class="circle extra" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
       <h6>RCCT 2026</h6>
     </nav>
   </header>
@@ -42,10 +42,6 @@ const {small=false} = Astro.props;
     <i>calendar_month</i>
     <div>Dates</div>
   </a>
-  <a href={url('en', '#participate')}>
-    <i>person_raised_hand</i>
-    <div>Participate!</div>
-  </a>
   <a href={url('en', '#sections')}>
     <i>checklist</i>
     <div>Sections</div>
@@ -53,6 +49,10 @@ const {small=false} = Astro.props;
   <a href={url('en', 'key_lectures')}>
     <i>key</i>
     <div>Key lectures</div>
+  </a>
+  <a href={url('en', '#participate')}>
+    <i>person_raised_hand</i>
+    <div>Participate!</div>
   </a>
   <a href={url('en', '#hotels')}>
     <i>hotel</i>
@@ -79,7 +79,7 @@ const {small=false} = Astro.props;
 
 <nav class="left m" class:list={[{ 'l': small }]}>
   <header>
-    <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
+    <img src="/logos/RCCT-logo-small-en.svg" class="circle extra" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
   </header>
   <a href={url('ru', Astro.url.pathname, true)}>
     <i>language</i>
@@ -101,10 +101,6 @@ const {small=false} = Astro.props;
     <i>calendar_month</i>
     <div>Dates</div>
   </a>
-  <a href={url('en', '#participate')}>
-    <i>person_raised_hand</i>
-    <div>Participate!</div>
-  </a>
   <a href={url('en', '#sections')}>
     <i>checklist</i>
     <div>Sections</div>
@@ -112,6 +108,10 @@ const {small=false} = Astro.props;
   <a href={url('en', 'key_lectures')}>
     <i>key</i>
     <div>Key lectures</div>
+  </a>
+  <a href={url('en', '#participate')}>
+    <i>person_raised_hand</i>
+    <div>Participate!</div>
   </a>
   <a href={url('en', '#hotels')}>
     <i>hotel</i>
@@ -137,7 +137,7 @@ const {small=false} = Astro.props;
 
 <nav class="top s">
   <header>
-    <img src="/logos/RCCT-logo-small-en.svg" class="circle extra">
+    <img src="/logos/RCCT-logo-small-en.svg" class="circle extra" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
   </header>
   <button class="transparent large" onclick="document.querySelector('#small-screen-menu').showModal()">
     <i>menu</i>
@@ -187,12 +187,6 @@ const {small=false} = Astro.props;
     </a>
   </li>
   <li class="wave round">
-    <a href={url('en', '#participate')}>
-      <i>person_raised_hand</i>
-      <div>Participate!</div>
-    </a>
-  </li>
-  <li class="wave round">
     <a href={url('en', '#sections')}>
       <i>checklist</i>
       <div>Sections</div>
@@ -202,6 +196,12 @@ const {small=false} = Astro.props;
     <a href={url('en', 'key_lectures')}>
       <i>key</i>
       <div>Key lectures</div>
+    </a>
+  </li>
+  <li class="wave round">
+    <a href={url('en', '#participate')}>
+      <i>person_raised_hand</i>
+      <div>Participate!</div>
     </a>
   </li>
   <li class="wave round">
@@ -256,5 +256,8 @@ const {small=false} = Astro.props;
   }
   nav.left.m {
     min-inline-size: 7rem;
+  }
+  nav > img {
+    cursor: pointer;
   }
 </style>
