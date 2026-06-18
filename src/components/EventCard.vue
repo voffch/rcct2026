@@ -50,7 +50,7 @@ const wrapperClass = computed(() => {
   </div>
 </template>
 
-<style>
+<style scoped>
   .event-wrapper {
     border: 1px solid #ddd;
     border-radius: 5px;

@@ -1,11 +1,12 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import { tr, days, defaultFilter } from './helpers.js';
+import FilterHelp from './FilterHelp.vue';
 
 const props = defineProps({
   lang: {
     type: String,
-    default: 'ru'
+    default: 'en'
   }
 });
 
@@ -19,9 +20,11 @@ const toggleableTypes = Object.keys(tr.eventTypeNames[props.lang]).filter(type =
 
 const filter = defineModel();
 
-function showHideButtonClick() {
+function showHideFilterClick() {
   filter.value.hidden = !filter.value.hidden;
 }
+
+const helpHidden = ref(true);
 
 function clearSearch() {
   filter.value.searchString = '';
@@ -66,107 +69,148 @@ const handleToggleTypes = () => {
 </script>
 
 <template>
-  <article>
-    <button class="show-hide border small-round small-elevate" @click="showHideButtonClick">
+  <div class="filter-wrapper" :class="{ 'help-shown': !helpHidden }">
+
+    <button v-if="helpHidden" class="show-hide border small-round small-elevate" @click="() => {helpHidden = !helpHidden}">
+      <i>help_center</i>
+      <span>{{ tr.hideHelp[lang](helpHidden) }}</span>
+    </button>
+    <article v-else :class="{ 'article-button-only': helpHidden }">
+      <div class="show-hide-button-wrapper">
+        <button class="show-hide border small-round small-elevate" @click="() => {helpHidden = !helpHidden}">
+          <i>help_center</i>
+          <span>{{ tr.hideHelp[lang](helpHidden) }}</span>
+        </button>
+      </div>
+      <FilterHelp :lang="lang" />
+    </article>
+
+    <button v-if="filter.hidden" class="show-hide border small-round small-elevate" @click="showHideFilterClick">
       <i>{{ filter.hidden ? 'expand_circle_down' : 'expand_circle_up' }}</i>
       <span>{{ tr.hideFilterButton[lang](filter.hidden) }}</span>
     </button>
-    <div class="filter-wrapper" v-if="!filter.hidden">
-      <div class="fieldset-wrapper">
-        <fieldset class="grid-checkboxes large">
-          <legend>
-            <button class="transparent square small" @click="handleToggleSections">
-              <i>{{ toggleSections ? 'check_box' : 'check_box_outline_blank' }}</i>
-            </button>
-          {{ tr.sections[lang] }}
-          </legend>
-          <label v-for="section in toggleableSections" :key="section" class="checkbox">
-            <input type="checkbox" :value="section" v-model="filter.sections">
-            <span>{{ tr.sectionNames[lang][section] }}</span>
-          </label>
-        </fieldset>
-        <fieldset class="grid-checkboxes">
-          <legend>
-            <button class="transparent square small" @click="handleToggleTypes">
-              <i>{{ toggleTypes ? 'check_box' : 'check_box_outline_blank' }}</i>
-            </button>
-            {{ tr.eventType[lang] }}
-          </legend>
-          <label v-for="type in toggleableTypes" :key="type" class="checkbox">
-            <input type="checkbox" :value="type" v-model="filter.types">
-            <span>{{ tr.eventTypeNames[lang][type] }}</span>
-          </label>
-        </fieldset>
-        <fieldset class="grid-checkboxes">
-          <legend>
-            <button class="transparent square small" @click="handleToggleDays">
-              <i>{{ toggleDays ? 'check_box' : 'check_box_outline_blank' }}</i>
-            </button>
-            {{ tr.days[lang] }}
-          </legend>
-          <label v-for="day in days" :key="day" class="checkbox">
-            <input type="checkbox" :value="day" v-model="filter.days">
-            <span>{{ tr.trDate[lang](day) }}</span>
-          </label>
-        </fieldset>
-        <fieldset class="grid-display-settings">
-          <legend>{{ tr.displaySettings[lang] }}</legend>
-          <div class="display-settings field suffix small border">
-            <select v-model="filter.display">
-              <option v-for="v in Object.keys(tr.displaySettingNames[lang])" :key="v" :value="v">
-                {{ tr.displaySettingNames[lang][v] }}
-              </option>
-            </select>
-            <i>arrow_drop_down</i>
-          </div>
-          <div class="presenter-settings field suffix small border">
-            <select v-model="filter.showAuthors">
-              <option v-for="v in Object.keys(tr.showPresenterNames[lang])" :key="v" :value="v">
-                {{ tr.showPresenterNames[lang][v] }}
-              </option>
-            </select>
-            <i>arrow_drop_down</i>
-          </div>
-          <label class="checkbox">
-            <input type="checkbox" v-model="filter.showAffs">
-            <span>{{ tr.showAffs[lang] }}</span>
-          </label>
-        </fieldset>
-        <fieldset class="grid-display-settings">
-          <legend>{{ tr.showOnly[lang] }}</legend>
-          <label class="checkbox">
-            <input type="checkbox" v-model="filter.showOnlyChecked">
-            <span>{{ tr.checked[lang] }} -&nbsp;</span><i class="tiny">check_box</i>
-          </label>
-        </fieldset>
+    <article v-else :class="{ 'article-button-only': filter.hidden }">
+      <div class="show-hide-button-wrapper">
+        <button class="show-hide border small-round small-elevate" @click="showHideFilterClick">
+          <i>{{ filter.hidden ? 'expand_circle_down' : 'expand_circle_up' }}</i>
+          <span>{{ tr.hideFilterButton[lang](filter.hidden) }}</span>
+        </button>
       </div>
-      <div class="filter-input-wrapper">
-        <div class="filter-input field label prefix border small">
-          <i>search</i>
-          <input v-model.trim="filter.searchString" type="text" placeholder=" ">
-          <label>{{ tr.titleOrCoauthor[lang] }}</label>
+      <div class="filter-controls-wrapper" v-if="!filter.hidden">
+        <div class="fieldset-wrapper">
+          <fieldset class="grid-checkboxes large">
+            <legend>
+              <button class="transparent square small" @click="handleToggleSections">
+                <i>{{ toggleSections ? 'check_box' : 'check_box_outline_blank' }}</i>
+              </button>
+            {{ tr.sections[lang] }}
+            </legend>
+            <label v-for="section in toggleableSections" :key="section" class="checkbox">
+              <input type="checkbox" :value="section" v-model="filter.sections">
+              <span>{{ tr.sectionNames[lang][section] }}</span>
+            </label>
+          </fieldset>
+          <fieldset class="grid-checkboxes">
+            <legend>
+              <button class="transparent square small" @click="handleToggleTypes">
+                <i>{{ toggleTypes ? 'check_box' : 'check_box_outline_blank' }}</i>
+              </button>
+              {{ tr.eventType[lang] }}
+            </legend>
+            <label v-for="type in toggleableTypes" :key="type" class="checkbox">
+              <input type="checkbox" :value="type" v-model="filter.types">
+              <span>{{ tr.eventTypeNames[lang][type] }}</span>
+            </label>
+          </fieldset>
+          <fieldset class="grid-checkboxes">
+            <legend>
+              <button class="transparent square small" @click="handleToggleDays">
+                <i>{{ toggleDays ? 'check_box' : 'check_box_outline_blank' }}</i>
+              </button>
+              {{ tr.days[lang] }}
+            </legend>
+            <label v-for="day in days" :key="day" class="checkbox">
+              <input type="checkbox" :value="day" v-model="filter.days">
+              <span>{{ tr.trDate[lang](day) }}</span>
+            </label>
+          </fieldset>
+          <fieldset class="grid-display-settings">
+            <legend>{{ tr.displaySettings[lang] }}</legend>
+            <div class="display-settings field suffix small border">
+              <select v-model="filter.display">
+                <option v-for="v in Object.keys(tr.displaySettingNames[lang])" :key="v" :value="v">
+                  {{ tr.displaySettingNames[lang][v] }}
+                </option>
+              </select>
+              <i>arrow_drop_down</i>
+            </div>
+            <div class="presenter-settings field suffix small border">
+              <select v-model="filter.showAuthors">
+                <option v-for="v in Object.keys(tr.showPresenterNames[lang])" :key="v" :value="v">
+                  {{ tr.showPresenterNames[lang][v] }}
+                </option>
+              </select>
+              <i>arrow_drop_down</i>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" v-model="filter.showAffs">
+              <span>{{ tr.showAffs[lang] }}</span>
+            </label>
+          </fieldset>
+          <fieldset class="grid-display-settings">
+            <legend>{{ tr.showOnly[lang] }}</legend>
+            <label class="checkbox">
+              <input type="checkbox" v-model="filter.showOnlyChecked">
+              <span>{{ tr.checked[lang] }} -&nbsp;</span><i class="tiny">check_box</i>
+            </label>
+          </fieldset>
         </div>
-        <button class="clear-filter border small-round small-elevate" @click="clearSearch">
-          <i>ink_eraser</i>
-          <span>{{ tr.clearSearch[lang] }}</span>
-        </button>
-        <button class="clear-filter border small-round small-elevate" @click="clearFilter">
-          <i>delete</i>
-          <span>{{ tr.clearAll[lang] }}</span>
-        </button>
+        <div class="filter-input-wrapper">
+          <div class="filter-input field label prefix border small">
+            <i>search</i>
+            <input v-model.trim="filter.searchString" type="text" placeholder=" ">
+            <label>{{ tr.titleOrCoauthor[lang] }}</label>
+          </div>
+          <button class="clear-filter border small-round small-elevate" @click="clearSearch">
+            <i>ink_eraser</i>
+            <span>{{ tr.clearSearch[lang] }}</span>
+          </button>
+          <button class="clear-filter border small-round small-elevate" @click="clearFilter">
+            <i>delete</i>
+            <span>{{ tr.clearAll[lang] }}</span>
+          </button>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </div>
 </template>
 
-<style>
+<style scoped>
+  .filter-wrapper {
+    margin-top: 5px;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .filter-wrapper.help-shown {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .filter-wrapper > article,
+  .filter-wrapper > button {
+    margin: 0;
+  }
+  .article-button-only {
+    width: max-content;
+  }
   .grid-checkboxes > legend button {
     margin: 0;
   }
   .show-hide {
     margin: 0;
   }
-  .filter-wrapper {
+  .filter-controls-wrapper {
     margin-top: 1rem;
   }
   .filter-input-wrapper {
@@ -240,6 +284,14 @@ const handleToggleTypes = () => {
     margin: 0;
   }
   @media only screen and (max-width: 600px) {
+    .filter-wrapper {
+      margin-top: 0;
+      justify-content: end;
+    }
+    .show-hide-button-wrapper {
+      display: flex;
+      justify-content: end;
+    }
     .fieldset-wrapper {
       grid-template-columns: 1fr;
     }

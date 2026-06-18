@@ -8,7 +8,7 @@ import { tr, defaultFilter } from './helpers.js';
 const props = defineProps({
   lang: {
     type: String,
-    default: 'ru'
+    default: 'en'
   }
 });
 

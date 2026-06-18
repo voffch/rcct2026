@@ -61,10 +61,13 @@ export const tr = {
       'event': 'События'
     }
   },
-
+  hideHelp: {
+    en: (hidden) => (hidden ? 'Help' : 'Hide help'),
+    ru: (hidden) => (hidden ? 'Справка' : 'Закрыть справку')
+  },
   hideFilterButton: {
     en: (hidden) => ((hidden ? 'Show' : 'Hide') + ' filter and display settings'),
-    ru: (hidden) => ((hidden ? 'Показать' : 'Скрыть') + ' настройки фильтра')
+    ru: (hidden) => ((hidden ? 'Фильтр и отображение' : 'Закрыть настройки фильтра') + ' ')
   },
   displaySettings: {
     en: 'Display settings',
