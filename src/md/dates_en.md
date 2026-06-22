@@ -25,10 +25,10 @@
   - 13.40-14.45: Dinner time
   - 14.45-16.00: Section presentations (S3, S4, S5, S6)
   - 16.00-16.30: Coffee break
-  - 16.30-17.30: Section presentations (S2, S4, S5, S6)
+  - 16.30-17.30: Section presentations (S2, S4, S6)
   - 17.30-19.30: Poster presentations (S2, S3, S6, S8)
 - July 03
-  - 9.00-11.00: Plenary lectures
-  - 11.00-11.30: Coffee break
-  - 11.30-12.30: Section presentations (S5, S7, S8)
-  - 12.30-13.30: Closing ceremony
+  - 9.00-11.30: Plenary lectures
+  - 11.30-12.00: Coffee break
+  - 12.00-13.00: Section presentations (S5, S7, S8)
+  - 13.00-14.00: Closing ceremony
