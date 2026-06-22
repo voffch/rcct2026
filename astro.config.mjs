@@ -6,6 +6,11 @@ import AstroPWA from '@vite-pwa/astro';
 
 // https://astro.build/config
 export default defineConfig({
+  server: {
+    headers: {
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+    }
+  },
   i18n: {
     locales: ["en", "ru"],
     defaultLocale: "ru",
@@ -31,6 +36,7 @@ export default defineConfig({
       enabled: false
     },
     registerType: 'autoUpdate',
+    injectRegister: false,
     includeAssets: ['favicon.ico'],
     manifest: {
       name: 'RCCT 2026',
@@ -71,6 +77,9 @@ export default defineConfig({
       ],
       globIgnores: ['**/abstracts/**', 'googlef*.*', 'mailru*.*'],
       globPatterns: ['**/*.{js,json,css,html,ico,jpg,png,svg,woff2}'],
+      cleanupOutdatedCaches: true,
+      skipWaiting: true,
+      clientsClaim: true,
     },
     experimental: {
       directoryAndTrailingSlashHandler: true,
