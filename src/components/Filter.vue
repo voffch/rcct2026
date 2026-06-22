@@ -7,6 +7,9 @@ const props = defineProps({
   lang: {
     type: String,
     default: 'en'
+  },
+  checkedPresentations: {
+    type: Object
   }
 });
 
@@ -82,7 +85,7 @@ const handleToggleTypes = () => {
           <span>{{ tr.hideHelp[lang](helpHidden) }}</span>
         </button>
       </div>
-      <FilterHelp :lang="lang" />
+      <FilterHelp :lang="lang" :checkedPresentations="checkedPresentations" />
     </article>
 
     <button v-if="filter.hidden" class="show-hide border small-round small-elevate" @click="showHideFilterClick">
@@ -161,7 +164,7 @@ const handleToggleTypes = () => {
             <legend>{{ tr.showOnly[lang] }}</legend>
             <label class="checkbox">
               <input type="checkbox" v-model="filter.showOnlyChecked">
-              <span>{{ tr.checked[lang] }} -&nbsp;</span><i class="tiny">check_box</i>
+              <span>{{ tr.checked[lang] }}: {{ checkedPresentations.size }}&nbsp;</span><i class="tiny">check_box</i>
             </label>
           </fieldset>
         </div>

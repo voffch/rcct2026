@@ -8,15 +8,18 @@ const props = defineProps({
   },
   event: Object,
   filter: Object,
+  checked: Boolean,
   spanTwoRows: {
     type: Boolean,
     default: false
   }
 });
 
-const checked = defineModel({
-  type: Array
-});
+const emit = defineEmits(['check']);
+
+const handleCheck = () => {
+  emit('check', props.event.id);
+};
 
 const abstractHref = computed(() => {
   const page = props.event.page;
@@ -43,7 +46,7 @@ const wrapperClass = computed(() => {
     <div class="additionals">
       <a v-if="abstractHref" :href="abstractHref" target="_blank"><i class="large">article_shortcut</i></a>
       <label class="checkbox" v-if="checkableTypes.includes(event.type)">
-        <input type="checkbox" :value="event.id" v-model="checked">
+        <input type="checkbox" :checked="checked" @change="handleCheck">
         <span></span>
       </label>
     </div>

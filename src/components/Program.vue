@@ -3,7 +3,7 @@ import { ref, computed, onMounted, watch } from 'vue';
 import Filter from './Filter.vue';
 import EventCard from './EventCard.vue';
 import prog from './prog.json';
-import { tr, days, defaultFilter } from './helpers.js';
+import { tr, defaultFilter } from './helpers.js';
 
 const props = defineProps({
   lang: {
@@ -21,16 +21,41 @@ const localStorageCheckedPresentations = 'rcct2026-checked-presentations';
 
 const filter = ref(structuredClone(defaultFilter));
 
-const checkedPresentations = ref([]);
+const checkedPresentations = ref(new Set());
 
 onMounted(() => {
   const storedFilter = localStorage.getItem(localStorageFilterName);
   if (storedFilter) {
-    filter.value = JSON.parse(storedFilter);
+    try {
+      filter.value = {...structuredClone(defaultFilter), ...JSON.parse(storedFilter)};
+    } catch (e) {
+      console.error('Error while parsing stored filter, using defaults: ', e);
+      filter.value = structuredClone(defaultFilter);
+    }
   }
   const storedChecked = localStorage.getItem(localStorageCheckedPresentations);
   if (storedChecked) {
-    checkedPresentations.value = JSON.parse(storedChecked);
+    try {
+      const restoredCheckedArray = JSON.parse(storedChecked);
+      checkedPresentations.value = new Set(restoredCheckedArray);
+    } catch (e) {
+      console.error('Error while parsing stored checked presentations, using defaults: ', e);
+      checkedPresentations.value = new Set();
+    }
+  }
+  const url = new URL(window.location.href);
+  const checkedStr = url.searchParams.get('checked');
+  if (checkedStr) {
+    try {
+      const allIds = new Set(prog.map(p => p.id));
+      const checkedArray = JSON.parse(checkedStr)?.filter(id => allIds.has(id));
+      checkedPresentations.value = new Set(checkedArray);
+    } catch (e) {
+      console.error('Error while parsing checked presentations from URL: ', e);
+    } finally {
+      url.searchParams.delete('checked');
+      window.history.replaceState({}, '', url);
+    }
   }
 });
 
@@ -42,9 +67,17 @@ watch(filter,
 
 watch(checkedPresentations,
   (newVal) => {
-    localStorage.setItem(localStorageCheckedPresentations, JSON.stringify(newVal))
+    localStorage.setItem(localStorageCheckedPresentations, JSON.stringify(Array.from(newVal)));
   }, { deep: true }
 );
+
+const handleCheckEventCard = (id) => {
+  if (checkedPresentations.value.has(id)) {
+    checkedPresentations.value.delete(id);
+  } else {
+    checkedPresentations.value.add(id);
+  }
+}
 
 function htmlToPlaintext(htmlString) {
   return htmlString
@@ -76,7 +109,7 @@ const filteredProg = computed(() => {
     const matchesDay = filter.value.days.includes(event.day);
     const matchesChecked = !filter.value.showOnlyChecked || 
                            event.section === 'events' ||
-                           checkedPresentations.value.includes(event.id);
+                           checkedPresentations.value.has(event.id);
     return matchesText && matchesSection && matchesType && matchesDay && matchesChecked;
   });
 });
@@ -214,7 +247,7 @@ function dontShowSectionTitles(sectionTitles) {
 </script>
 
 <template>
-  <Filter v-model="filter" :lang="lang" />
+  <Filter v-model="filter" :lang="lang" :checkedPresentations="checkedPresentations" />
   <div class="program-wrapper">
     <div class="day-wrapper" v-for="dayObj in scheduleGrid" :key="dayObj.day">
       <h4>{{ tr.trDate[lang](dayObj.day) }}</h4>
@@ -237,13 +270,14 @@ function dontShowSectionTitles(sectionTitles) {
               <template v-for="sectionTitle in block.sectionTitles" :key="sectionTitle">
                 <div v-if="!slot.events[sectionTitle]" class="empty-placeholder"></div>
                 <EventCard v-else-if="slot.events[sectionTitle] && !slot.events[sectionTitle].skip"
-                          :key="slot.events[sectionTitle].id"
                           :lang="lang"
-                          :event="slot.events[sectionTitle]"
                           :filter="filter"
+                          :key="slot.events[sectionTitle].id"
+                          :event="slot.events[sectionTitle]"
+                          :checked="checkedPresentations.has(slot.events[sectionTitle].id)"
+                          @check="handleCheckEventCard"
                           :spanTwoRows="((index < block.timeSlots.length - 1) && (block.timeSlots[index + 1].start < slot.events[sectionTitle].end))
-                          || slot.events[sectionTitle].end > slot.end"
-                          v-model="checkedPresentations" />
+                          || slot.events[sectionTitle].end > slot.end" />
               </template>
             </template>
           </div>
@@ -258,7 +292,12 @@ function dontShowSectionTitles(sectionTitles) {
               <template v-for="slot in block.timeSlots" :key="slot.start">
                 <div class="event-card-with-time-wrapper" v-if="slot.events[sectionTitle] && !slot.events[sectionTitle].skip">
                   <div class="time">{{ formatTime(slot.events[sectionTitle].start) }}-<wbr/>{{ formatTime(slot.events[sectionTitle].end) }}</div>
-                  <EventCard :lang="lang" :event="slot.events[sectionTitle]" :filter="filter" v-model="checkedPresentations" />
+                  <EventCard 
+                    :lang="lang" 
+                    :filter="filter" 
+                    :event="slot.events[sectionTitle]" 
+                    :checked="checkedPresentations.has(slot.events[sectionTitle].id)"
+                    @check="handleCheckEventCard" />
                 </div>
               </template>
             </div>
@@ -277,7 +316,8 @@ function dontShowSectionTitles(sectionTitles) {
                           :lang="lang"
                           :event="event"
                           :filter="filter"
-                          v-model="checkedPresentations" />
+                          :checked="checkedPresentations.has(event.id)"
+                          @check="handleCheckEventCard" />
             </template>
           </template>
         </div>
