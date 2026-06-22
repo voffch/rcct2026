@@ -43,6 +43,6 @@ onUnmounted(() => {
 
 <template>
   <p v-if="lang === 'ru'">
-    В программе используется местное время (Asia/Yekaterinburg, GMT+5). В Екатеринбурге сейчас <strong>{{ ourTime }}</strong>, что <template v-if="ourTime === localTime">совпадает с вашим системным временем</template><template v-else> <strong>отличается</strong> от вашего системного времени ({{ localTime }})</template>.</p>
-  <p v-else>This program uses local time (Asia/Yekaterinburg, GMT+5). In Ekaterinburg now it's <strong>{{ ourTime }}</strong>, which <template v-if="ourTime === localTime">is the same as your system time</template><template v-else> <strong>differs</strong> from your system time ({{ localTime }})</template>.</p>
+    В программе и расписании используется наше местное время (Asia/Yekaterinburg, GMT+5). В Екатеринбурге сейчас <strong>{{ ourTime }}</strong>, что <template v-if="ourTime === localTime">совпадает с вашим системным временем</template><template v-else> <strong>отличается</strong> от вашего системного времени ({{ localTime }})</template>.</p>
+  <p v-else>We use our local time (Asia/Yekaterinburg, GMT+5) in the program and the schedule. In Ekaterinburg now it's <strong>{{ ourTime }}</strong>, which <template v-if="ourTime === localTime">is the same as your system time</template><template v-else> <strong>differs</strong> from your system time ({{ localTime }})</template>.</p>
 </template>

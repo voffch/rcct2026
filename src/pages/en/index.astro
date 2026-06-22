@@ -3,6 +3,8 @@ import LayoutEn from '../../components/Layout_en.astro';
 
 import Calendar from '../../components/Calendar.astro';
 
+import TimeMessage from '../../components/TimeMessage.vue';
+
 import {Content as Committees} from '../../md/committees_en.md';
 import {Content as Sections} from '../../md/sections_en.md';
 import {Content as Dates} from '../../md/dates_en.md';
@@ -122,6 +124,7 @@ import {Content as Hotels} from '../../md/hotels_en.md';
   </article>
   <article id="dates">
     <h2>Key Dates and Schedule</h2>
+    <TimeMessage client:load lang="en" />
     <Calendar lang="en" year="2026" importantDates="29.6 30.6 1.7 2.7 3.7" />
     <Dates />
     <p>The <strong>detailed program</strong> is available <a class="link underline" href="prog">here</a>.</p>

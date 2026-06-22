@@ -69,7 +69,7 @@ export default defineConfig({
         /\.(?:pdf|docx?|xlsx?|pptx?|zip)$/i,
         /^\/abstracts\//
       ],
-      globIgnores: ['**/abstracts/**'],
+      globIgnores: ['**/abstracts/**', 'googlef*.*', 'mailru*.*'],
       globPatterns: ['**/*.{js,json,css,html,ico,jpg,png,svg,woff2}'],
     },
     experimental: {
