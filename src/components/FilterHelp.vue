@@ -1,5 +1,6 @@
 <script setup>
 import EventCard from './EventCard.vue';
+import TimeMessage from './TimeMessage.vue';
 import { tr } from './helpers.js';
 
 const props = defineProps({
@@ -83,6 +84,7 @@ const dummyEvents = {
 
 <template>
   <div v-if="lang === 'ru'" class="help-wrapper">
+    <TimeMessage :lang="lang" />
     В этой интерактивной программе представлены следующие типы событий:
     <div class="dummy-event-wrapper">
       <EventCard v-for="(event, index) in dummyEvents[lang]" :event="event" :key="index" />
@@ -95,6 +97,7 @@ const dummyEvents = {
     <p>Чтобы вернуться наверх страницы, нажмите на логотип RCCT в меню или рядом с ним.</p>
   </div>
   <div v-else class="help-wrapper">
+    <TimeMessage :lang="lang" />
     The following types of events are shown in this interactive program:
     <div class="dummy-event-wrapper">
       <EventCard v-for="(event, index) in dummyEvents[lang]" :event="event" :key="index" />

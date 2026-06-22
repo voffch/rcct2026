@@ -3,7 +3,7 @@ import { ref, computed, onMounted, watch } from 'vue';
 import Filter from './Filter.vue';
 import EventCard from './EventCard.vue';
 import prog from './prog.json';
-import { tr, defaultFilter } from './helpers.js';
+import { tr, days, defaultFilter } from './helpers.js';
 
 const props = defineProps({
   lang: {
@@ -11,8 +11,6 @@ const props = defineProps({
     default: 'en'
   }
 });
-
-const days = [...new Set(prog.map(p => p.start.split('T')[0]))].sort();
 
 function explainSection(sectionTitle) {
   return tr.sectionNames[props.lang][sectionTitle] ?? sectionTitle;
