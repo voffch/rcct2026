@@ -10,6 +10,7 @@ import {Content as Sections} from '../md/sections_ru.md';
 import {Content as Dates} from '../md/dates_ru.md';
 import {Content as Participate} from '../md/participate_ru.md';
 import {Content as Hotels} from '../md/hotels_ru.md';
+import {Content as Venue} from '../md/howtoget_ru.md';
 ---
 
 <LayoutRu>
@@ -31,6 +32,9 @@ import {Content as Hotels} from '../md/hotels_ru.md';
         <li>Научный совет РАН по неорганической химии</li>
       </ul>
     </p>
+  </article>
+  <article id="venue">
+    <Venue />
   </article>
   <article id="news">
     <h2>Новости</h2>
@@ -136,6 +140,9 @@ import {Content as Hotels} from '../md/hotels_ru.md';
     <Dates />
     <p><strong>Подробная программа</strong> доступна <a class="link underline" href="prog">по ссылке</a>.</p>
   </article>
+  <article id="sections">
+    <Sections />
+  </article>
   <article id="participate">
     <h2>Регистрация и оргвзнос</h2>
     <Participate />
@@ -153,9 +160,6 @@ import {Content as Hotels} from '../md/hotels_ru.md';
         </div>
       </div>
     </article>
-  </article>
-  <article id="sections">
-    <Sections />
   </article>
   <article id="hotels">
     <Hotels />
