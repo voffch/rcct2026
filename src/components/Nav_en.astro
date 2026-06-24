@@ -18,7 +18,7 @@ const {small=false} = Astro.props;
 {!small && (<nav class="left max l">
   <header>
     <nav>
-      <img src="/logos/RCCT-logo-small-en.svg" class="circle extra" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+      <img src="/logos/RCCT-logo-small.svg" class="large" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
       <h6>RCCT 2026</h6>
     </nav>
   </header>
@@ -83,7 +83,7 @@ const {small=false} = Astro.props;
 
 <nav class="left m" class:list={[{ 'l': small }]}>
   <header>
-    <img src="/logos/RCCT-logo-small-en.svg" class="circle extra" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <img src="/logos/RCCT-logo-small.svg" class="large" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
   </header>
   <a href={url('ru', Astro.url.pathname, true)}>
     <i>language</i>
@@ -145,7 +145,7 @@ const {small=false} = Astro.props;
 
 <nav class="top s">
   <header>
-    <img src="/logos/RCCT-logo-small-en.svg" class="circle extra" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <img src="/logos/RCCT-logo-small.svg" class="large" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
   </header>
   <button class="transparent large" onclick="document.querySelector('#small-screen-menu').showModal()">
     <i>menu</i>
