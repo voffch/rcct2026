@@ -84,7 +84,7 @@ const handleToggleTypes = () => {
 </script>
 
 <template>
-  <div class="filter-wrapper" :class="{ 'help-shown': !helpHidden }">
+  <div class="filter-wrapper" :class="{ 'help-or-filter-shown': !helpHidden || !filter.hidden }">
 
     <button v-if="helpHidden" class="show-hide border small-round small-elevate" @click="() => {helpHidden = !helpHidden}">
       <i>help_center</i>
@@ -212,7 +212,7 @@ const handleToggleTypes = () => {
     align-items: flex-start;
     flex-wrap: wrap;
   }
-  .filter-wrapper.help-shown {
+  .filter-wrapper.help-or-filter-shown {
     flex-direction: column;
     flex-wrap: nowrap;
   }
