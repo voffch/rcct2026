@@ -4,6 +4,7 @@ import Filter from './Filter.vue';
 import EventCard from './EventCard.vue';
 import prog from './prog.json';
 import { tr, defaultFilter } from './helpers.js';
+import { usePolling } from './usePolling.js';
 
 const props = defineProps({
   lang: {
@@ -110,7 +111,11 @@ const filteredProg = computed(() => {
     const matchesChecked = !filter.value.showOnlyChecked || 
                            event.section === 'events' ||
                            checkedPresentations.value.has(event.id);
-    return matchesText && matchesSection && matchesType && matchesDay && matchesChecked;
+    const matchesCurrent = !isLive.value || 
+                           !filter.value.showOnlyCurrent || 
+                           event.section === 'events' || 
+                           event.status === 'current';
+    return matchesText && matchesSection && matchesType && matchesDay && matchesChecked && matchesCurrent;
   });
 });
 
@@ -244,10 +249,69 @@ const scheduleGrid = computed(() => {
 function dontShowSectionTitles(sectionTitles) {
   return sectionTitles.some(t => ['events', 'vip'].includes(t));
 }
+
+/* LIVE STATUS UPDATES */
+
+const isDev = import.meta.env.DEV;
+
+const backendProgramEndpoint = isDev ? 'http://127.0.0.1:8000/prog/' : 'https://api.rcct2026.ru/prog/';
+
+let lastEtag = null;
+let isFirstRun = true;
+const isLive = ref(false);
+const lastFetchStatus = ref({
+  success: false,
+  time: null
+});
+const currentPresentationCounter = ref(0);
+
+async function fetchLiveStatuses() {
+  let success = false;
+  try {
+      const response = await fetch(backendProgramEndpoint);
+      if (!response.ok) throw new Error('Server unreachable');
+      const etag = response.headers.get('ETag');
+      if (etag && etag !== lastEtag) {
+          const liveStatuses = await response.json();
+          currentPresentationCounter.value = Object.values(liveStatuses).filter(x => x.status === 'current').length;
+          const liveIDs = new Set(Object.keys(liveStatuses));
+          sortedProg.value.forEach(event => {
+            if (liveIDs.has(event.id)) {
+              for (const [key, value] of Object.entries(liveStatuses[event.id])) {
+                event[key] = value;
+              }
+            } else if (!['event', 'poster'].includes(event.type)) {
+              event.status = 'scheduled';
+            }
+          });
+          lastEtag = etag;
+      }
+      isLive.value = true;
+      success = true;
+  } catch (e) {
+      console.warn("Could not fetch live updates: ", e);
+      //isLive.value = false; 
+  } finally {
+      lastFetchStatus.value = {
+        success: success,
+        time: new Date()
+      };
+      const shouldContinue = success || !isFirstRun;
+      isFirstRun = false;
+      return shouldContinue;
+  }
+}
+
+usePolling(fetchLiveStatuses, (isDev ? 1000 : 15000));
 </script>
 
 <template>
-  <Filter v-model="filter" :lang="lang" :checkedPresentations="checkedPresentations" />
+  <Filter v-model="filter" 
+          :lang="lang"
+          :checkedPresentations="checkedPresentations"
+          :isLive="isLive"
+          :lastFetchStatus="lastFetchStatus"
+          :currentCount="currentPresentationCounter" />
   <div class="program-wrapper">
     <div class="day-wrapper" v-for="dayObj in scheduleGrid" :key="dayObj.day">
       <h4>{{ tr.trDate[lang](dayObj.day) }}</h4>

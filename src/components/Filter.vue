@@ -10,6 +10,18 @@ const props = defineProps({
   },
   checkedPresentations: {
     type: Object
+  },
+  isLive: {
+    type: Boolean,
+    default: false
+  },
+  lastFetchStatus: {
+    type: Object,
+    required: true
+  },
+  currentCount: {
+    type: Number,
+    default: 0
   }
 });
 
@@ -85,7 +97,7 @@ const handleToggleTypes = () => {
           <span>{{ tr.hideHelp[lang](helpHidden) }}</span>
         </button>
       </div>
-      <FilterHelp :lang="lang" :checkedPresentations="checkedPresentations" />
+      <FilterHelp :lang="lang" :checkedPresentations="checkedPresentations" :isLive="isLive" :lastFetchStatus="lastFetchStatus" />
     </article>
 
     <button v-if="filter.hidden" class="show-hide border small-round small-elevate" @click="showHideFilterClick">
@@ -165,6 +177,10 @@ const handleToggleTypes = () => {
             <label class="checkbox">
               <input type="checkbox" v-model="filter.showOnlyChecked">
               <span>{{ tr.checked[lang] }}: {{ checkedPresentations.size }}&nbsp;</span><i class="tiny">check_box</i>
+            </label>
+            <label v-if="isLive" class="checkbox">
+              <input type="checkbox" v-model="filter.showOnlyCurrent">
+              <span>{{ tr.current[lang] }}: {{ currentCount }}⏳</span>
             </label>
           </fieldset>
         </div>

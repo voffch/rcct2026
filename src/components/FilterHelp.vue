@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue';
 import EventCard from './EventCard.vue';
 import TimeMessage from './TimeMessage.vue';
 import { tr } from './helpers.js';
@@ -9,6 +10,14 @@ const props = defineProps({
     default: 'en'
   },
   checkedPresentations: {
+    type: Object,
+    required: true
+  },
+  isLive: {
+    type: Boolean,
+    default: false
+  },
+  lastFetchStatus: {
     type: Object,
     required: true
   }
@@ -85,6 +94,22 @@ const dummyEvents = {
   ]
 }
 
+const timeFormatter = new Intl.DateTimeFormat('en-GB', {
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: false,
+  timeZone: 'Asia/Yekaterinburg'
+});
+
+const formattedFetchTime = computed(() => {
+  if (props.lastFetchStatus.time) {
+    return timeFormatter.format(props.lastFetchStatus.time);
+  } else {
+    return null;
+  }
+});
+
 function copyCheckedAsUrl() {
   const url = new URL(window.location.href);
   const checkedAsString = JSON.stringify(Array.from(props.checkedPresentations));
@@ -110,6 +135,17 @@ function copyCheckedAsUrl() {
     <p>Набрав в поисковой строке <i>search</i> в любом регистре часть названия доклада или имени соавтора, можно найти конкретный доклад. Имена в программе и сборнике представлены в формате "Фамилия И.О." или "Фамилия Имя".</p>
     <p>Настройки фильтра также сохраняются в вашем браузере. Для того, чтобы вернуть фильтр в исходное состояние и показать программу целиком, используйте кнопки: <strong>{{ tr.clearSearch[lang] }}</strong> сбрасывает только содержимое поисковой строки, а <strong>{{ tr.clearAll[lang] }}</strong> - вообще все настройки фильтра и отображения.</p>
     <p>Чтобы вернуться наверх страницы, нажмите на логотип RCCT в меню или рядом с ним.</p>
+    <p>Во время проведения конференции мы планируем отображать текущие статусы пленарных, ключевых и устных докладов на их карточках, чтобы вы могли видеть в интерактивной программе, какие доклады 📅&nbsp;запланированы, ⏳&nbsp;докладываются в настоящее время или ✅&nbsp;уже состоялись. Статусы обновляются при загрузке страницы и далее раз в 15 с. Сейчас эта функция 
+      <template v-if="isLive">
+        <em>активна</em>
+        <template v-if="formattedFetchTime">, последнее обновление в {{ formattedFetchTime }} 
+          <template v-if="lastFetchStatus.success">прошло <em>успешно</em></template>
+          <template v-else><span style="color: var(--error)">не удалось</span> (упс!)</template>
+        </template>
+      </template>
+      <template v-else>
+        <em>неактивна</em>
+      </template>.</p>
   </div>
   <div v-else class="help-wrapper">
     <TimeMessage :lang="lang" />
@@ -127,6 +163,17 @@ function copyCheckedAsUrl() {
     <p>By typing into the case-insensitive text input <i>search</i> a part of the presentation title or coauthor name, you can find a particular presentation. The names in both the program and the book of abstracts follow the "Surname F.M." or "Surname Firstname" pattern.</p>
     <p>The filter settings are saved in your browser as well. You can clear the search string by clicking the <strong>{{ tr.clearSearch[lang] }}</strong> button, and the <strong>{{ tr.clearAll[lang] }}</strong> button clears all the filter and display settings, allowing you to see the whole program again.</p>
     <p>To scroll to the very top of the page, click the RCCT logo in the navigation menu (or to the left of it).</p>
+    <p>During the conference, we are planning to display the current statuses of the plenary, key and oral presentations on their cards, so that you could see in the program which presentations are 📅&nbsp;scheduled, ⏳&nbsp;underway or ✅&nbsp;have been delivered. The statuses are updated upon the page load and then every 15 s. Right now this function is  
+      <template v-if="isLive">
+        <em>enabled</em>
+        <template v-if="formattedFetchTime">, the last update at {{ formattedFetchTime }} 
+          <template v-if="lastFetchStatus.success">has been <em>successful</em></template>
+          <template v-else><span style="color: var(--error)">has failed</span> (oops!)</template>
+        </template>
+      </template>
+      <template v-else>
+        <em>disabled</em>
+      </template>.</p>
   </div>
 </template>
 

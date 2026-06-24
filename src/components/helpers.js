@@ -100,12 +100,16 @@ export const tr = {
     ru: 'Показать аффилиации'
   },
   showOnly: {
-    en: 'Show Only',
-    ru: 'Показать только'
+    en: 'Limit To',
+    ru: 'Ограничить'
   },
   checked: {
     en: 'Checked',
-    ru: 'Отмеченные'
+    ru: 'Отмеченными'
+  },
+  current: {
+    en: 'Underway',
+    ru: 'Текущими'
   },
   titleOrCoauthor: {
     en: 'title or coauthor',
@@ -122,6 +126,20 @@ export const tr = {
   posterSession: {
     en: 'Poster Session',
     ru: 'Стендовая сессия'
+  },
+  status: {
+    en: {
+      current: 'Underway',
+      delivered: 'Delivered',
+      cancelled: 'Cancelled',
+      scheduled: 'Scheduled'
+    },
+    ru: {
+      current: 'Докладывается',
+      delivered: 'Состоялся',
+      cancelled: 'Отменен',
+      scheduled: 'Запланирован'
+    }
   }
 };
 
@@ -156,5 +174,6 @@ export const defaultFilter = {
   display: 'list', //list, grid
   showAuthors: 'presenter', //presenter, coauthors, or none
   showAffs: false,
-  showOnlyChecked: false
+  showOnlyChecked: false,
+  showOnlyCurrent: false
 };

@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue';
+import { tr } from './helpers.js';
 
 const props = defineProps({
   lang: {
@@ -33,12 +34,51 @@ const wrapperClass = computed(() => {
   if (props.spanTwoRows) {
     result += ' span2';
   }
+  if (props.event.status) {
+    result += ` status-${props.event.status}`;
+  }
   return result;
+});
+
+const timeFormatter = new Intl.DateTimeFormat('en-GB', {
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+  timeZone: 'Asia/Yekaterinburg'
+});
+
+const statusHtml = computed(() => {
+  const times = [props.event.time_started, props.event.time_finished].map(
+    dateText => dateText ? timeFormatter.format(new Date(dateText)) : null
+  ).filter(Boolean);
+  const timesText = times.length ? ` (${times.join(' - ')})` : '';
+  let html = '';
+  const translatedStatus = tr.status[props.lang][props.event.status];
+  switch(props.event.status) {
+    case 'current':
+        html = `<span class="hourglass">⏳</span><span> ${translatedStatus}...${timesText}</span></>`;
+        break;
+    case 'delivered':
+        html = `✅ ${translatedStatus}${timesText}`;
+        break;
+    case 'cancelled':
+        html = `❌ ${translatedStatus}`;
+        break;
+    case undefined:
+        break;
+    case 'scheduled':
+        //break;
+    default:
+        html = `📅 ${translatedStatus}`;
+        break;
+  }
+  return html;
 });
 </script>
 
 <template>
   <div class="event-wrapper" :class="wrapperClass">
+    <div v-if="event.status" class="status" v-html="statusHtml"></div>
     <div v-html="(lang === 'ru' && event.title_ru) ? event.title_ru : event.title"></div>
     <div class="authors" v-if="event.presenter && filter.showAuthors === 'presenter'">{{ event.presenter }}</div>
     <div class="authors" v-else-if="event.authors && filter.showAuthors === 'coauthors'" v-html="event.authors"></div>
@@ -98,5 +138,34 @@ const wrapperClass = computed(() => {
   }
   .span2 {
     grid-row: span 2;
+  }
+
+  .event-wrapper.status-current {
+    animation: shadowPulse 2s infinite ease-in-out;
+  }
+  @keyframes shadowPulse {
+    0%, 100% {
+      box-shadow: var(--elevate1);
+    }
+    50% {
+      box-shadow: 0 0 3px 3px var(--tertiary);
+    }
+  }
+
+  .status {
+    color: var(--presentation-status-color);
+  }
+  .status :deep(.hourglass) {
+    animation: rotate 5s linear infinite;
+    transform-origin: center;
+    display: inline-block;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 </style>
