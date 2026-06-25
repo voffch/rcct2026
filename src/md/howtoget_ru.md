@@ -23,3 +23,5 @@
 Пешком до входа: ~20 минут. Обратите внимание на то, что участок ул. Куйбышева (от ул. 8 Марта до ул. Горького) сейчас полностью ЗАКРЫТ ДЛЯ ТРАНСПОРТА И ПЕШЕХОДОВ (см. <a class="link underline" target="_blank" href="https://yandex.ru/maps/?um=constructor%3A8af9ff7be3c7e51377dec9cf4b284e533823c5ef13eb6fc56df491ceec13d099">схему обхода</a> на карте).
 
 <i>exclamation</i> Для входа в корпус университета обязательно возьмите с собой ПАСПОРТ.
+
+<i>wifi</i> Для доступа к интернету участники конференции могут воспользоваться нашей официальной гостевой сетью Wi-Fi <strong>UGMK-Telecom(FREE)</strong> (требует авторизоваться по звонку, см. краткую <a class="link underline" rel="nofollow noreferrer" href="https://dit.urfu.ru/ru/servisy/wi-fi/gostevaja-besprovodnaja-set-urfu-ugmk-telecomfree/">инструкцию</a> на сайте УрФУ).

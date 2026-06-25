@@ -23,3 +23,5 @@ Walking distance to the entrance: ~8 minutes.
 Walking distance to the entrance: ~20 minutes. Please note that the section of Kuybysheva Street (from 8 Marta St. to Gorky St.) is currently completely CLOSED TO ALL TRANSPORT AND PEDESTRIANS (see <a class="link underline" target="_blank" href="https://yandex.ru/maps/?um=constructor%3A8af9ff7be3c7e51377dec9cf4b284e533823c5ef13eb6fc56df491ceec13d099">walking directions</a> on the map).
 
 <i>exclamation</i> To enter the university building, please bring your PASSPORT.
+
+<i>wifi</i> To access the internet, the participants can use the guest Wi-Fi network of our university. The network's name is <strong>UGMK-Telecom(FREE)</strong> (phone call authorization is required).
