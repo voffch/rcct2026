@@ -148,17 +148,20 @@ function translateDate(isoDateString, lang) {
   if (lang === 'ru') {
     const dateStr = date.toLocaleDateString('ru-RU', {
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
+      timeZone: 'Asia/Yekaterinburg'
     });
     const weekdayStr = date.toLocaleDateString('ru-RU', {
       weekday: 'short',
+      timeZone: 'Asia/Yekaterinburg'
     });
     return `${dateStr}, ${weekdayStr}`;
   } else {
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
+      timeZone: 'Asia/Yekaterinburg'
     });
   }
 }
