@@ -39,10 +39,12 @@ body.light {
 
 /* my custom colors */
 --presentation-status-color: #380AFF;
+--html-background-color: #fafaf2;
 }
 
 html {
-    background-color: #fafaf2 !important;
+    background-color: var(--html-background-color) !important;
+
 }
 
 main {

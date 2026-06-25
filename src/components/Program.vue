@@ -313,8 +313,9 @@ usePolling(fetchLiveStatuses, (isDev ? 1000 : 15000));
           :lastFetchStatus="lastFetchStatus"
           :currentCount="currentPresentationCounter" />
   <div class="program-wrapper">
-    <div class="day-wrapper" v-for="dayObj in scheduleGrid" :key="dayObj.day">
-      <h4>{{ tr.trDate[lang](dayObj.day) }}</h4>
+    <div class="day-wrapper" v-for="(dayObj, dayObjIndex) in scheduleGrid" :key="dayObj.day">
+      <hr v-if="dayObjIndex !== 0" class="day-separator" />
+      <h4 class="day-header">{{ tr.trDate[lang](dayObj.day) }}</h4>
 
       <template v-for="(block, index) in dayObj.blocks" :key="index">
 
@@ -422,6 +423,17 @@ usePolling(fetchLiveStatuses, (isDev ? 1000 : 15000));
     display: flex;
     flex-direction: column;
     gap: 5px;
+  }
+  .day-separator {
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    height: 5px;
+    background: linear-gradient(to right, var(--tertiary), transparent);
+  }
+  .day-header {
+    font-weight: bold;
   }
   @media only screen and (max-width: 600px) {
     .event-block.list .event-card-with-time-wrapper {
