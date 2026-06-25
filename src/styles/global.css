@@ -112,7 +112,8 @@ sub {
 }
 
 @media all and (max-width: 600px) {
-    main > article {
+    main > article,
+    #sponsors > article {
         scroll-margin-top: 5rem;
     }
 }
