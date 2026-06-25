@@ -1,8 +1,8 @@
 #### Conference Schedule
 
 - June 29
-  - 11.00-15.00: Registration
-  - 15.00-15.20: Opening ceremony
+  - 11.00-14.00: Registration
+  - 14.00-15.20: Opening ceremony
   - 15.20-18.30: Plenary lectures
   - 18.30-20.30: Welcome party
 - June 30
