@@ -125,7 +125,7 @@ function copyCheckedAsUrl() {
     <div class="dummy-event-wrapper">
       <EventCard v-for="(event, index) in dummyEvents[lang]" :event="event" :key="index" />
     </div>
-    Нажав на значок <i>article_shortcut</i> на карточке доклада, вы можете открыть в соседней вкладке HTML-версию тезисов. Ссылка на PDF-страницу из сборника тезисов расположена внизу страницы HTML-версии. Обратите внимание на то, что до официальной публикации сборника тезисов страницы в сборнике (и ссылки на конкретные тезисы) не являются окончательными и могут поменяться.
+    Нажав на значок <i>article_shortcut</i> на карточке доклада, вы можете открыть в соседней вкладке HTML-версию тезисов. Ссылка на PDF-страницу из сборника тезисов расположена внизу страницы HTML-версии. Обратите внимание на то, что до официальной публикации сборника тезисов страницы в сборнике (и ссылки на конкретные тезисы) не являются окончательными и могут поменяться. Значок <i>id_card</i> - ссылка на информацию о докладчике (только для ключевых и пленарных докладов) или компании-спонсоре.
     <p>С помощью галочки <i>check_box_outline_blank</i> в углу карточек можно отмечать заинтересовавшие вас доклады. Информация о том, какие доклады вы отметили, сохраняется в браузере. Вы можете поделиться этими докладами с коллегами (или собой): если нажать на кнопку 
     <button class="chip" @click="copyCheckedAsUrl">
       <i>link</i>
@@ -153,7 +153,7 @@ function copyCheckedAsUrl() {
     <div class="dummy-event-wrapper">
       <EventCard v-for="(event, index) in dummyEvents[lang]" :event="event" :key="index" />
     </div>
-    By clicking this icon <i>article_shortcut</i> on the presentation card, you can open the HTML abstract in an additional browser tab. The link to the PDF page from the book of abstracts will be located at the bottom of the HTML abstract. Please be aware that until the book of abstracts is officially published, the pages (and the URLs of the particular abstracts) are preliminary and could change.
+    By clicking this icon <i>article_shortcut</i> on the presentation card, you can open the HTML abstract in an additional browser tab. The link to the PDF page from the book of abstracts will be located at the bottom of the HTML abstract. Please be aware that until the book of abstracts is officially published, the pages (and the URLs of the particular abstracts) are preliminary and could change. The <i>id_card</i> icon leads to the info about a presenter (only for key and plenary speakers) or a sponsor company.
     <p>The checkboxes <i>check_box_outline_blank</i> located in the corner of the presentation cards allow you to mark the presentations that caught your interest. The data regarding the presentations you marked (checked) is saved in your browser. You can share the checked presentations with your collegues (or yourself): if you click the 
     <button class="chip" @click="copyCheckedAsUrl">
       <i>link</i>

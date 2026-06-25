@@ -89,7 +89,15 @@ function htmlToPlaintext(htmlString) {
     .replace(/&gt;/g, '>');
 }
 
-const sortedProg = ref(prog.sort((a, b) => new Date(a.start) - new Date(b.start)));
+const sortedProg = ref(prog.sort((a, b) => {
+  if (a.start !== b.start) {
+    return a.start < b.start ? -1 : 1;
+  } else { //assume poster
+    const aNum = a.poster_number ?? 0;
+    const bNum = b.poster_number ?? 0;
+    return aNum - bNum;
+  }
+}));
 sortedProg.value.forEach(event => {
   const match = event.authors.match(/<u>(.*?)<\/u>/);
   event.presenter = match ? match[1] : event.authors;

@@ -307,6 +307,9 @@ const handleToggleTypes = () => {
       margin-top: 0;
       justify-content: end;
     }
+    .filter-wrapper.help-or-filter-shown {
+      align-items: end;
+    }
     .show-hide-button-wrapper {
       display: flex;
       justify-content: end;

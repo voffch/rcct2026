@@ -74,17 +74,34 @@ const statusHtml = computed(() => {
   }
   return html;
 });
+
+const profileHref = computed(() => {
+  let href = null;
+  if (props.event.profile_id) {
+    href = (props.lang === 'en' ? '/en/' : '/');
+    if (props.event.section === 'vip') {
+      href += '#' + props.event.profile_id;
+    } else {
+      href += 'key_lectures/#' + props.event.profile_id;
+    }
+  }
+  return href;
+});
 </script>
 
 <template>
   <div class="event-wrapper" :class="wrapperClass">
     <div v-if="event.status" class="status" v-html="statusHtml"></div>
-    <div v-html="(lang === 'ru' && event.title_ru) ? event.title_ru : event.title"></div>
+    <div class="title-wrapper">
+      <div v-if="event.poster_number" class="poster-number">{{ event.poster_number }}</div>
+      <div v-html="(lang === 'ru' && event.title_ru) ? event.title_ru : event.title"></div>
+    </div>
     <div class="authors" v-if="event.presenter && filter.showAuthors === 'presenter'">{{ event.presenter }}</div>
     <div class="authors" v-else-if="event.authors && filter.showAuthors === 'coauthors'" v-html="event.authors"></div>
     <div class="affs" v-if="event.affs && filter.showAffs">{{ event.affs }}</div>
     <div class="additionals">
       <a v-if="abstractHref" :href="abstractHref" target="_blank"><i class="large">article_shortcut</i></a>
+      <a v-if="profileHref" :href="profileHref"><i class="large">id_card</i></a>
       <label class="checkbox" v-if="checkableTypes.includes(event.type)">
         <input type="checkbox" :checked="checked" @change="handleCheck">
         <span></span>
@@ -104,13 +121,24 @@ const statusHtml = computed(() => {
     display: flex;
     flex-direction: column;
   }
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .poster-number {
+    justify-self: center;
+    font-size: 1.5em;
+    margin: 0.5rem;
+  }
   .additionals {
     margin-top: auto;
     display: flex;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 2rem;
   }
-  .additionals .checkbox {
+  .additionals .checkbox,
+  .additionals .checkbox:only-child {
     margin-left: auto;
   }
   .type-poster {
@@ -166,6 +194,12 @@ const statusHtml = computed(() => {
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .additionals .checkbox {
+      margin-left: 0;
     }
   }
 </style>
