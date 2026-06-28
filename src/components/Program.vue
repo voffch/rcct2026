@@ -262,22 +262,63 @@ function dontShowSectionTitles(sectionTitles) {
 
 const isDev = import.meta.env.DEV;
 
-const backendProgramEndpoint = isDev ? 'http://127.0.0.1:8000/prog/' : 'https://api.rcct2026.ru/prog/';
+// 'http://127.0.0.1:8000/prog/'
+// 'https://api.064329.xyz/prog/'
+// 'https://api.rcct2026.ru/prog/'
+const backendProgramEndpoint = 'https://api.rcct2026.ru/prog/';
+const backendApiGatewayBackup = 'https://d5dfof06fmarqek2p1j2.p8361f8z.apigw.yandexcloud.net/prog/';
 
 let lastEtag = null;
 let isFirstRun = true;
 const isLive = ref(false);
 const lastFetchStatus = ref({
   success: false,
-  time: null
+  time: null,
+  backupFired: false
 });
 const currentPresentationCounter = ref(0);
+
+async function fetchWithFallback(primaryUrl, fallbackUrl, timeout=5000) {
+  const controller = new AbortController();
+  const signal = controller.signal;
+
+  const timeoutPromise = new Promise((_, reject) =>
+    setTimeout(() => {
+      controller.abort();
+      reject(new Error(`Primary fetch timed out after ${timeout} ms`));
+    }, timeout)
+  );
+
+  try {
+    const response = await Promise.race([
+      fetch(primaryUrl, { signal }),
+      timeoutPromise
+    ]);
+
+    if (!response.ok) {
+      throw new Error(`Primary fetch failed with status: ${response.status}`);
+    }
+
+    lastFetchStatus.value.backupFired = false;
+    return response;
+  } catch (error) {
+    console.warn(`${error.message}. Trying fallback URL...`);
+
+    lastFetchStatus.value.backupFired = true;
+    const fallbackResponse = await fetch(fallbackUrl);
+
+    if (!fallbackResponse.ok) {
+      throw new Error(`Fallback fetch also failed with status: ${fallbackResponse.status}`);
+    }
+
+    return fallbackResponse;
+  }
+}
 
 async function fetchLiveStatuses() {
   let success = false;
   try {
-      const response = await fetch(backendProgramEndpoint);
-      if (!response.ok) throw new Error('Server unreachable');
+      const response = await fetchWithFallback(backendProgramEndpoint, backendApiGatewayBackup);
       const etag = response.headers.get('ETag');
       if (etag && etag !== lastEtag) {
           const liveStatuses = await response.json();
@@ -300,17 +341,15 @@ async function fetchLiveStatuses() {
       console.warn("Could not fetch live updates: ", e);
       //isLive.value = false; 
   } finally {
-      lastFetchStatus.value = {
-        success: success,
-        time: new Date()
-      };
+      lastFetchStatus.value.success = success;
+      lastFetchStatus.value.time = new Date();
       const shouldContinue = success || !isFirstRun;
       isFirstRun = false;
       return shouldContinue;
   }
 }
 
-usePolling(fetchLiveStatuses, (isDev ? 1000 : 15000));
+usePolling(fetchLiveStatuses, (isDev ? 5000 : 15000));
 </script>
 
 <template>

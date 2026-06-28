@@ -139,7 +139,7 @@ function copyCheckedAsUrl() {
       <template v-if="isLive">
         <em>активна</em>
         <template v-if="formattedFetchTime">, последнее обновление в {{ formattedFetchTime }} 
-          <template v-if="lastFetchStatus.success">прошло <em>успешно</em></template>
+          <template v-if="lastFetchStatus.success">прошло <em>успешно</em>, {{ lastFetchStatus.backupFired ? 'в обход (БС?)' : 'штатно' }}</template>
           <template v-else><span style="color: var(--error)">не удалось</span> (упс!)</template>
         </template>
       </template>
@@ -167,7 +167,7 @@ function copyCheckedAsUrl() {
       <template v-if="isLive">
         <em>enabled</em>
         <template v-if="formattedFetchTime">, the last update at {{ formattedFetchTime }} 
-          <template v-if="lastFetchStatus.success">has been <em>successful</em></template>
+          <template v-if="lastFetchStatus.success">has been <em>successful</em>, {{ lastFetchStatus.backupFired ? 'via API Gateway' : 'direct' }}</template>
           <template v-else><span style="color: var(--error)">has failed</span> (oops!)</template>
         </template>
       </template>
