@@ -121,6 +121,7 @@ function copyCheckedAsUrl() {
 <template>
   <div v-if="lang === 'ru'" class="help-wrapper">
     <TimeMessage :lang="lang" />
+    <p>Программа также доступна в <a class="link underline" href="/docs/RCCT2026_program.pdf">pdf</a> (~0.5 MB).</p>
     В этой интерактивной программе представлены следующие типы событий:
     <div class="dummy-event-wrapper">
       <EventCard v-for="(event, index) in dummyEvents[lang]" :event="event" :key="index" />
@@ -149,6 +150,7 @@ function copyCheckedAsUrl() {
   </div>
   <div v-else class="help-wrapper">
     <TimeMessage :lang="lang" />
+    <p>The program is also available in <a class="link underline" href="/docs/RCCT2026_program.pdf">pdf format</a> (~0.5 MB).</p>
     The following types of events are shown in this interactive program:
     <div class="dummy-event-wrapper">
       <EventCard v-for="(event, index) in dummyEvents[lang]" :event="event" :key="index" />
