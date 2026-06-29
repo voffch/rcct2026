@@ -33,6 +33,44 @@ export const tr = {
       'vip': 'Доклады спонсоров'
     }
   },
+  sectionChairmen: {
+    'plenary': [
+      genSecCha('06-29T15:20', '06-29T18:00', 'Столярова В.Л., Гавричев К.С.', 'Stolyarova V.L., Gavrichev K.S.'),
+      genSecCha('06-30T09:00', '06-30T11:55', 'Столярова В.Л., Хван А.В.', 'Stolyarova V.L., Khvan A.V.'),
+      genSecCha('07-01T09:00', '07-01T11:00', 'Гавричев К.С., Цветков Д.С.', 'Gavrichev K.S., Tsvetkov D.S.'),
+      genSecCha('07-02T09:00', '07-02T11:55', 'Верёвкин С.П., Будков Ю.А.', 'Verevkin S.P., Budkov Yu.A.'),
+    ],
+    'S1': [
+      genSecCha('06-30T12:25', '06-30T13:25', 'Тойкка А.М., Зуев А.Ю.', 'Toikka A.M., Zuev A.Yu.'),
+      genSecCha('06-30T14:30', '06-30T16:00', 'Будков Ю.А., Соломонов Б.Н.', 'Budkov Yu.A., Solomonov B.N.'),
+      genSecCha('06-30T16:30', '06-30T18:00', 'Ягофаров М.И.', 'Yagofarov M.I.'),
+    ],
+    'S2': [
+      genSecCha('06-30T12:25', '06-30T13:25', 'Беспятов М.А., Цветков Д.С.', 'Bespyatov M.A., Tsvetkov D.S.'),
+      genSecCha('06-30T14:30', '06-30T16:00', 'Гавричев К.С., Биссенгалиева М.Р.', 'Gavrichev K.S., Bissengaliyeva M.R.'),
+      genSecCha('06-30T16:30', '06-30T18:00', 'Гельфонд Н.В., Жерикова К.В.', 'Gelfond N.V., Zherikova K.V.'),
+      genSecCha('07-02T12:25', '07-02T13:40', 'Горбачук В.В., Зуев А.Ю.', 'Gorbatchuk V.V., Zuev A.Yu.'),
+    ],
+    'S3': [
+      genSecCha('06-30T12:25', '06-30T13:25', 'Киселёв М.Г., Опарин Р.Д.', 'Kiselev M.G., Oparin R.D.'),
+      genSecCha('06-30T14:30', '06-30T16:00', 'Волков Н.А., Постников Е.Б.', 'Volkov N.A., Postnikov E.B.'),
+      genSecCha('06-30T16:30', '06-30T18:00', 'Ткачёв Н.К., Сафонова Е.А.', 'Tkachev N.K., Safonova E.A.'),
+    ],
+    'S4': [
+      genSecCha('06-30T12:25', '06-30T13:25', 'Черепанов В.А., Зеленина Л.Н.', 'Cherepanov V.A., Zelenina L.N.'),
+      genSecCha('06-30T14:30', '06-30T16:00', 'Викторов А.И., Константинова Н.М.', 'Victorov A.I., Konstantinova N.M.'),
+      genSecCha('06-30T16:30', '06-30T18:00', 'Верёвкин С.П.', 'Verevkin S.P.'),
+      genSecCha('07-02T12:25', '07-02T13:40', 'Жерикова К.В., Черепанов В.А.', 'Zherikova K.V., Cherepanov V.A.'),
+    ],
+    'S5': [],
+    'S6': [
+      genSecCha('06-30T12:25', '06-30T13:25', 'Горбачук В.В., Красилин А.А.', 'Gorbatchuk V.V., Krasilin A.A.'),
+      genSecCha('06-30T14:30', '06-30T16:00', 'Маркин А.В., Середа В.В.', 'Markin A.V., Sereda V.V.'),
+      genSecCha('06-30T16:30', '06-30T18:00', 'Мовенко Д.А., Мазурин М.О.', 'Movenko D.A., Mazurin M.O.'),
+    ],
+    'S7': [],
+    'S8': [],
+  },
   days: {
     en: 'Days',
     ru: 'Даты'
@@ -180,3 +218,13 @@ export const defaultFilter = {
   showOnlyChecked: false,
   showOnlyCurrent: false
 };
+
+function genSecCha(start, end, ru, en) {
+  //start and end are, e.g., 07-03T10:50
+  return {
+    start: `2026-${start}:00`,
+    end: `2026-${end}:00`,
+    ru: ru,
+    en: en,
+  }
+}

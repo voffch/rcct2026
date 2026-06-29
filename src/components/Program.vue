@@ -17,6 +17,18 @@ function explainSection(sectionTitle) {
   return tr.sectionNames[props.lang][sectionTitle] ?? sectionTitle;
 }
 
+function getSectionChairmen(sectionTitle, start) {
+  let chairmen = '';
+  const possibleChairmen = tr.sectionChairmen[sectionTitle];
+  if (Array.isArray(possibleChairmen) && start) {
+    const chairmenObj = possibleChairmen.find(c => c.start <= start && c.end > start);
+    if (chairmenObj) {
+      chairmen = chairmenObj[props.lang] ?? '';
+    }
+  }
+  return chairmen;
+}
+
 const localStorageFilterName = 'rcct2026-filter-settings';
 const localStorageCheckedPresentations = 'rcct2026-checked-presentations';
 
@@ -374,7 +386,8 @@ usePolling(fetchLiveStatuses, (isDev ? 5000 : 15000));
             <template v-if="!dontShowSectionTitles(block.sectionTitles)">
               <div class="empty-placeholder"></div>
               <div v-for="sectionTitle in block.sectionTitles" :key="sectionTitle" class="section-title">
-                {{ explainSection(sectionTitle) }}{{ block.sectionRooms && ` (${block.sectionRooms[sectionTitle]})` }}
+                {{ explainSection(sectionTitle) }}{{ block.sectionRooms && ` (${block.sectionRooms[sectionTitle]})` }}<br />
+                <em>{{ getSectionChairmen(sectionTitle, block.timeSlots?.at(0)?.start) }}</em>
               </div>
             </template>
             <template v-for="(slot, index) in block.timeSlots" :key="slot.start">
@@ -399,7 +412,8 @@ usePolling(fetchLiveStatuses, (isDev ? 5000 : 15000));
                  :class="filter.display"
                  v-for="sectionTitle in block.sectionTitles" :key="sectionTitle">
               <div v-if="!dontShowSectionTitles(block.sectionTitles)" class="section-title">
-                {{ explainSection(sectionTitle) }}{{ block.sectionRooms && ` (${block.sectionRooms[sectionTitle]})` }}
+                {{ explainSection(sectionTitle) }}{{ block.sectionRooms && ` (${block.sectionRooms[sectionTitle]})` }}<br />
+                <em>{{ getSectionChairmen(sectionTitle, block.timeSlots?.at(0)?.start) }}</em>
               </div>
               <template v-for="slot in block.timeSlots" :key="slot.start">
                 <div class="event-card-with-time-wrapper" v-if="slot.events[sectionTitle] && !slot.events[sectionTitle].skip">
