@@ -39,6 +39,7 @@ export const tr = {
       genSecCha('06-30T09:00', '06-30T11:55', 'Столярова В.Л., Хван А.В.', 'Stolyarova V.L., Khvan A.V.'),
       genSecCha('07-01T09:00', '07-01T11:00', 'Гавричев К.С., Цветков Д.С.', 'Gavrichev K.S., Tsvetkov D.S.'),
       genSecCha('07-02T09:00', '07-02T11:55', 'Верёвкин С.П., Будков Ю.А.', 'Verevkin S.P., Budkov Yu.A.'),
+      genSecCha('07-03T09:00', '07-03T11:00', 'Хван А.В., Цветков Д.С.', 'Khvan A.V., Tsvetkov D.S.'),
     ],
     'S1': [
       genSecCha('06-30T12:25', '06-30T13:25', 'Тойкка А.М., Зуев А.Ю.', 'Toikka A.M., Zuev A.Yu.'),
@@ -50,26 +51,41 @@ export const tr = {
       genSecCha('06-30T14:30', '06-30T16:00', 'Гавричев К.С., Биссенгалиева М.Р.', 'Gavrichev K.S., Bissengaliyeva M.R.'),
       genSecCha('06-30T16:30', '06-30T18:00', 'Гельфонд Н.В., Жерикова К.В.', 'Gelfond N.V., Zherikova K.V.'),
       genSecCha('07-02T12:25', '07-02T13:40', 'Горбачук В.В., Зуев А.Ю.', 'Gorbatchuk V.V., Zuev A.Yu.'),
+      genSecCha('07-02T16:30', '07-02T17:30', 'Коваленко Л.Ю., Мазурин М.О.', 'Kovalenko L.Yu., Mazurin M.O.'),
     ],
     'S3': [
       genSecCha('06-30T12:25', '06-30T13:25', 'Киселёв М.Г., Опарин Р.Д.', 'Kiselev M.G., Oparin R.D.'),
       genSecCha('06-30T14:30', '06-30T16:00', 'Волков Н.А., Постников Е.Б.', 'Volkov N.A., Postnikov E.B.'),
       genSecCha('06-30T16:30', '06-30T18:00', 'Ткачёв Н.К., Сафонова Е.А.', 'Tkachev N.K., Safonova E.A.'),
+      genSecCha('07-02T14:45', '07-02T16:00', 'Седов И.А., Мищенко С.А.', 'Sedov I.A., Mitchenko S.A.'),
     ],
     'S4': [
       genSecCha('06-30T12:25', '06-30T13:25', 'Черепанов В.А., Зеленина Л.Н.', 'Cherepanov V.A., Zelenina L.N.'),
       genSecCha('06-30T14:30', '06-30T16:00', 'Викторов А.И., Константинова Н.М.', 'Victorov A.I., Konstantinova N.M.'),
       genSecCha('06-30T16:30', '06-30T18:00', 'Верёвкин С.П.', 'Verevkin S.P.'),
       genSecCha('07-02T12:25', '07-02T13:40', 'Жерикова К.В., Черепанов В.А.', 'Zherikova K.V., Cherepanov V.A.'),
+      genSecCha('07-02T14:45', '07-02T16:00', 'Титова С.Г., Кураева Ю.Г.', 'Titova S.G., Kuraeva Yu.G.'),
+      genSecCha('07-02T16:30', '07-02T17:30', 'Цветков Д.С., Терзиян Т.В.', 'Tsvetkov D.S., Terziyan T.V.'),
     ],
-    'S5': [],
+    'S5': [
+      genSecCha('07-02T12:25', '07-02T13:40', 'Востриков С.В., Середа В.В.', 'Vostrikov S.V., Sereda V.V.'),
+      genSecCha('07-02T14:45', '07-02T16:00', 'Хван А.В., Середа В.В.', 'Khvan A.V., Sereda V.V.'),
+      genSecCha('07-03T11:30', '07-03T12:30', 'Рыльцев Р.Е., Самаров А.А.', 'Ryltsev R.E., Samarov A.A.'),
+    ],
     'S6': [
       genSecCha('06-30T12:25', '06-30T13:25', 'Горбачук В.В., Красилин А.А.', 'Gorbatchuk V.V., Krasilin A.A.'),
       genSecCha('06-30T14:30', '06-30T16:00', 'Маркин А.В., Середа В.В.', 'Markin A.V., Sereda V.V.'),
       genSecCha('06-30T16:30', '06-30T18:00', 'Мовенко Д.А., Мазурин М.О.', 'Movenko D.A., Mazurin M.O.'),
+      genSecCha('07-02T14:45', '07-02T16:00', 'Пестов С.М., Сидоров В.Е.', 'Pestov S.M., Sidorov V.E.'),
+      genSecCha('07-02T16:30', '07-02T17:30', 'Зуев А.Ю., Черепанов В.А.', 'Zuev A.Yu., Cherepanov V.A.'),
     ],
-    'S7': [],
-    'S8': [],
+    'S7': [
+      genSecCha('07-03T11:30', '07-03T12:30', 'Зуев А.Ю.', 'Zuev A.Yu.'),
+    ],
+    'S8': [
+      genSecCha('07-02T12:25', '07-02T13:40', 'Корчагина Е.Н., Цветков Д.С.', 'Korchagina E.N., Tsvetkov D.S.'),
+      genSecCha('07-03T11:30', '07-03T12:30', 'Цветков Д.С.', 'Tsvetkov D.S.'),
+    ],
   },
   days: {
     en: 'Days',
